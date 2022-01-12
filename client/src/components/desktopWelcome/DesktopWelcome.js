@@ -26,8 +26,7 @@ const animationIn = {
 const DesktopWelcome = ({ openWelcome }) => {
   return (
     <Wrapper
-      openWelcome={openWelcome}
-      variants={openWelcome ? animationIn : animationOut}
+      variants={openWelcome === "out" ? animationIn : openWelcome === "in" ? animationOut : null}
       initial='hiden'
       animate='animate'
     >

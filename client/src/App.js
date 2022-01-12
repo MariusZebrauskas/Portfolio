@@ -5,11 +5,11 @@ import { useState, useEffect } from 'react';
 
 function App() {
   // controls img scale + center
-  const [openWelcome, setOpenWelcome] = useState(true);
+  const [openWelcome, setOpenWelcome] = useState('out');
 
   return (
     <Body>
-      <Wrapper>
+      <Wrapper openWelcome={openWelcome}>
         <DesktopWelcome openWelcome={openWelcome} />
         <Main openWelcome={openWelcome} setOpenWelcome={setOpenWelcome} />
       </Wrapper>

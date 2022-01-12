@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const boxWidth = '270px';
 
 export const Img = styled.section`
@@ -26,14 +25,30 @@ export const Img = styled.section`
     max-width: ${boxWidth};
     min-width: ${boxWidth};
     transform: ${(props) =>
-    props.openWelcome ? 'rotateX(-60deg) rotateZ(-40deg) translateY(10rem) translateX(12rem)' : "translateX(-0px) scale(2)"};
+      props.openWelcome === 'out'
+        ? 'rotateX(-60deg) rotateZ(-40deg) translateY(10rem) translateX(12rem)'
+        : props.openWelcome === 'in'
+        ? 'translateX(-0px) scale(2)'
+        : props.openWelcome === 'deep'
+        ? 'translateX(-0px) scale(2)'
+        : null};
     transform-style: preserve-3d;
     box-shadow: -65px 60px 50px #0007;
-    transition: transform ease-in-out 1s, box-shadow 0.3s ease-in-out 0s;
+    transition: ${(props) =>
+      props.openWelcome === 'out'
+        ? 'transform ease-out .5s, box-shadow 0.3s ease-out 0s;'
+        : props.openWelcome === 'in'
+        ? 'transform ease-in 1s, box-shadow 0.3s ease-in-out 0s;'
+        : props.openWelcome === 'deep'
+        ? 'transform ease-in 1s, box-shadow 0.3s ease-in-out 0s;'
+        : null};
     &:hover {
       transform: ${(props) =>
-      props.openWelcome ? 'rotateX(-58deg) rotateZ(-39deg) translateY(10rem) translateX(11rem)' : null};
+        props.openWelcome === 'out'
+          ? 'rotateX(-58deg) rotateZ(-39deg) translateY(10rem) translateX(11rem)'
+          : null};
       box-shadow: -45px 40px 50px #0009;
+     
       transition: transform ease-in-out 1s, box-shadow 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.2s;
       cursor: pointer;
     }

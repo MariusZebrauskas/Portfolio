@@ -9,7 +9,11 @@ export const Wrapper = styled.nav`
   align-items: center;
   width: 90%;
   @media (min-width: 768px) {
-    opacity: ${(props) => (props.activeallmenu === true? 1 : 0)};
+    transform: scale(50%);
+    bottom: -0.5rem;
+    left: -3.5rem;
+    width: 100%;
+    z-index: 5;
   }
 `;
 
@@ -37,6 +41,19 @@ export const Li = styled.li`
   position: relative;
   cursor: pointer;
   z-index: 2;
+
+  @media (min-width: 768px) {
+    min-width: 6.5rem;
+    opacity: ${(props) => (props.openWelcome === 'in' || props.openWelcome === 'deep' ? 1 : 0)};
+    transition: ${(props) =>
+      (props.openWelcome === 'in' || props.openWelcome === 'deep') && props.about
+        ? 'opacity ease-in-out .3s'
+        : (props.openWelcome === 'in' || props.openWelcome === 'deep') && props.myWork
+        ? 'opacity ease-in-out .3s .3s'
+        : (props.openWelcome === 'in' || props.openWelcome === 'deep') && props.contact
+        ? 'opacity ease-in-out .3s .6s'
+        : null};
+  }
 
   &:before {
     content: '';
@@ -75,13 +92,27 @@ export const P = styled.p`
 export const Close = styled(MdOutlineClose)`
   position: absolute;
   font-size: 2rem;
-  top: 2rem;
-  right: 2rem;
-  z-index: 3;
-  opacity: ${(props) => (props.imghandler === 'small' ? 1 : 0)};
+  top: -1.5rem;
+  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : null)};
+  right: -3rem;
+  z-index: 99999;
+  opacity: ${(props) => (props.openwelcome === 'in' ? 1 : props.openwelcome === 'out' ? 0 : null)};
+  transform: ${(props) =>
+    props.openwelcome === 'in' || props.openwelcome === 'deep'
+      ? 'scale(50%)'
+      : props.openwelcome === 'out'
+      ? null
+      : null};
   transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
+
   cursor: ${(props) => (props.imghandler === 'small' ? 'pointer' : null)};
   &:hover {
-    transform: rotate(300deg);
+    transform: ${(props) =>
+      props.openwelcome === 'in' || props.openwelcome === 'deep'
+        ? 'scale(50%) rotate(300deg)'
+        : props.openwelcome === 'out'
+        ? null
+        : null};
+    transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
   }
 `;

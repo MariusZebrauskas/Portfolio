@@ -24,8 +24,9 @@ export const WrapperH1 = styled.div`
   display: flex;
   @media (min-width: 768px) {
     padding-left: 0;
-    transition:opacity ease-in-out 1s 0.3s;
-    opacity: ${(props) => (props.openWelcome ? 0 : 1)};
+    transition: opacity ease-in-out .3s 0.3s;
+    opacity: ${(props) =>
+      props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
   }
 `;
 export const NameWrapper = styled.div`
@@ -61,16 +62,16 @@ export const P2 = styled(P)`
 
 export const SecondPar = styled.div`
   @media (min-width: 768px) {
-    transition:opacity ease-in-out 1s .6s;
-    opacity: ${(props) => (props.openWelcome ? 0 : 1)};
+    transition: opacity ease-in-out .3s 0.6s;
+    opacity: ${(props) =>
+      props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
     /* opacity: 0; */
     /* transform: scale(50%); */
   }
 `;
 export const ThirdPar = styled.div`
   @media (min-width: 768px) {
-    opacity: ${(props) => (props.openWelcome ? 0 : 0)};
-    /* opacity: 0; */
-    /* transform: scale(50%); */
+    opacity: 0;
+
   }
 `;

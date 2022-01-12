@@ -12,6 +12,7 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
   const [activeAllMenu, setActiveAllMenu] = useState(false);
 
   const [imghandler, setImgHandler] = useState('large');
+  // remove all active menu items
   const activatemenu = (about, work, contact) => {
     togglerabout(about);
     togglerwork(work);
@@ -30,29 +31,40 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
       togglercontatc(false);
     }
   };
-
-  const openImgPortfolio = () => {
+  // controls img size + position + scale
+  const openImgPortfolio = (x) => {
     // if img in center and scaled
-    setOpenWelcome(false);
+    if ((x === 'out' && openWelcome === 'in') || (x === 'out' && openWelcome === 'deep')) {
+      activatemenu(false, false, false);
+      return setOpenWelcome('out');
+    }
+    if (x === 'in' && openWelcome === 'out') {
+      return setOpenWelcome('in');
+    }
+    if (x === 'deep' && openWelcome === 'in') {
+      return setOpenWelcome('deep');
+    }
   };
 
-// FIXME: work on close menu  
+  // FIXME: work on remeliai shadows phone bugs, button clicks not in place
 
   return (
-    <Img
-      openWelcome={openWelcome}
-      imghandler={imghandler}
-      onClick={openImgPortfolio}
-    >
-      <Welcome openWelcome={openWelcome}/>
-      <Close imghandler={imghandler} onClick={() => adjustImg('large')} />
+    <Img openWelcome={openWelcome} imghandler={imghandler} onClick={() => openImgPortfolio('in')}>
+      <Welcome openWelcome={openWelcome} />
+      <Close
+        openwelcome={openWelcome}
+        imghandler={imghandler}
+        onClick={() => openImgPortfolio('out')}
+      />
       <Menu
         activework={activework}
         activeabout={activeabout}
         activecontact={activecontact}
         activeAllMenu={activeAllMenu}
+        openWelcome={openWelcome}
         activatemenu={activatemenu}
         adjustImg={adjustImg}
+        openImgPortfolio={openImgPortfolio}
       />
       <Bottom />
       <Left />

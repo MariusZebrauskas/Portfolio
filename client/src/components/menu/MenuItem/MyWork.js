@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 import { Li, P, MyWorkIcon } from '../menustyles';
 
-const MyWork = ({ data, animationTimer, activatemenu, activework, adjustImg }) => {
+const MyWork = ({
+  data,
+  animationTimer,
+  activatemenu,
+  activework,
+  adjustImg,
+  openWelcome,
+  openImgPortfolio,
+}) => {
   const [click, setClick] = useState(false);
   const openMenuHandler = () => {
     if (click) {
@@ -11,6 +19,7 @@ const MyWork = ({ data, animationTimer, activatemenu, activework, adjustImg }) =
     setClick(true);
     adjustImg('small');
     activatemenu(false, true, false);
+    openImgPortfolio('deep');
   };
   useEffect(() => {
     if (click) {
@@ -20,7 +29,13 @@ const MyWork = ({ data, animationTimer, activatemenu, activework, adjustImg }) =
     }
   }, [click]);
   return (
-    <Li activework={activework} myWork click={click} onClick={openMenuHandler}>
+    <Li
+      openWelcome={openWelcome}
+      activework={activework}
+      myWork
+      click={click}
+      onClick={openMenuHandler}
+    >
       <MyWorkIcon />
       <P>{data}</P>
     </Li>

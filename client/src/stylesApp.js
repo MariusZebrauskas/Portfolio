@@ -15,6 +15,14 @@ export const Wrapper = styled.div`
   position: relative;
   @media (min-width: 768px) {
     width: 90%;
-    margin: ${(props) => props.theme.margin.top};
+    margin: ${(props) =>
+      props.openWelcome === 'out'
+        ? props.theme.margin.top
+        : props.openWelcome === 'in'
+        ? props.theme.margin.top
+        : props.openWelcome === 'deep'
+        ? '8rem'
+        : null};
   }
+  transition: margin ease-in .3s;
 `;

@@ -11,6 +11,8 @@ const Menu = ({
   activework,
   activecontact,
   activeallmenu,
+  openImgPortfolio,
+  openWelcome,
 }) => {
   let animationTimer = 600;
 
@@ -21,6 +23,8 @@ const Menu = ({
         activatemenu={activatemenu}
         adjustImg={adjustImg}
         animationTimer={animationTimer}
+        openImgPortfolio={openImgPortfolio}
+        openWelcome={openWelcome}
         data='About me'
       />
       <MyWork
@@ -28,6 +32,9 @@ const Menu = ({
         activework={activework}
         animationTimer={animationTimer}
         adjustImg={adjustImg}
+        openWelcome={openWelcome}
+        openImgPortfolio={openImgPortfolio}
+
         data='My Work'
       />
       <Contact
@@ -35,6 +42,9 @@ const Menu = ({
         adjustImg={adjustImg}
         animationTimer={animationTimer}
         activatemenu={activatemenu}
+        openWelcome={openWelcome}
+        openImgPortfolio={openImgPortfolio}
+
         data='Contatc'
       />
     </Wrapper>

@@ -2,15 +2,24 @@ import React, { useState, useEffect } from 'react';
 
 import { Li, P, ContatcIcon } from '../menustyles';
 
-const Contact = ({ data, animationTimer, activecontact, adjustImg, activatemenu }) => {
+const Contact = ({
+  data,
+  animationTimer,
+  activecontact,
+  adjustImg,
+  activatemenu,
+  openWelcome,
+  openImgPortfolio,
+}) => {
   const [click, setClick] = useState(false);
   const openMenuHandler = () => {
     if (click) {
       return;
     }
-    activatemenu(false, false, true)
+    activatemenu(false, false, true);
     setClick(true);
     adjustImg('small');
+    openImgPortfolio('deep');
   };
   useEffect(() => {
     if (click) {
@@ -20,7 +29,13 @@ const Contact = ({ data, animationTimer, activecontact, adjustImg, activatemenu 
     }
   }, [click]);
   return (
-    <Li activecontact={activecontact} contact click={click} onClick={openMenuHandler}>
+    <Li
+      activecontact={activecontact}
+      openWelcome={openWelcome}
+      contact
+      click={click}
+      onClick={openMenuHandler}
+    >
       <ContatcIcon />
       <P>{data}</P>
     </Li>
