@@ -13,8 +13,8 @@ export const WrapperWelcome = styled.article`
   width: 100%;
   @media (min-width: 768px) {
     transform: scale(50%);
-    top: -3.9rem;
-    left: -4rem;
+    top: -4rem;
+    left: -5rem;
   }
 `;
 export const WrapperH1 = styled.div`
@@ -24,7 +24,7 @@ export const WrapperH1 = styled.div`
   display: flex;
   @media (min-width: 768px) {
     padding-left: 0;
-    transition: opacity ease-in-out .3s 0.3s;
+    transition: opacity ease-in-out 0.3s 0.3s;
     opacity: ${(props) =>
       props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
   }
@@ -57,21 +57,22 @@ export const P = styled.p`
 export const P2 = styled(P)`
   letter-spacing: ${(props) => props.theme.letterSpacing.mid};
   line-height: ${(props) => props.theme.lineHeight.mid};
-  /* color: ${(props) => props.theme.color.primary}; */
+  margin-top: 1rem;
+  max-width: 15rem;
 `;
 
 export const SecondPar = styled.div`
   @media (min-width: 768px) {
-    transition: opacity ease-in-out .3s 0.6s;
     opacity: ${(props) =>
       props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
-    /* opacity: 0; */
-    /* transform: scale(50%); */
+    transition: opacity ease-in-out 0.3s 0.6s;
   }
 `;
 export const ThirdPar = styled.div`
+  transition: opacity ease-in-out 0.1s;
+  opacity: ${(props) => (props.openWelcome === 'out' ? 1 : 0)};
   @media (min-width: 768px) {
-    opacity: 0;
-
+    transition: opacity ease-in-out 0.3s 0.9s;
+    opacity: ${(props) => (props.openWelcome === 'in' ? 1 : 0)};
   }
 `;

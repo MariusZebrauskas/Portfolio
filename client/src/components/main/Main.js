@@ -35,6 +35,7 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
   const openImgPortfolio = (x) => {
     // if img in center and scaled
     if ((x === 'out' && openWelcome === 'in') || (x === 'out' && openWelcome === 'deep')) {
+      adjustImg('large');
       activatemenu(false, false, false);
       return setOpenWelcome('out');
     }
@@ -66,8 +67,8 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
         adjustImg={adjustImg}
         openImgPortfolio={openImgPortfolio}
       />
-      <Bottom />
-      <Left />
+      <Bottom openWelcome={openWelcome} />
+      <Left openWelcome={openWelcome} />
     </Img>
   );
 };

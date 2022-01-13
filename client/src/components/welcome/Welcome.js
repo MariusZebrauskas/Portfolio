@@ -16,13 +16,12 @@ const Welcome = ({ openWelcome }) => {
         <P paddingBottom>WEB DEWELOPER</P>
       </SecondPar>
 
-        <ThirdPar openWelcome={openWelcome}>
-          <P2>
-            I'm a REACT JS Web Developer. I enjoy writing functions and building beautiful
-            responsive websites.
-          </P2>
-        </ThirdPar>
-  
+      <ThirdPar openWelcome={openWelcome}>
+        <P2>
+          I'm a REACT JS Web Developer. I enjoy writing functions and building beautiful responsive
+          websites.
+        </P2>
+      </ThirdPar>
     </WrapperWelcome>
   );
 };

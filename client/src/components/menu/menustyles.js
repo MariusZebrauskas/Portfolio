@@ -11,7 +11,7 @@ export const Wrapper = styled.nav`
   @media (min-width: 768px) {
     transform: scale(50%);
     bottom: -0.5rem;
-    left: -3.5rem;
+    left: -5rem;
     width: 100%;
     z-index: 5;
   }
@@ -92,9 +92,8 @@ export const P = styled.p`
 export const Close = styled(MdOutlineClose)`
   position: absolute;
   font-size: 2rem;
-  top: -1.5rem;
-  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : null)};
-  right: -3rem;
+  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '-2rem')};
+  right: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '-1rem')};
   z-index: 99999;
   opacity: ${(props) => (props.openwelcome === 'in' ? 1 : props.openwelcome === 'out' ? 0 : null)};
   transform: ${(props) =>
@@ -105,7 +104,10 @@ export const Close = styled(MdOutlineClose)`
       : null};
   transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
 
-  cursor: ${(props) => (props.imghandler === 'small' ? 'pointer' : null)};
+  cursor: ${(props) =>
+    props.imghandler === 'small' || props.openwelcome === 'in' || props.openwelcome === 'deep'
+      ? 'pointer'
+      : null};
   &:hover {
     transform: ${(props) =>
       props.openwelcome === 'in' || props.openwelcome === 'deep'
