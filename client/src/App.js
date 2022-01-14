@@ -14,9 +14,9 @@ function App() {
         <DesktopWelcome openWelcome={openWelcome} />
         <Main openWelcome={openWelcome} setOpenWelcome={setOpenWelcome} />
       </Wrapper>
-      <ContentWrapper>
+      {/* <ContentWrapper>
         <AboutMe />
-      </ContentWrapper>
+      </ContentWrapper> */}
     </Body>
   );
 }

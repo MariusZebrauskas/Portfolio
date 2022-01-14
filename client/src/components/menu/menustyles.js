@@ -92,8 +92,8 @@ export const P = styled.p`
 export const Close = styled(MdOutlineClose)`
   position: absolute;
   font-size: 2rem;
-  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '-2rem')};
-  right: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '-1rem')};
+  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '1rem')};
+  right: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '1rem')};
   z-index: 99999;
   opacity: ${(props) => (props.openwelcome === 'in' ? 1 : props.openwelcome === 'out' ? 0 : null)};
   transform: ${(props) =>
@@ -115,6 +115,9 @@ export const Close = styled(MdOutlineClose)`
         : props.openwelcome === 'out'
         ? null
         : null};
-    transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
+    transition: transform ease-in-out 0.3s;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
   }
 `;

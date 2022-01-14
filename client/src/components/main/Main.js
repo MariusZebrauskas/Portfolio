@@ -31,6 +31,17 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
       togglercontatc(false);
     }
   };
+  // chek users window size
+  const [mediaQuery, setMediaQuery] = useState(window.innerWidth);
+  useEffect(() => {
+    const trackWidth = () => {
+      setMediaQuery(window.innerWidth);
+    };
+    window.addEventListener('resize', trackWidth);
+    return () => {
+      window.removeEventListener('resize', trackWidth);
+    };
+  }, [mediaQuery]);
   // controls img size + position + scale
   const openImgPortfolio = (x) => {
     // if img in center and scaled
@@ -39,7 +50,7 @@ const Main = ({ setOpenWelcome, openWelcome }) => {
       activatemenu(false, false, false);
       return setOpenWelcome('out');
     }
-    if (x === 'in' && openWelcome === 'out') {
+    if (x === 'in' && openWelcome === 'out' && mediaQuery >= 768) {
       return setOpenWelcome('in');
     }
     if (x === 'deep' && openWelcome === 'in') {

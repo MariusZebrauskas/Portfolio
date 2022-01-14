@@ -52,6 +52,7 @@ export const Img = styled.section`
       box-shadow: -45px 40px 50px #0009;
 
       transition: transform ease-in-out 1s, box-shadow 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.2s;
+      
       cursor: ${(props) => (props.openWelcome === 'out' ? 'pointer' : null)};
     }
   }
