@@ -11,6 +11,10 @@ export const Img = styled.section`
   width: 100%;
   height: ${(props) => (props.openWelcome === 'out' ? '100vh' : '45vh')};
   transition: height ease-in-out 0.7s;
+  @media (max-height: 350px) {
+    /* small phone horizontal */
+    height: ${(props) => (props.openWelcome === 'out' ? '100vh' : '65vh')};
+  }
 
   &:after {
     content: '';
@@ -19,7 +23,8 @@ export const Img = styled.section`
     background-color: #0045933b;
     position: absolute;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
+    /* plancet or phones  with bigger screens  */
     min-height: ${boxHeight};
     max-height: ${boxHeight};
     max-width: ${boxWidth};
@@ -34,14 +39,16 @@ export const Img = styled.section`
         ? 'translateX(0px) scale(2.03, 2) '
         : null};
     transform-style: preserve-3d;
-    box-shadow: -65px 60px 50px #0007;
+    /* box-shadow: -65px 60px 50px #0007; */
+    box-shadow: ${(props) =>
+      props.openWelcome === 'out' ? '-45px 40px 50px #0009' : '-45px 30px 150px #0009'};
     transition: ${(props) =>
       props.openWelcome === 'out'
-        ? 'transform ease-out .5s, box-shadow 0.3s ease-out 0s;'
+        ? 'transform ease-out .5s, box-shadow 0.3s ease-in-out;'
         : props.openWelcome === 'in'
-        ? 'transform ease-in 1s, box-shadow 0.3s ease-in-out 0s;'
+        ? 'transform ease-in 1s, box-shadow 0.3s ease-in-out;'
         : props.openWelcome === 'deep'
-        ? 'transform ease-in-out .3s, box-shadow 0.3s ease-in-out 0s;'
+        ? 'transform ease-in-out .3s, box-shadow 0.3s ease-in-out;'
         : 'all eas-in-out 2s'};
 
     &:hover {
@@ -49,10 +56,10 @@ export const Img = styled.section`
         props.openWelcome === 'out'
           ? 'rotateX(-58deg) rotateZ(-39deg) translateY(10rem) translateX(11rem)'
           : null};
-      box-shadow: -45px 40px 50px #0009;
+      box-shadow: ${(props) => (props.openWelcome === 'out' ? '-45px 40px 50px #0009' : null)};
 
       transition: transform ease-in-out 1s, box-shadow 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.2s;
-      
+
       cursor: ${(props) => (props.openWelcome === 'out' ? 'pointer' : null)};
     }
   }

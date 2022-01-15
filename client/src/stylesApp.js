@@ -6,7 +6,7 @@ export const Body = styled.section`
   flex-direction: column;
   align-items: center;
   @media (min-width: 768px) {
-    margin: 0 ${(props) => props.theme.margin.mainWrapper};
+    /* margin: 0 ${(props) => props.theme.margin.mainWrapper}; */
   }
 `;
 
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px){
     width: 90%;
     margin: ${(props) =>
       props.openWelcome === 'out'

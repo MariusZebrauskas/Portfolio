@@ -11,7 +11,7 @@ export const WrapperWelcome = styled.article`
   position: absolute;
   z-index: 2;
   width: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
     transform: scale(50%);
     top: -4rem;
     left: -5rem;
@@ -22,7 +22,7 @@ export const WrapperH1 = styled.div`
   padding-top: ${(props) => props.theme.padding.small};
   padding-bottom: ${(props) => props.theme.padding.smaller};
   display: flex;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
     padding-left: 0;
     transition: opacity ease-in-out 0.3s 0.3s;
     opacity: ${(props) =>
@@ -47,7 +47,7 @@ export const P = styled.p`
   padding-bottom: ${(props) => (props.paddingBottom ? props.theme.padding.smaller : null)};
   line-height: ${(props) => props.theme.lineHeight.big};
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
     font-size: ${(props) => props.theme.fontSize.p};
     font-weight: ${(props) => props.theme.fontWeight.p};
     letter-spacing: ${(props) => props.theme.letterSpacing.p};
@@ -62,7 +62,7 @@ export const P2 = styled(P)`
 `;
 
 export const SecondPar = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
     opacity: ${(props) =>
       props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
     transition: opacity ease-in-out 0.3s 0.6s;
@@ -71,8 +71,12 @@ export const SecondPar = styled.div`
 export const ThirdPar = styled.div`
   transition: opacity ease-in-out 0.1s;
   opacity: ${(props) => (props.openWelcome === 'out' ? 1 : 0)};
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (min-height: 660px) {
     transition: opacity ease-in-out 0.3s 0.9s;
     opacity: ${(props) => (props.openWelcome === 'in' ? 1 : 0)};
+  }
+  @media (max-height: 350px) {
+    /* small phone horizontal */
+    display: none;
   }
 `;
