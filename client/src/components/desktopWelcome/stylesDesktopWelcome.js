@@ -3,11 +3,23 @@ import { motion } from 'framer-motion';
 
 export const Wrapper = styled(motion.section)`
   /* background: green; */
-  max-width: 20rem;
+  /* max-width: 20rem; */
   margin-left: -21rem;
 
   @media (max-width: 760px) {
     display: none;
+  }
+  @media (min-width: 1024px) {
+    margin-left: -31rem;
+  }
+  @media (min-width: 1440px) {
+    margin-left: -35rem;
+  }
+  @media (min-width: 2556px) {
+    margin-left: -40rem;
+  }
+  @media (min-width: 3500px) {
+    margin-left: -45rem;
   }
 `;
 export const WrapperH1 = styled.div`
@@ -31,6 +43,10 @@ export const WrapperText = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   max-width: 20rem;
+  @media (min-width: 2556px) {
+    max-width: 25rem;
+
+  }
 `;
 
 export const P = styled.p`

@@ -4,7 +4,7 @@ import { H1, WrapperH1, WrapperWelcome, P, NameWrapper, SecondPar, ThirdPar, P2 
 const Welcome = ({ openWelcome }) => {
   // openWelcome image center screen + scale + fade in animation
   return (
-    <WrapperWelcome>
+    <WrapperWelcome openWelcome={openWelcome}>
       <WrapperH1 openWelcome={openWelcome}>
         <NameWrapper>
           <H1>Marius</H1>

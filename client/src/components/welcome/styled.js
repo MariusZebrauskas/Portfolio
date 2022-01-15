@@ -15,6 +15,9 @@ export const WrapperWelcome = styled.article`
     transform: scale(50%);
     top: -4rem;
     left: -5rem;
+    /* remove all welcome + menu when pres X */
+    opacity: ${(props) => (props.openWelcome === 'out' ? 0 : 1)};
+    transition: opacity ease-in-out 0.3s;
   }
 `;
 export const WrapperH1 = styled.div`

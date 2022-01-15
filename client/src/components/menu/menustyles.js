@@ -8,7 +8,7 @@ export const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   width: 90%;
-  @media (min-width: 768px) and (min-height: 660px){
+  @media (min-width: 768px) and (min-height: 660px) {
     transform: scale(50%);
     bottom: -0.5rem;
     left: -5rem;
@@ -59,12 +59,20 @@ export const Li = styled.li`
     animation: ${(props) => (props.click ? puls : null)} 0.5s 1;
     animation-timing-function: ease-in-out;
     color: #e9ebed;
-    @media (min-width: 768px) and (min-height: 660px){
-    left: ${(props) =>
-      props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+    @media (min-width: 768px) and (min-height: 660px) {
+      left: ${(props) =>
+        props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+    }
+    @media (min-width: 1024px) and (min-height: 660px) {
+      left: ${(props) =>
+        props.aboutLeft ? '1.75rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+    }
+    @media (min-width: 2560px) and (min-height: 660px) {
+      left: ${(props) =>
+        props.aboutLeft ? '1.85rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+    }
   }
-  }
-  @media (min-width: 768px) and (min-height: 660px){
+  @media (min-width: 768px) and (min-height: 660px) {
     min-width: 6.5rem;
     opacity: ${(props) => (props.openWelcome === 'in' || props.openWelcome === 'deep' ? 1 : 0)};
     transition: ${(props) =>
@@ -76,7 +84,6 @@ export const Li = styled.li`
         ? 'opacity ease-in-out .3s .6s'
         : null};
   }
-
 `;
 export const AboutMeIcon = styled(AiOutlineFileDone)`
   font-size: ${(props) => props.theme.fontSize.icon};
@@ -97,7 +104,7 @@ export const Close = styled(MdOutlineClose)`
   position: absolute;
   font-size: 2rem;
   top: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '1rem')};
-  right: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '2.1rem')};
+  right: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '1rem')};
   z-index: 99999;
   opacity: ${(props) =>
     props.openwelcome === 'in' || props.openwelcome === 'deep'
@@ -126,7 +133,7 @@ export const Close = styled(MdOutlineClose)`
         : null};
     transition: transform ease-in-out 0.3s;
   }
-  @media (min-width: 768px) and (min-height: 660px){
+  @media (min-width: 768px) and (min-height: 660px) {
     font-size: 2rem;
   }
 `;
