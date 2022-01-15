@@ -8,7 +8,8 @@ const About = ({
   activeabout,
   activatemenu,
   openImgPortfolio,
-  openWelcome
+  openWelcome,
+  setAudioSound,
 }) => {
   const [click, setClick] = useState(false);
   const openMenuHandler = (e) => {
@@ -16,11 +17,12 @@ const About = ({
       return;
     }
     setClick(true);
-    // male active
+    // maenu active
     activatemenu(true, false, false);
-    adjustImg('small');
-    // make img bigest 
-    openImgPortfolio('deep');
+    adjustImg();
+    // make img bigest
+    openImgPortfolio('about');
+    setAudioSound('about');
   };
 
   useEffect(() => {
@@ -31,11 +33,30 @@ const About = ({
     }
   }, [click]);
   return (
-    <Li openWelcome={openWelcome} about="true" activeabout={activeabout} aboutLeft click={click} onClick={openMenuHandler}>
+    <Li
+      openWelcome={openWelcome}
+      about='true'
+      activeabout={activeabout}
+      aboutLeft
+      click={click}
+      onClick={openMenuHandler}
+    >
       <AboutMeIcon />
       <P>{data}</P>
     </Li>
   );
 };
+// Multimedia button click 23More info [+]
 
+// 00:00
+// 00:00
+
+// Button ClickMultimedia and UIMP3WAVadd to listZapSplatFollow
+// Standard License
+// Multimedia button click 24More info [+]
+
+// 00:00
+// 00:00
+
+// Button ClickMultimedia and UI
 export default About;

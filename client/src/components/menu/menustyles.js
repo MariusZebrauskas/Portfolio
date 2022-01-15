@@ -42,6 +42,28 @@ export const Li = styled.li`
   cursor: pointer;
   z-index: 2;
 
+  &:before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-style: solid;
+    border-color: #4000000;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    top: 0.5rem;
+    right: 0;
+    left: ${(props) =>
+      props.aboutLeft ? '1.7rem' : props.contact ? '1.2rem' : props.myWork ? '1.5rem' : null};
+    bottom: 0;
+    animation: ${(props) => (props.click ? puls : null)} 0.5s 1;
+    animation-timing-function: ease-in-out;
+    color: #e9ebed;
+  @media (min-width: 768px) {
+    left: ${(props) =>
+      props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+  }
+  }
   @media (min-width: 768px) {
     min-width: 6.5rem;
     opacity: ${(props) => (props.openWelcome === 'in' || props.openWelcome === 'deep' ? 1 : 0)};
@@ -55,24 +77,6 @@ export const Li = styled.li`
         : null};
   }
 
-  &:before {
-    content: '';
-    width: 1rem;
-    height: 1rem;
-    border-style: solid;
-    border-color: #4000000;
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0;
-    top: 0.5rem;
-    right: 0;
-    left: ${(props) =>
-      props.aboutLeft ? '1.7rem' : props.contact ? '1.2rem' : props.myWork ? '1.4rem' : null};
-    bottom: 0;
-    animation: ${(props) => (props.click ? puls : null)} 0.5s 1;
-    animation-timing-function: ease-in-out;
-    color: #e9ebed;
-  }
 `;
 export const AboutMeIcon = styled(AiOutlineFileDone)`
   font-size: ${(props) => props.theme.fontSize.icon};
@@ -92,10 +96,15 @@ export const P = styled.p`
 export const Close = styled(MdOutlineClose)`
   position: absolute;
   font-size: 2rem;
-  top: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '1rem')};
-  right: ${(props) => (props.openwelcome === 'deep' ? '0rem' : '1rem')};
+  top: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '1rem')};
+  right: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '2.1rem')};
   z-index: 99999;
-  opacity: ${(props) => (props.openwelcome === 'in' ? 1 : props.openwelcome === 'out' ? 0 : null)};
+  opacity: ${(props) =>
+    props.openwelcome === 'in' || props.openwelcome === 'deep'
+      ? 1
+      : props.openwelcome === 'out'
+      ? 0
+      : null};
   transform: ${(props) =>
     props.openwelcome === 'in' || props.openwelcome === 'deep'
       ? 'scale(50%)'

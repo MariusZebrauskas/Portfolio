@@ -10,6 +10,7 @@ const Contact = ({
   activatemenu,
   openWelcome,
   openImgPortfolio,
+  setAudioSound,
 }) => {
   const [click, setClick] = useState(false);
   const openMenuHandler = () => {
@@ -18,8 +19,9 @@ const Contact = ({
     }
     activatemenu(false, false, true);
     setClick(true);
-    adjustImg('small');
-    openImgPortfolio('deep');
+    adjustImg();
+    openImgPortfolio('contact');
+    setAudioSound('contact');
   };
   useEffect(() => {
     if (click) {

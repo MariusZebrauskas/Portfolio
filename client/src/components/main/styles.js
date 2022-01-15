@@ -9,7 +9,7 @@ export const Img = styled.section`
   background-size: cover;
   position: absolute;
   width: 100%;
-  height: ${(props) => (props.imghandler === 'large' ? '100vh' : '45vh')};
+  height: ${(props) => (props.openWelcome === 'out' ? '100vh' : '45vh')};
   transition: height ease-in-out 0.7s;
 
   &:after {

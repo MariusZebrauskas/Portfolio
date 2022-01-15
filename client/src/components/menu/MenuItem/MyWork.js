@@ -10,6 +10,7 @@ const MyWork = ({
   adjustImg,
   openWelcome,
   openImgPortfolio,
+  setAudioSound,
 }) => {
   const [click, setClick] = useState(false);
   const openMenuHandler = () => {
@@ -17,9 +18,10 @@ const MyWork = ({
       return;
     }
     setClick(true);
-    adjustImg('small');
+    adjustImg();
     activatemenu(false, true, false);
-    openImgPortfolio('deep');
+    openImgPortfolio('myWork');
+    setAudioSound('myWork');
   };
   useEffect(() => {
     if (click) {

@@ -13,6 +13,7 @@ const Menu = ({
   activeallmenu,
   openImgPortfolio,
   openWelcome,
+  setAudioSound,
 }) => {
   let animationTimer = 600;
 
@@ -25,6 +26,7 @@ const Menu = ({
         animationTimer={animationTimer}
         openImgPortfolio={openImgPortfolio}
         openWelcome={openWelcome}
+        setAudioSound={setAudioSound}
         data='About me'
       />
       <MyWork
@@ -34,8 +36,9 @@ const Menu = ({
         adjustImg={adjustImg}
         openWelcome={openWelcome}
         openImgPortfolio={openImgPortfolio}
-
         data='My Work'
+        setAudioSound={setAudioSound}
+
       />
       <Contact
         activecontact={activecontact}
@@ -44,8 +47,9 @@ const Menu = ({
         activatemenu={activatemenu}
         openWelcome={openWelcome}
         openImgPortfolio={openImgPortfolio}
-
         data='Contatc'
+        setAudioSound={setAudioSound}
+
       />
     </Wrapper>
   );
