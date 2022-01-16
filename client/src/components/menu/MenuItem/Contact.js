@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Li, P, ContatcIcon } from '../menustyles';
 
@@ -31,16 +32,18 @@ const Contact = ({
     }
   }, [click]);
   return (
-    <Li
-      activecontact={activecontact}
-      openWelcome={openWelcome}
-      contact
-      click={click}
-      onClick={openMenuHandler}
-    >
-      <ContatcIcon />
-      <P>{data}</P>
-    </Li>
+    <Link to="contatc">
+      <Li
+        activecontact={activecontact}
+        openWelcome={openWelcome}
+        contact
+        click={click}
+        onClick={openMenuHandler}
+      >
+        <ContatcIcon />
+        <P>{data}</P>
+      </Li>
+    </Link>
   );
 };
 

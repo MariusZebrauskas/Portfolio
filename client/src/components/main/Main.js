@@ -3,6 +3,8 @@ import Menu from '../menu/Menu';
 import { Close } from '../menu/menustyles';
 import Welcome from '../welcome/Welcome';
 import { Bottom, Img, Left } from './styles';
+import { Link } from 'react-router-dom';
+
 const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   const [activeabout, togglerabout] = useState(false);
   const [activework, togglerwork] = useState(false);
@@ -76,7 +78,9 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   return (
     <Img openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>
       <Welcome openWelcome={openWelcome} />
-      <Close openwelcome={openWelcome} onClick={() => openImgPortfolio('out')} />
+      <Link to="/">
+        <Close openwelcome={openWelcome} onClick={() => openImgPortfolio('out')} />
+      </Link>
       <Menu
         activework={activework}
         activeabout={activeabout}

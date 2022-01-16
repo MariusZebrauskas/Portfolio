@@ -5,9 +5,6 @@ export const Body = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 768px) {
-    /* margin: 0 ${(props) => props.theme.margin.mainWrapper}; */
-  }
 `;
 
 export const Wrapper = styled.div`
@@ -15,7 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  @media (min-width: 768px) and (min-height: 660px){
+  @media (min-width: 768px) and (min-height: 660px) {
     width: 90%;
     margin: ${(props) =>
       props.openWelcome === 'out'
@@ -29,8 +26,22 @@ export const Wrapper = styled.div`
   transition: margin ease-in 0.3s;
 `;
 export const ContentWrapper = styled.section`
-  margin: 10rem 0 0 0;
-  background-color: #3333;
+  margin: 46vh 0 0 0;
   width: 100%;
-  height: 30vh;
+  padding: 2rem;
+
+  @media (min-width: 768px) {
+    width: 710.15px;
+    padding: 1rem;
+    margin: 3rem 0 0 0;
+  }
+  @media (min-width: 1024px) {
+    margin: 4rem 0 0 0;
+  }
+  @media (min-width: 1440px) {
+    margin: 5rem 0 0 0;
+  }
+  @media (min-width: 2456px) {
+    margin: 6rem 0 0 0;
+  }
 `;

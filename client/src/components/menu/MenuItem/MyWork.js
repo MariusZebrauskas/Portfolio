@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Li, P, MyWorkIcon } from '../menustyles';
 
@@ -31,16 +32,18 @@ const MyWork = ({
     }
   }, [click]);
   return (
-    <Li
-      openWelcome={openWelcome}
-      activework={activework}
-      myWork
-      click={click}
-      onClick={openMenuHandler}
-    >
-      <MyWorkIcon />
-      <P>{data}</P>
-    </Li>
+    <Link to='/mywork'>
+      <Li
+        openWelcome={openWelcome}
+        activework={activework}
+        myWork
+        click={click}
+        onClick={openMenuHandler}
+      >
+        <MyWorkIcon />
+        <P>{data}</P>
+      </Li>
+    </Link>
   );
 };
 

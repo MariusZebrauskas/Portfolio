@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AboutMeIcon, Li, P } from '../menustyles';
+import { Link } from 'react-router-dom';
 
 const About = ({
   data,
@@ -33,17 +34,19 @@ const About = ({
     }
   }, [click]);
   return (
-    <Li
-      openWelcome={openWelcome}
-      about='true'
-      activeabout={activeabout}
-      aboutLeft
-      click={click}
-      onClick={openMenuHandler}
-    >
-      <AboutMeIcon />
-      <P>{data}</P>
-    </Li>
+    <Link to='/about'>
+      <Li
+        openWelcome={openWelcome}
+        about='true'
+        activeabout={activeabout}
+        aboutLeft
+        click={click}
+        onClick={openMenuHandler}
+      >
+        <AboutMeIcon />
+        <P>{data}</P>
+      </Li>
+    </Link>
   );
 };
 // Multimedia button click 23More info [+]
