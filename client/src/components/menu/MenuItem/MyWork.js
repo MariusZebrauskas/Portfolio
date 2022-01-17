@@ -19,7 +19,7 @@ const MyWork = ({
       return;
     }
     setClick(true);
-    adjustImg();
+    // adjustImg();
     activatemenu(false, true, false);
     openImgPortfolio('myWork');
     setAudioSound('myWork');

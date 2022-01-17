@@ -32,15 +32,18 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   };
   // chek users window size
   const [mediaQuery, setMediaQuery] = useState(window.innerWidth);
+  const [mediaQueryHeight, setMediaQueryHeight] = useState(window.innerHeight);
   useEffect(() => {
     const trackWidth = () => {
       setMediaQuery(window.innerWidth);
+      setMediaQueryHeight(window.innerHeight);
     };
+    console.log(mediaQueryHeight)
     window.addEventListener('resize', trackWidth);
     return () => {
       window.removeEventListener('resize', trackWidth);
     };
-  }, [mediaQuery]);
+  }, [mediaQuery,mediaQueryHeight]);
   // controls img size + position + scale
   const openImgPortfolio = (x) => {
     if ((x === 'out' && openWelcome === 'in') || (x === 'out' && openWelcome === 'deep')) {
@@ -51,7 +54,7 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
       activatemenu(false, false, false);
       return setOpenWelcome('out');
     }
-    if (x === 'in' && openWelcome === 'out' && mediaQuery >= 768) {
+    if (x === 'in' && openWelcome === 'out' && mediaQuery >= 768 && mediaQueryHeight >= 660 ) {
       // click on img on plancet +++
       setAudioSound('onImg');
       return setOpenWelcome('in');
@@ -64,7 +67,9 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
       x === 'about' ||
       x === 'myWork' ||
       (x === 'contact' && openWelcome === 'in') ||
-      openWelcome === 'out'
+      x === 'about' ||
+      x === 'myWork' ||
+      (x === 'contact' && openWelcome === 'out')
     ) {
       // click on about,myWork or Contact
       return setOpenWelcome('deep');
@@ -78,7 +83,7 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   return (
     <Img openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>
       <Welcome openWelcome={openWelcome} />
-      <Link to="/">
+      <Link to='/'>
         <Close openwelcome={openWelcome} onClick={() => openImgPortfolio('out')} />
       </Link>
       <Menu

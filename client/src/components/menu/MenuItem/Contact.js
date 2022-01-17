@@ -20,10 +20,12 @@ const Contact = ({
     }
     activatemenu(false, false, true);
     setClick(true);
-    adjustImg();
+    // adjustImg();
     openImgPortfolio('contact');
+    // audio turn on
     setAudioSound('contact');
   };
+// reset animatio
   useEffect(() => {
     if (click) {
       setTimeout(() => {
@@ -31,8 +33,9 @@ const Contact = ({
       }, animationTimer);
     }
   }, [click]);
+
   return (
-    <Link to="contatc">
+    <Link to="contatc" >
       <Li
         activecontact={activecontact}
         openWelcome={openWelcome}

@@ -35,6 +35,11 @@ export const ContentWrapper = styled.section`
     padding: 1rem;
     margin: 3rem 0 0 0;
   }
+  @media  (max-height: 400px) {
+    width: 710.15px;
+    padding: 1rem;
+    margin: -2rem 0 0 0;
+  }
   @media (min-width: 1024px) {
     margin: 4rem 0 0 0;
   }

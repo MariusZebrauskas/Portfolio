@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { AiOutlineFileDone, AiOutlinePaperClip, AiOutlineMail } from 'react-icons/ai';
 import { MdOutlineClose } from 'react-icons/md';
+
 export const Wrapper = styled.nav`
   position: absolute;
   bottom: ${(props) => props.theme.padding.small};
@@ -39,9 +40,9 @@ export const Li = styled.li`
   flex-direction: column;
   padding-right: ${(props) => (props.noPadding ? null : props.theme.padding.small)};
   position: relative;
+  z-index: 999;
   cursor: pointer;
-  z-index: 2;
-
+  /* animation */
   &:before {
     content: '';
     width: 1rem;
@@ -59,6 +60,11 @@ export const Li = styled.li`
     animation: ${(props) => (props.click ? puls : null)} 0.5s 1;
     animation-timing-function: ease-in-out;
     color: #e9ebed;
+    @media (max-width: 280px) {
+      left: ${(props) =>
+        props.aboutLeft ? '1.1rem' : props.contact ? '.6rem' : props.myWork ? '.8rem' : null};
+      
+    }
     @media (min-width: 768px) and (min-height: 660px) {
       left: ${(props) =>
         props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
@@ -87,17 +93,33 @@ export const Li = styled.li`
 `;
 export const AboutMeIcon = styled(AiOutlineFileDone)`
   font-size: ${(props) => props.theme.fontSize.icon};
+  @media (max-width: 280px) {
+    min-width: 4.5rem;
+    margin-left: -0.7rem;
+  }
 `;
 export const MyWorkIcon = styled(AiOutlinePaperClip)`
   font-size: ${(props) => props.theme.fontSize.icon};
+  @media (max-width: 280px) {
+    min-width: 4.5rem;
+    margin-left: -1.1rem;
+  }
 `;
 export const ContatcIcon = styled(AiOutlineMail)`
   font-size: ${(props) => props.theme.fontSize.icon};
+  @media (max-width: 280px) {
+    min-width: 4.5rem;
+    margin-left: -1.5rem;
+  }
 `;
 export const P = styled.p`
   font-size: ${(props) => props.theme.fontSize.p};
   letter-spacing: ${(props) => props.theme.letterSpacing.p};
   margin-top: ${(props) => props.theme.padding.smallest};
+  @media (max-width: 280px) {
+    min-width: 4.5rem;
+    margin-left: -0.7rem;
+  }
 `;
 
 export const Close = styled(MdOutlineClose)`
@@ -133,6 +155,12 @@ export const Close = styled(MdOutlineClose)`
         : null};
     transition: transform ease-in-out 0.3s;
   }
+
+  @media (max-width: 280px) {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
   @media (min-width: 768px) and (min-height: 660px) {
     font-size: 2rem;
   }

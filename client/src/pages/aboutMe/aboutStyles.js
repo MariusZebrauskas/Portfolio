@@ -27,6 +27,7 @@ export const AboutMeH1 = styled.h1`
   font-size: ${(props) => props.theme.fontSize.h1b};
   letter-spacing: ${(props) => props.theme.letterSpacing.small};
   color: ${(props) => props.theme.color.forth};
+  
 `;
 export const ResponsiveWebsitesWrapper = styled.section`
   margin-top: ${(props) => props.theme.margin.small};
@@ -52,6 +53,10 @@ export const ResponsiveWebsites = styled.p`
     bottom: 0;
     background-color: #fdf854;
     z-index: -2;
+  }
+  @media (max-width: 280px) {
+  font-size: ${(props) => props.theme.fontSize.small};
+
   }
 `;
 export const Description = styled.p`

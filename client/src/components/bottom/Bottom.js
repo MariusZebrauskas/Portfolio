@@ -4,7 +4,7 @@ import LogoMZ from './LogoMZ';
 
 const email = 'zebrauskas.mar@gmail.com';
 
-const Bottom = ({openWelcome}) => {
+const Bottom = ({ openWelcome }) => {
   const preventDefaultActions = (event) => {
     return event.preventDefault();
   };

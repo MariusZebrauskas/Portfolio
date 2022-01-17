@@ -19,6 +19,7 @@ function App() {
   // FIXME: remove shadows when in or deep fix close + click  location
   return (
     <BrowserRouter>
+    {/* lan survey icon  needed */}
       <Body>
         <Audio setAudioSound={setAudioSound} audioSound={audioSound} />
         <Wrapper openWelcome={openWelcome}>

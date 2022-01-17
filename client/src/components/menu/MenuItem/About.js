@@ -20,7 +20,7 @@ const About = ({
     setClick(true);
     // maenu active
     activatemenu(true, false, false);
-    adjustImg();
+    // adjustImg();
     // make img bigest
     openImgPortfolio('about');
     setAudioSound('about');

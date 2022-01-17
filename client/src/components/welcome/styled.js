@@ -65,9 +65,9 @@ export const P2 = styled(P)`
 `;
 
 export const SecondPar = styled.div`
-  @media (min-width: 768px) and (min-height: 660px) {
+  @media (min-width: 768px) and (max-height: 461px) {
     opacity: ${(props) =>
-      props.openWelcome === 'out' ? 0 : props.openWelcome === 'in' ? 1 : null};
+      props.openWelcome === 'out' ? 1 : props.openWelcome === 'in' ? 1 : 0};
     transition: opacity ease-in-out 0.3s 0.6s;
   }
 `;

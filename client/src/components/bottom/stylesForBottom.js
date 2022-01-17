@@ -10,6 +10,7 @@ export const Wrapper = styled.section`
   padding: 1rem 1rem 1rem 0;
   position: relative;
   bottom: -100%;
+  z-index:-99;
   opacity: ${(props) => (props.openWelcome === 'deep' ? 1 : 0)};
    @media (min-width: 400px) {
     padding: 1rem 1rem 1rem 1rem;
