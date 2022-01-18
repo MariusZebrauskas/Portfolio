@@ -9,6 +9,10 @@ export const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   width: 90%;
+
+  @media (min-width: 280px) {
+    left: 25px;
+  }
   @media (min-width: 768px) and (min-height: 660px) {
     transform: scale(50%);
     bottom: -0.5rem;
@@ -63,19 +67,18 @@ export const Li = styled.li`
     @media (max-width: 280px) {
       left: ${(props) =>
         props.aboutLeft ? '1.1rem' : props.contact ? '.6rem' : props.myWork ? '.8rem' : null};
-      
     }
     @media (min-width: 768px) and (min-height: 660px) {
       left: ${(props) =>
-        props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.7rem' : props.contact ? '2.65rem' : props.myWork ? '1.8rem' : null};
     }
     @media (min-width: 1024px) and (min-height: 660px) {
       left: ${(props) =>
-        props.aboutLeft ? '1.75rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.75rem' : props.contact ? '2.65rem' : props.myWork ? '1.8rem' : null};
     }
     @media (min-width: 2560px) and (min-height: 660px) {
       left: ${(props) =>
-        props.aboutLeft ? '1.85rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.85rem' : props.contact ? '2.65rem' : props.myWork ? '1.8rem' : null};
     }
   }
   @media (min-width: 768px) and (min-height: 660px) {
@@ -156,12 +159,39 @@ export const Close = styled(MdOutlineClose)`
     transition: transform ease-in-out 0.3s;
   }
 
-  @media (max-width: 280px) {
-    top: 0.5rem;
-    right: 0.5rem;
+  @media (min-width: 280px) {
+    right: 1rem;
+  }
+  @media (min-width: 320px) {
+    right: 3rem;
+  }
+  @media (min-width: 320px) {
+    right: 2rem;
+  }
+  @media (min-width: 375px) {
+    right: 1rem;
+  }
+  @media (min-width: 412px) {
+    right: 1rem;
   }
 
+  @media (min-width: 653px) and (min-height: 280px) {
+    right: 1rem;
+
+  }
+  @media (min-width: 720px) and (min-height: 540px) {
+    right: 1rem;
+
+  }
+  @media (min-width: 740px) and (min-height: 360px) {
+    right: 1rem;
+
+  }
   @media (min-width: 768px) and (min-height: 660px) {
     font-size: 2rem;
+  }
+  @media (min-width: 820px) {
+    font-size: 2rem;
+    right: 1rem;
   }
 `;

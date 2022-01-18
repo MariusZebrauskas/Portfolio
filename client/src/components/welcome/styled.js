@@ -65,6 +65,11 @@ export const P2 = styled(P)`
 `;
 
 export const SecondPar = styled.div`
+  @media (max-height: 375px) {
+    opacity: ${(props) =>
+      props.openWelcome === 'out' ? 1 : 0};
+    transition: opacity ease-in-out 0.3s ;
+  }
   @media (min-width: 768px) and (max-height: 461px) {
     opacity: ${(props) =>
       props.openWelcome === 'out' ? 1 : props.openWelcome === 'in' ? 1 : 0};

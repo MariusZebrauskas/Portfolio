@@ -38,12 +38,11 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
       setMediaQuery(window.innerWidth);
       setMediaQueryHeight(window.innerHeight);
     };
-    console.log(mediaQueryHeight)
     window.addEventListener('resize', trackWidth);
     return () => {
       window.removeEventListener('resize', trackWidth);
     };
-  }, [mediaQuery,mediaQueryHeight]);
+  }, [mediaQuery, mediaQueryHeight]);
   // controls img size + position + scale
   const openImgPortfolio = (x) => {
     if ((x === 'out' && openWelcome === 'in') || (x === 'out' && openWelcome === 'deep')) {
@@ -54,7 +53,7 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
       activatemenu(false, false, false);
       return setOpenWelcome('out');
     }
-    if (x === 'in' && openWelcome === 'out' && mediaQuery >= 768 && mediaQueryHeight >= 660 ) {
+    if (x === 'in' && openWelcome === 'out' && mediaQuery >= 768 && mediaQueryHeight >= 660) {
       // click on img on plancet +++
       setAudioSound('onImg');
       return setOpenWelcome('in');
@@ -76,12 +75,15 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
     }
   };
 
-  // FIXME: work on remeliai shadows phone bugs,  Add music sounds
   useEffect(() => {
     console.log('openWelcomemain componenet says : ', openWelcome);
   });
+
   return (
-    <Img openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>
+    <Img
+      openWelcome={openWelcome}
+      onClick={() => openImgPortfolio('in')}
+    >
       <Welcome openWelcome={openWelcome} />
       <Link to='/'>
         <Close openwelcome={openWelcome} onClick={() => openImgPortfolio('out')} />
