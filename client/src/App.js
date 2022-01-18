@@ -16,7 +16,9 @@ function App() {
   const [openWelcome, setOpenWelcome] = useState('out');
   // controls mp3 audio
   const [audioSound, setAudioSound] = useState(null);
-  // FIXME: remove shadows when in or deep fix close + click  location
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
   return (
     <BrowserRouter>
     {/* lan survey icon  needed */}
@@ -30,7 +32,7 @@ function App() {
             setOpenWelcome={setOpenWelcome}
           />
         </Wrapper>
-        <ContentWrapper>
+        <ContentWrapper openWelcome={openWelcome} >
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
             <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />

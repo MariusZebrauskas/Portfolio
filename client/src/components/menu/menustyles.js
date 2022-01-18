@@ -42,7 +42,7 @@ export const Li = styled.li`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: ${(props) => (props.noPadding ? null : props.theme.padding.small)};
+  padding-right: ${(props) => (props.contact ? null : props.theme.padding.small)};
   position: relative;
   z-index: 999;
   cursor: pointer;
