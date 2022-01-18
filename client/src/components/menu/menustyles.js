@@ -80,6 +80,7 @@ export const Li = styled.li`
       left: ${(props) =>
         props.aboutLeft ? '1.85rem' : props.contact ? '2.65rem' : props.myWork ? '1.8rem' : null};
     }
+    
   }
   @media (min-width: 768px) and (min-height: 660px) {
     min-width: 6.5rem;
@@ -177,15 +178,12 @@ export const Close = styled(MdOutlineClose)`
 
   @media (min-width: 653px) and (min-height: 280px) {
     right: 1rem;
-
   }
   @media (min-width: 720px) and (min-height: 540px) {
     right: 1rem;
-
   }
   @media (min-width: 740px) and (min-height: 360px) {
     right: 1rem;
-
   }
   @media (min-width: 768px) and (min-height: 660px) {
     font-size: 2rem;

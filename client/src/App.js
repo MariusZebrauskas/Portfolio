@@ -33,8 +33,8 @@ function App() {
         <ContentWrapper>
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
-            <Route path='/contatc' exsact element={<Contatc />} />
-            <Route path='/mywork' exsact element={<MyWork />} />
+            <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />
+            <Route path='/mywork' exsact element={<MyWork setOpenWelcome={setOpenWelcome}/>} />
           </Routes>
         </ContentWrapper>
         <Bottom openWelcome={openWelcome} />
