@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Menu from '../menu/Menu';
 import { Close } from '../menu/menustyles';
 import Welcome from '../welcome/Welcome';
 import { Bottom, Img, Left } from './styles';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
 
 const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
+  const imgRef = useRef();
   const [activeabout, togglerabout] = useState(false);
   const [activework, togglerwork] = useState(false);
   const [activecontact, togglercontatc] = useState(false);
@@ -78,12 +80,31 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   useEffect(() => {
     console.log('openWelcomemain componenet says : ', openWelcome);
   });
+  useEffect(() => {
+    // animation bigger with
+    if (mediaQuery >= 768 && mediaQueryHeight >= 660) {
+      if (openWelcome === 'out') {
+        gsap.to(imgRef.current, {
+          minWidth: '350',
+        });
+      }
+      if (openWelcome === 'in') {
+        gsap.to(imgRef.current, {
+          minWidth: '350',
+        });
+      }
+      if (openWelcome === 'deep') {
+        gsap.to(imgRef.current, {
+          minWidth: '380',
+          duration: 2,
+          ease: 'power4.out',
+        });
+      }
+    }
+  }, [openWelcome]);
 
   return (
-    <Img
-      openWelcome={openWelcome}
-      onClick={() => openImgPortfolio('in')}
-    >
+    <Img ref={imgRef} openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>
       <Welcome openWelcome={openWelcome} />
       <Link to='/'>
         <Close openwelcome={openWelcome} onClick={() => openImgPortfolio('out')} />
