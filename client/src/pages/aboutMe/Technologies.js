@@ -24,6 +24,7 @@ import {
   DoubleIconWrapper,
   StyledomponentsIcon,
   TechnologiesWrapper,
+  GsapIcon,
 } from './aboutStyles';
 
 const Technologies = () => {
@@ -74,7 +75,7 @@ const Technologies = () => {
         {
           duration: 0.1,
           opacity: 1,
-          y: '2rem',
+          y: '0rem',
           scale: 1,
           ease: 'expo.out',
           stagger: 0.1,
@@ -117,9 +118,10 @@ const Technologies = () => {
                 <FramerMotionIcon />
                 <SingleIconHeader>Framer Motion</SingleIconHeader>
               </SingleIconWrapper>
+
               <SingleIconWrapper className='iconsFade'>
-                <ReactIcon />
-                <SingleIconHeader>Context Api</SingleIconHeader>
+                <GsapIcon />
+                <SingleIconHeader>Green Sock</SingleIconHeader>
               </SingleIconWrapper>
             </DoubleIconWrapper>
             <DoubleIconWrapper>
@@ -127,9 +129,10 @@ const Technologies = () => {
                 <ReactIcon />
                 <SingleIconHeader>React Router Dom</SingleIconHeader>
               </SingleIconWrapper>
+
               <SingleIconWrapper className='iconsFade'>
-                <HTML5Icon />
-                <SingleIconHeader>HTML 5</SingleIconHeader>
+                <ReactIcon />
+                <SingleIconHeader>Context Api</SingleIconHeader>
               </SingleIconWrapper>
             </DoubleIconWrapper>
             <DoubleIconWrapper>
@@ -142,10 +145,16 @@ const Technologies = () => {
                 <SingleIconHeader>SASS</SingleIconHeader>
               </SingleIconWrapper>
             </DoubleIconWrapper>
-            <SingleIconWrapper className='iconsFade'>
-              <JSIcon />
-              <SingleIconHeader>Java Script</SingleIconHeader>
-            </SingleIconWrapper>
+            <DoubleIconWrapper>
+              <SingleIconWrapper className='iconsFade'>
+                <JSIcon />
+                <SingleIconHeader>Java Script</SingleIconHeader>
+              </SingleIconWrapper>
+              <SingleIconWrapper className='iconsFade'>
+                <HTML5Icon />
+                <SingleIconHeader>HTML 5</SingleIconHeader>
+              </SingleIconWrapper>
+            </DoubleIconWrapper>
           </IconWrapper>
         </Front>
 

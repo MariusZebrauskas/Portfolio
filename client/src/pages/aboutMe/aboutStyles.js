@@ -11,6 +11,7 @@ import {
   SiFirebase,
   SiGithub,
   SiHeroku,
+  SiGreensock,
 } from 'react-icons/si';
 import { MdOutlineSchool } from 'react-icons/md';
 import { CgGym } from 'react-icons/cg';
@@ -262,6 +263,10 @@ export const MotoIcon = styled(BiLayerPlus)`
   }
 `;
 export const EducationIcon = styled(MdOutlineSchool)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.fifth};
+`;
+export const GsapIcon = styled(SiGreensock)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;

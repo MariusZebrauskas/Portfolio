@@ -12,7 +12,7 @@ export const theme = {
     small: 'calc(1rem + .1vw)',
     icon: 'calc(1.7rem + .1vw)',
     h1: 'calc(3rem + .1vw)',
-    h1b: 'calc(1.5rem + .1vw)',
+    h1b: 'calc(1.5rem + .4vw)',
   },
   padding: {
     small: '2rem',
@@ -38,5 +38,6 @@ export const theme = {
     top: '12.5rem 0 0 0',
     small: '3rem',
     smaller: '1.7rem',
+    smaller2: '1rem',
   },
 };

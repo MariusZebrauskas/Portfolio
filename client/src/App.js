@@ -9,19 +9,19 @@ import Contatc from './pages/contact/Contatc';
 import MyWork from './pages/myWork/MyWork';
 import Home from './pages/homeTest/Home';
 import Bottom from './components/bottom/Bottom';
-
+import MusicSchoolNotes from './pages/musicschoolnotes/MusicSchoolNotes';
 
 function App() {
   // controls img scale + center
   const [openWelcome, setOpenWelcome] = useState('out');
   // controls mp3 audio
   const [audioSound, setAudioSound] = useState(null);
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys 
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
   return (
     <BrowserRouter>
-    {/* lan survey icon  needed */}
+      {/* lan survey icon  needed */}
       <Body>
         <Audio setAudioSound={setAudioSound} audioSound={audioSound} />
         <Wrapper openWelcome={openWelcome}>
@@ -32,11 +32,16 @@ function App() {
             setOpenWelcome={setOpenWelcome}
           />
         </Wrapper>
-        <ContentWrapper openWelcome={openWelcome} >
+        <ContentWrapper openWelcome={openWelcome}>
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
             <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />
-            <Route path='/mywork' exsact element={<MyWork setOpenWelcome={setOpenWelcome}/>} />
+            <Route path='/mywork' exsact element={<MyWork setOpenWelcome={setOpenWelcome} />} />
+            <Route
+              path='/mywork/musicschoolnotes'
+              exsact
+              element={<MusicSchoolNotes setOpenWelcome={setOpenWelcome} />}
+            />
           </Routes>
         </ContentWrapper>
         <Bottom openWelcome={openWelcome} />
