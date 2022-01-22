@@ -70,15 +70,15 @@ export const Li = styled.li`
     }
     @media (min-width: 768px) and (min-height: 660px) {
       left: ${(props) =>
-        props.aboutLeft ? '1.7rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.7rem' : props.contact ? '2.7rem' : props.myWork ? '1.8rem' : null};
     }
     @media (min-width: 1024px)  {
       left: ${(props) =>
-        props.aboutLeft ? '1.75rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.75rem' : props.contact ? '2.7rem' : props.myWork ? '1.8rem' : null};
     }
     @media (min-width: 2560px)  {
       left: ${(props) =>
-        props.aboutLeft ? '1.85rem' : props.contact ? '1.8rem' : props.myWork ? '1.8rem' : null};
+        props.aboutLeft ? '1.85rem' : props.contact ? '2.7rem' : props.myWork ? '1.8rem' : null};
     }
     
   }

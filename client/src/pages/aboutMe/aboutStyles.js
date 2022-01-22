@@ -27,7 +27,6 @@ export const AboutMeH1 = styled.h1`
   font-size: ${(props) => props.theme.fontSize.h1b};
   letter-spacing: ${(props) => props.theme.letterSpacing.small};
   color: ${(props) => props.theme.color.forth};
-  
 `;
 export const ResponsiveWebsitesWrapper = styled.section`
   margin-top: ${(props) => props.theme.margin.small};
@@ -42,6 +41,7 @@ export const ResponsiveWebsites = styled.p`
   position: relative;
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
+  opacity: 0;
 
   &:before {
     content: '';
@@ -55,8 +55,7 @@ export const ResponsiveWebsites = styled.p`
     z-index: -2;
   }
   @media (max-width: 280px) {
-  font-size: ${(props) => props.theme.fontSize.small};
-
+    font-size: ${(props) => props.theme.fontSize.small};
   }
 `;
 export const Description = styled.p`
@@ -67,6 +66,7 @@ export const Description = styled.p`
   text-align: justify;
   text-indent: 2rem;
   line-height: 1.5rem;
+  opacity: 0;
   color: ${(props) => props.theme.color.forth};
 `;
 
@@ -154,6 +154,7 @@ export const HerokuIcon = styled(SiHeroku)`
 export const IconHeder = styled.i`
   color: ${(props) => props.theme.color.forth};
   letter-spacing: 0.15rem;
+  opacity: 0;
 `;
 
 export const Front = styled.section`
@@ -162,7 +163,8 @@ export const Front = styled.section`
   align-items: center;
   @media (min-width: 768px) {
     width: 100%;
-    border-right: 0.125rem dashed #3333;
+    /* border-right: 0.125rem dashed #3333;
+    transition:border-right 5s ease-in; */
   }
 `;
 export const Back = styled.section`
@@ -188,6 +190,7 @@ export const SingleIconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  opacity: 0;
 `;
 export const DoubleIconWrapper = styled.div`
   display: flex;
@@ -253,12 +256,10 @@ export const LanguagesIcon = styled(FaLanguage)`
 export const MotoIcon = styled(BiLayerPlus)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
-  margin-top:${props => props.last ? "1.5rem" : null};
+  margin-top: ${(props) => (props.last ? '1.5rem' : null)};
   @media (min-width: 375px) {
-    margin-top:0;
-
+    margin-top: 0;
   }
-
 `;
 export const EducationIcon = styled(MdOutlineSchool)`
   font-size: ${(props) => props.theme.fontSize.icon};
