@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   transition: margin ease-in 0.3s;
 `;
 export const ContentWrapper = styled.section`
-  margin: 46vh 0 0 0;
+
   margin: ${(props) => (props.openWelcome === 'deep' ? '46vh 0 0 0' : 0)};
   width: 100%;
   padding: 2rem;

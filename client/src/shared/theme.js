@@ -9,6 +9,7 @@ export const theme = {
   fontSize: {
     p: 'calc(.9rem + .1vw)',
     p2: 'calc(1.1rem + .1vw)',
+    p3: 'calc(1.1rem + .2vw)',
     small: 'calc(1rem + .1vw)',
     icon: 'calc(1.7rem + .1vw)',
     h1: 'calc(3rem + .1vw)',

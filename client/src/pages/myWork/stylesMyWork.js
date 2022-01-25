@@ -17,6 +17,7 @@ export const MyWorkH1 = styled.h1`
 
 export const WrapperCompleateProjects = styled.section`
   margin-top: ${(props) => props.theme.margin.small};
+  margin-bottom: 10rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -28,12 +29,14 @@ export const SliderWrapper = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  bottom: -100%;
+  /* bottom: -60%; */
+  transform: translateY(100%);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #14151363;
-  opacity: 0;
+  flex-direction: column;
+  background-color: #141513c9;
+  opacity: 1;
   transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s;
 `;
 export const OlgosWebImg = styled.div`
@@ -49,12 +52,20 @@ export const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 10rem;
-  background: red;
-
+  /* &:hover > .blur {
+    filter: blur(5px);
+  } */
+  /*
   &:hover ${SliderWrapper} {
     bottom: 0;
     opacity: 1;
-    transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.4s;
+    transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.4s.;
+  } */
+  @media (min-width: 425px) {
+    height: 15rem;
+  }
+  @media (min-width: 768px) {
+    height: 20rem;
   }
 `;
 
@@ -77,17 +88,22 @@ export const DescriotionWrapper = styled.section`
 `;
 
 export const H4 = styled.h4`
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1rem;
   color: ${(props) => props.theme.color.primary};
-  /* -webkit-text-stroke: 1px white; */
-  /* background-color: green; */
-  padding: 0.5rem 0.7rem;
+  padding: 0.5em 1em;
   border-radius: 0.2rem;
   font-weight: 400;
-  border: 1px solid #c4c5b336;
-  background: #3d3f40ad;
+  border: 1px solid #e8ee8836;
+  background: #181816;
   text-shadow: 1px 2px 0px #000000;
+  @media (min-width: 425px) {
+    font-size: 1.05rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+ 
 `;
 
 export const P = styled.p`
@@ -121,5 +137,37 @@ export const Header = styled.h4`
     bottom: 0;
     background-color: #fdf854;
     z-index: -2;
+  }
+`;
+export const PWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: -0.3rem;
+  @media (min-width: 425px) {
+    margin: 0;
+  }
+  @media (min-width: 425px) {
+    margin: 1rem;
+  }
+`;
+
+export const P2 = styled(P)`
+  color: #e9ebed;
+  font-size: calc(0.7rem + 0.1vw);
+  font-weight: 500;
+  text-shadow: 2px 2px 2px #000000;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  text-indent: 0;
+  @media (min-width: 425px) {
+    font-size: ${(props) => props.theme.fontSize.p};
+    margin-top: 0.2rem;
+  }
+  @media (min-width: 768px) {
+    margin-top: 0.3rem;
+    font-size: 1rem;
   }
 `;

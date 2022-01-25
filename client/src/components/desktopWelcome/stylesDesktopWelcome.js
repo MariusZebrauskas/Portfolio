@@ -5,9 +5,9 @@ export const Wrapper = styled(motion.section)`
   /* background: green; */
   /* max-width: 20rem; */
   margin-left: -21rem;
-
-  @media (max-width: 760px) {
-    display: none;
+  display: none;
+  @media (min-width: 760px) {
+    display: block;
   }
   @media (min-width: 1024px) {
     margin-left: -31rem;
@@ -45,7 +45,6 @@ export const WrapperText = styled.div`
   max-width: 20rem;
   @media (min-width: 2556px) {
     max-width: 25rem;
-
   }
 `;
 

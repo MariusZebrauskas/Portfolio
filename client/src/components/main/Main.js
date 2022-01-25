@@ -80,28 +80,7 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   useEffect(() => {
     console.log('openWelcomemain componenet says : ', openWelcome);
   });
-  useEffect(() => {
-    // animation bigger with
-    if (mediaQuery >= 768 && mediaQueryHeight >= 660) {
-      if (openWelcome === 'out') {
-        gsap.to(imgRef.current, {
-          minWidth: '350',
-        });
-      }
-      if (openWelcome === 'in') {
-        gsap.to(imgRef.current, {
-          minWidth: '350',
-        });
-      }
-      if (openWelcome === 'deep') {
-        gsap.to(imgRef.current, {
-          minWidth: '380',
-          duration: 2,
-          ease: 'power4.out',
-        });
-      }
-    }
-  }, [openWelcome]);
+
 
   return (
     <Img ref={imgRef} openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>
