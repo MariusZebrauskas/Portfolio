@@ -34,9 +34,13 @@ const MyWork = ({ setOpenWelcome }) => {
     });
   }, []);
 
+// timer stops overlaping animation wich brokeanimation
+// timer runs 1 animation at the time
   let timer = false;
 
   const onMouseEnter = () => {
+// timer stops overlaping animation wich brokeanimation
+// timer runs 1 animation at the time
     if (timer) {
       return;
     }
@@ -50,6 +54,8 @@ const MyWork = ({ setOpenWelcome }) => {
   };
   // blure background
   const onMouseLeave = () => {
+    // timer stops overlaping animation wich brokeanimation
+// timer runs 1 animation at the time
     if (timer) {
       return;
     }

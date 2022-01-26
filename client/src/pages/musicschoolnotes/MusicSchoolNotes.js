@@ -3,56 +3,50 @@ import React from 'react';
 const MusicSchoolNotes = () => {
   return (
     <div>
-      <h1>www.musicschoolnotes.com Is A Full Stack Aplication</h1>
       <div>
         <h1>Short Intro</h1>
         <p>
-          First of all I`m the only developer who worked on this project, every line of code was
-          written on my own. Using pictures of albums I designed the website design on the fly.
-        </p>
-        <p>A person I was warking on, was a Piano teacher, she allready had 3 music albums</p>
-        <p>My task was to make a way to sell those albums online in elegant way</p>
-        <p>That is how this website came to life</p>
-        <h1>About Website</h1>
-        <p>
-          On this website you can listen music clips for free, if you happy with a music peace you
-          can add music notes to cart
-        </p>
-        <p>Once you finish shoping, with stripe help you can pay for your shoping items</p>
-        <p>After shoping is compleate, you receive sheets allmost instantly to your email</p>
-      </div>
-
-      <p>
-        Because this application is designed to sell music note sheets to piano teachers around the
-        world. I integrated 3 languages into this website: Lithuanian, Russian, English. You can
-        pick them up on the menu.
-      </p>
-      <p>
-        On this website at the moment are uploaded 3 albums. You can pick the album you want to look
-        upon on this menu.
-      </p>
-
-      <div>
-        <p>
-          Here is a login page, there are some pages where login is required, in this case, please
-          use test account, or register a new one.
-        </p>
-        <h4>login : testmyweb@gmail.com </h4>
-        <h4>password : helloworld </h4>
-      </div>
-      <div>
-        <p>
-          If you want to say thanks to Olgos Beliukevicienės for awesome music note sheets or if
-          there is any reason to contact administrators of this website you can contact thru contact
-          page.
+          www.musicschoolnotes.com Is a full-stack application and I`m the only developer who worked
+          on this project. My tasks were to make a design, make front-end, and back-end applications
+          with a user's authentication, account, email, payment gate systems.
         </p>
       </div>
       <div>
+        <h1>Design</h1>
         <p>
-          You can read about each album on the about page, also there is a cool 3d menu animation
-          witch triggers when the album change. Album can be changed with mouse drag or by clicking
-          on the arrow.
+          My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
+          designed the website design on the fly.
         </p>
+      </div>
+      <div>
+        <h1>Front-End</h1>
+        <p>
+          On this website, you can listen to music clips for free, by using a sliding playlist. If
+          you are happy with a music piece you can add music notes to the cart. Once you finish
+          shopping, with stripe help you can pay for your shopping items. After shopping is
+          complete, you receive sheets almost instantly to your email. Because this application is
+          designed to sell music note sheets to piano teachers around the world. I integrated 3
+          languages into this website: Lithuanian, Russian, English. You can pick them up on the
+          menu.
+        </p>
+        <h1>3D elements in about page</h1>
+        <p>
+          On this website at the moment are uploaded 3 albums. You can read the description about
+          them on the about page, also want to mention I integrated 3d elements on that page. Feel
+          free to check it out!
+        </p>
+      </div>
+      <div>
+        <h1>Back-End</h1>
+        <p>
+          Using Node JS, express API I created a user account and authentication application. Then I
+          added a node mailer for emails. And combined node mailer with stripe, so after purchase
+          node-mailer send all purchased sheets to the client.{' '}
+        </p>
+        <p>Now you are ready to check a website here is a registered account for you </p>
+        <p>login: testmyweb@gmail.com</p>
+        <p>password: helloworld</p>
+        <p>www.musicschoolnotes.com</p>
       </div>
     </div>
   );
