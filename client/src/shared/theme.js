@@ -4,6 +4,8 @@ export const theme = {
     third: '#faff32',
     forth: '#334455',
     fifth: '#525444',
+    sixth: '#9A33FF',
+    seventh: '#5A00B3',
     six: '#2e2f2a',
   },
   fontSize: {
@@ -33,6 +35,7 @@ export const theme = {
   lineHeight: {
     big: '1.5rem',
     mid: '1.4rem',
+    one: 'calc(1.4rem + .2vw)',
   },
   margin: {
     mainWrapper: 'calc(1rem + 1vw)',

@@ -66,7 +66,7 @@ export const Description = styled.p`
   letter-spacing: 0.1rem;
   text-align: justify;
   text-indent: 2rem;
-  line-height: 1.5rem;
+  line-height: ${props => props.theme.lineHeight.one};
   opacity: 0;
   color: ${(props) => props.theme.color.forth};
 `;
@@ -119,6 +119,10 @@ export const Css3Icon = styled(SiCss3)`
   color: ${(props) => props.theme.color.fifth};
 `;
 export const SassIcon = styled(FaSass)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.fifth};
+`;
+export const GsapIcon = styled(SiGreensock)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;
@@ -266,7 +270,4 @@ export const EducationIcon = styled(MdOutlineSchool)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;
-export const GsapIcon = styled(SiGreensock)`
-  font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
-`;
+

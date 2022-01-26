@@ -35,9 +35,9 @@ const ResposiveWebsites = () => {
     <ResponsiveWebsitesWrapper>
       <ResponsiveWebsites ref={responsive}>Responsive Websites</ResponsiveWebsites>
       <Description ref={description}>
-        Responsive Modern Websites Are My Thing. I Would Love To Modifie Existing Software. Detect
+        Responsive Modern Websites Are My Thing. I Would Love To Modify Existing Software. Detect
         And Correct Errors, Improve Performance, And Upgrade Interfaces, Or If You Got A Design Of A
-        Brand New Website, I Could Bring It To Life.
+        Brand New Website, I Would Love To Be A Front End Web Developer In Your Team.
       </Description>
     </ResponsiveWebsitesWrapper>
   );

@@ -91,11 +91,13 @@ export const H4 = styled.h4`
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   color: ${(props) => props.theme.color.primary};
+  /* color: #FAFF32; */
   padding: 0.5em 1em;
   border-radius: 0.2rem;
   font-weight: 400;
   border: 1px solid #e8ee8836;
   background: #181816;
+  /* background: #9A33FF; */
   text-shadow: 1px 2px 0px #000000;
   @media (min-width: 425px) {
     font-size: 1.05rem;
@@ -112,7 +114,8 @@ export const P = styled.p`
   letter-spacing: 0.1rem;
   text-align: justify;
   text-indent: 2rem;
-  line-height: 1.5rem;
+  line-height: ${props => props.theme.lineHeight.one};
+
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
 `;
@@ -154,6 +157,7 @@ export const PWrapper = styled.div`
 
 export const P2 = styled(P)`
   color: #e9ebed;
+  color: #FCFF4D;
   font-size: calc(0.7rem + 0.1vw);
   font-weight: 500;
   text-shadow: 2px 2px 2px #000000;

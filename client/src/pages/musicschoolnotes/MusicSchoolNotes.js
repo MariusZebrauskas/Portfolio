@@ -44,7 +44,7 @@ const MusicSchoolNotes = () => {
           node-mailer send all purchased sheets to the client.{' '}
         </p>
         <p>Now you are ready to check a website here is a registered account for you </p>
-        <p>login: testmyweb@gmail.com</p>
+        <p>logincd: testmyweb@gmail.com</p>
         <p>password: helloworld</p>
         <p>www.musicschoolnotes.com</p>
       </div>
