@@ -54,7 +54,7 @@ const Technologies = () => {
           y: '0',
           scale: 1,
           ease: 'expo.out',
-          stagger: 0.1,
+          stagger: 0.05,
         }
       )
       .fromTo(
@@ -66,7 +66,7 @@ const Technologies = () => {
           y: '0',
           scale: 1,
           ease: 'expo.out',
-          stagger: 0.1,
+          stagger: 0.05,
         }
       )
       .fromTo(

@@ -103,7 +103,6 @@ export const H4 = styled.h4`
   @media (min-width: 768px) {
     font-size: 1.1rem;
   }
- 
 `;
 
 export const P = styled.p`

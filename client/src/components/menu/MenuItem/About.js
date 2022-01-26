@@ -49,17 +49,5 @@ const About = ({
     </Link>
   );
 };
-// Multimedia button click 23More info [+]
 
-// 00:00
-// 00:00
-
-// Button ClickMultimedia and UIMP3WAVadd to listZapSplatFollow
-// Standard License
-// Multimedia button click 24More info [+]
-
-// 00:00
-// 00:00
-
-// Button ClickMultimedia and UI
 export default About;
