@@ -1,15 +1,23 @@
 import React from 'react';
-
+import img1 from '../../img/1.png';
+import { AlbumWrapper } from './musicStyles';
+let musicfairystory =
+  'https://firebasestorage.googleapis.com/v0/b/pianonotes-a108c.appspot.com/o/muzikinepasaka%2Fimg%2FMuzikine%20pasaka%20LT-EN%20-%20web-pages-1-1.jpg?alt=media&token=ade27c57-46b6-499a-b11c-bf3b8461df2e';
+let valsas =
+  'https://firebasestorage.googleapis.com/v0/b/pianonotes-a108c.appspot.com/o/valsai%2Fimg%2FA4%2B3mm%20virselis%20-%20ri%C5%A1imui%20spirale%20EN%20-%20x-WEB_Page_1.jpg?alt=media&token=19cd2c04-d703-428b-8fc8-d12606f01eb7';
+let cirkas =
+  'https://firebasestorage.googleapis.com/v0/b/pianonotes-a108c.appspot.com/o/cirkas%2Fpictures%2Fcirkas-atvaziavo-lt-eng.jpg?alt=media&token=54527cdf-b607-4da4-9b7d-896a895a8230';
 const MusicSchoolNotes = () => {
   return (
-    <div>
+    <section>
       <div>
-        <h1>Short Intro</h1>
+        <h1>Intro</h1>
         <p>
           www.musicschoolnotes.com Is a full-stack application and I`m the only developer who worked
           on this project. My tasks were to make a design, make front-end, and back-end applications
           with a user's authentication, account, email, payment gate systems.
         </p>
+        <img src={img1} width='100%' alt='' />
       </div>
       <div>
         <h1>Design</h1>
@@ -17,17 +25,23 @@ const MusicSchoolNotes = () => {
           My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
         </p>
+        <AlbumWrapper>
+          <img src={cirkas} alt='' />
+          <img src={valsas} alt='' />
+          <img src={musicfairystory} alt='' />
+        </AlbumWrapper>
+        <div></div>
       </div>
       <div>
         <h1>Front-End</h1>
         <p>
-          On this website, you can listen to music clips for free, by using a sliding playlist. If
-          you are happy with a music piece you can add music notes to the cart. Once you finish
-          shopping, with stripe help you can pay for your shopping items. After shopping is
-          complete, you receive sheets almost instantly to your email. Because this application is
-          designed to sell music note sheets to piano teachers around the world. I integrated 3
-          languages into this website: Lithuanian, Russian, English. You can pick them up on the
-          menu.
+          On the home page, I integrated a playlist. You can listen, watch music clips for free, by
+          using a sliding playlist. If you are happy with a music piece you can add music notes to
+          the cart. Once you finish shopping, using stripe you can pay for your shopping items.
+          After shopping is complete, you receive sheets almost instantly to your email. Because
+          this application is designed to sell music note sheets to piano teachers around the world.
+          I integrated 3 languages into this website: Lithuanian, Russian, English. You can pick
+          them up on the menu.
         </p>
         <h1>3D elements in about page</h1>
         <p>
@@ -39,16 +53,31 @@ const MusicSchoolNotes = () => {
       <div>
         <h1>Back-End</h1>
         <p>
-          Using Node JS, express API I created a user account and authentication application. Then I
-          added a node mailer for emails. And combined node mailer with stripe, so after purchase
-          node-mailer send all purchased sheets to the client.{' '}
+          Using Node JS, express API I created a user account and authentication application.
+          Because of security reasons, I don't want to go too deep into this topic. Then I added a
+          node mailer and combined it with stripe, so after purchase node-mailer sends all purchased
+          sheets to the client.
         </p>
-        <p>Now you are ready to check a website here is a registered account for you </p>
-        <p>logincd: testmyweb@gmail.com</p>
-        <p>password: helloworld</p>
-        <p>www.musicschoolnotes.com</p>
       </div>
-    </div>
+      <div>
+        <h1>Conclusion</h1>
+        <div>
+          <h4>Olga Beliukeviciene</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deserunt?</p>
+        </div>
+        <div>
+          <p>Now you are ready to check a website here is a demo account </p>
+          <div>
+            <p>login: </p>
+            <h4>testmyweb@gmail.com</h4>
+          </div>
+          <div>
+            <p>password: </p>
+            <h4>helloworld</h4>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -24,7 +24,37 @@ export const WrapperCompleateProjects = styled.section`
   align-items: center;
   position: relative;
 `;
+export const P = styled.p`
+  margin-top: ${(props) => props.theme.margin.smaller};
+  font-weight: 400;
+  font-size: ${(props) => props.theme.fontSize.p};
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  text-indent: 2rem;
+  line-height: ${(props) => props.theme.lineHeight.one};
 
+  opacity: 1;
+  color: ${(props) => props.theme.color.forth};
+`;
+export const P2 = styled(P)`
+  color: #e9ebed;
+  /* color: #FCFF4D; */
+  font-size: calc(0.7rem + 0.1vw);
+  font-weight: 500;
+  text-shadow: 2px 2px 2px #000000;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  text-indent: 0;
+  @media (min-width: 425px) {
+    font-size: ${(props) => props.theme.fontSize.p};
+    margin-top: 0.2rem;
+  }
+  @media (min-width: 768px) {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+`;
 export const SliderWrapper = styled.div`
   position: absolute;
   height: 100%;
@@ -37,7 +67,11 @@ export const SliderWrapper = styled.div`
   flex-direction: column;
   background-color: #141513c9;
   opacity: 1;
-  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s;
+  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s, color ease-in-out .2s;
+  &:hover ${P2} {
+    transition: color ease-in-out .2s;
+    color: #fcff4d;
+  }
 `;
 export const OlgosWebImg = styled.div`
   background: url(${pic}) no-repeat center center;
@@ -107,19 +141,6 @@ export const H4 = styled.h4`
   }
 `;
 
-export const P = styled.p`
-  margin-top: ${(props) => props.theme.margin.smaller};
-  font-weight: 400;
-  font-size: ${(props) => props.theme.fontSize.p};
-  letter-spacing: 0.1rem;
-  text-align: justify;
-  text-indent: 2rem;
-  line-height: ${props => props.theme.lineHeight.one};
-
-  opacity: 1;
-  color: ${(props) => props.theme.color.forth};
-`;
-
 export const Header = styled.h4`
   margin-top: ${(props) => props.theme.margin.smaller2};
   letter-spacing: 0.1rem;
@@ -152,25 +173,5 @@ export const PWrapper = styled.div`
   }
   @media (min-width: 425px) {
     margin: 1rem;
-  }
-`;
-
-export const P2 = styled(P)`
-  color: #e9ebed;
-  color: #FCFF4D;
-  font-size: calc(0.7rem + 0.1vw);
-  font-weight: 500;
-  text-shadow: 2px 2px 2px #000000;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  text-indent: 0;
-  @media (min-width: 425px) {
-    font-size: ${(props) => props.theme.fontSize.p};
-    margin-top: 0.2rem;
-  }
-  @media (min-width: 768px) {
-    margin-top: 0.3rem;
-    font-size: 1rem;
   }
 `;
