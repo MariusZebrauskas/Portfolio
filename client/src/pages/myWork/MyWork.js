@@ -25,22 +25,28 @@ const MyWork = ({ setOpenWelcome }) => {
 
   // animation on load
   useEffect(() => {
-    gsap.from('.animate', {
-      delay: 0.5,
-      opacity: 0,
-      y: '2rem',
-      duration: 0.2,
-      stagger: 0.1,
-    });
+    gsap.fromTo(
+      '.animate',
+      {
+        opacity: 0,
+        y: '2rem',
+      },
+      {
+        delay: 0.5,
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+      }
+    );
   }, []);
 
-// timer stops overlaping animation wich brokeanimation
-// timer runs 1 animation at the time
+  // timer stops overlaping animation wich brokeanimation
+  // timer runs 1 animation at the time
   let timer = false;
 
   const onMouseEnter = () => {
-// timer stops overlaping animation wich brokeanimation
-// timer runs 1 animation at the time
+    // timer stops overlaping animation wich brokeanimation
+    // timer runs 1 animation at the time
     if (timer) {
       return;
     }
@@ -55,7 +61,7 @@ const MyWork = ({ setOpenWelcome }) => {
   // blure background
   const onMouseLeave = () => {
     // timer stops overlaping animation wich brokeanimation
-// timer runs 1 animation at the time
+    // timer runs 1 animation at the time
     if (timer) {
       return;
     }

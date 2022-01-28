@@ -13,6 +13,7 @@ export const MyWorkH1 = styled.h1`
   font-size: ${(props) => props.theme.fontSize.h1b};
   letter-spacing: ${(props) => props.theme.letterSpacing.small};
   color: ${(props) => props.theme.color.forth};
+  opacity: 0;
 `;
 
 export const WrapperCompleateProjects = styled.section`
@@ -33,7 +34,7 @@ export const P = styled.p`
   text-indent: 2rem;
   line-height: ${(props) => props.theme.lineHeight.one};
 
-  opacity: 1;
+  opacity: 0;
   color: ${(props) => props.theme.color.forth};
 `;
 export const P2 = styled(P)`
@@ -46,6 +47,7 @@ export const P2 = styled(P)`
   text-align: center;
   width: 100%;
   text-indent: 0;
+  opacity: 1;
   @media (min-width: 425px) {
     font-size: ${(props) => props.theme.fontSize.p};
     margin-top: 0.2rem;
@@ -67,9 +69,9 @@ export const SliderWrapper = styled.div`
   flex-direction: column;
   background-color: #141513c9;
   opacity: 1;
-  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s, color ease-in-out .2s;
+  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s, color ease-in-out 0.2s;
   &:hover ${P2} {
-    transition: color ease-in-out .2s;
+    transition: color ease-in-out 0.2s;
     color: #fcff4d;
   }
 `;
@@ -111,6 +113,7 @@ export const WrapperEachJobe = styled.section`
   position: relative;
   transition: height ease-in-out 0.2s;
   width: 100%;
+  opacity: 0;
 `;
 export const DescriotionWrapper = styled.section`
   display: flex;
@@ -148,7 +151,7 @@ export const Header = styled.h4`
   position: relative;
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
-  opacity: 1;
+  opacity: 0;
 
   &:before {
     content: '';
