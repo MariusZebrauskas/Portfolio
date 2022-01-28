@@ -1,6 +1,21 @@
 import React, { useEffect } from 'react';
 import img1 from '../../img/1.png';
-import { AlbumWrapper } from './musicStyles';
+import {
+  AlbumWrapper,
+  BackEndWrapper,
+  ConclusionWrapper,
+  Description,
+  DesignWrapper,
+  FrontEndWrapper,
+  Headers,
+  HeaderWrapper,
+  Img,
+  ImgFront,
+  ImgMainWrapper,
+  IntroWrapper,
+  TwoImages,
+  Wrapper,
+} from './musicStyles';
 import frontendimg from '../../img/8.png';
 import loginImg from '../../img/3.png';
 let musicfairystory =
@@ -18,62 +33,64 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
     return () => {};
   }, []);
   return (
-    <section>
-      <div>
-        <h1>Intro</h1>
-        <p>
-          www.musicschoolnotes.com Is a full-stack application and I`m the only developer who worked
-          on this project. My tasks were to make a design, make front-end, and back-end applications
+    <Wrapper>
+      <IntroWrapper>
+        <Headers>Short Intro</Headers>
+        <Description>
+          musicschoolnotes.com Is a full-stack application and I`m the only developer who worked on
+          this project. My tasks were to make a design, make front-end, and back-end applications
           with a user's authentication, account, email, payment gate systems.
-        </p>
-        <img src={img1} width='100%' alt='' />
-      </div>
-      <div>
-        <h1>Design</h1>
-        <p>
+        </Description>
+        {/* <img src={img1} width='100%' alt='' /> */}
+      </IntroWrapper>
+
+      <DesignWrapper>
+        <Headers mt='2rem'>Design</Headers>
+        <Description>
           My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
-        </p>
-        <AlbumWrapper>
-          <img src={cirkas} alt='' />
-          <img src={valsas} alt='' />
-          <img src={musicfairystory} alt='' />
-        </AlbumWrapper>
-        <div></div>
-      </div>
-      <div>
-        <h1>Front-End</h1>
-        <div>
-          <p>
-            On the home page, I integrated a playlist. You can listen, watch music clips for free,
-            by using a sliding playlist. If you are happy with a music piece you can add music notes
-            to the cart. Once you finish shopping, using stripe you can pay for your shopping items.
-            After shopping is complete, you receive sheets almost instantly to your email. Because
-            this application is designed to sell music note sheets to piano teachers around the
-            world. I integrated 3 languages into this website: Lithuanian, Russian, English. You can
-            pick them up on the menu.
-          </p>
-          <img src={frontendimg} width='100%' alt='' />
-        </div>
-        <h1>3D elements in about page</h1>
-        <p>
-          On this website at the moment are uploaded 3 albums. You can read the description about
-          them on the about page, also want to mention I integrated 3d elements on that page. Feel
-          free to check it out!
-        </p>
-      </div>
-      <div>
-        <h1>Back-End</h1>
-        <p>
+        </Description>
+        <ImgMainWrapper>
+          <TwoImages>
+            <Img src={cirkas} alt='' />
+            <Img src={valsas} alt='' />
+          </TwoImages>
+          <Img src={musicfairystory} alt='' />
+        </ImgMainWrapper>
+      </DesignWrapper>
+      <FrontEndWrapper>
+        <Headers mt='2rem'>Front-End</Headers>
+        <Description>
+          On the home page, I integrated a playlist. You can listen, watch music clips for free, by
+          using a sliding playlist. If you are happy with a music piece you can add music notes to
+          the cart. Once you finish shopping, using stripe you can pay for your shopping items.
+          After shopping is complete, you receive sheets almost instantly to your email. Because
+          this application is designed to sell music note sheets to piano teachers around the world.
+          I integrated 3 languages into this website: Lithuanian, Russian, English. You can pick
+          them up on the menu.
+        </Description>
+        <ImgFront src={frontendimg} width='100%' alt='' />
+        <HeaderWrapper>
+          <Headers mt='2rem'>3D elements</Headers>
+          <Headers>in about page</Headers>
+        </HeaderWrapper>
+        <Description>
+          You can read the description about albums on the about page by clicking on images, also I
+          want to mention I integrated 3d elements on that page. Feel free to check it out!
+        </Description>
+      </FrontEndWrapper>
+      <BackEndWrapper>
+        <Headers mt='2rem'>Back-End</Headers>
+        <Description>
           Using Node JS, express API I created a user account and authentication application.
           Because of security reasons, I don't want to go too deep into this topic. Then I added a
           node-mailer and combined it with stripe, so after purchase node-mailer sends all purchased
           sheets to the client.
-        </p>
-        <img src={loginImg} width='100%' alt='' />
-      </div>
-      <div>
-        <h1>Conclusion</h1>
+        </Description>
+        <ImgFront src={loginImg} alt='' />
+      </BackEndWrapper>
+      <ConclusionWrapper>
+        <Headers mt='2rem'>Conclusion</Headers>
         <div>
           <h4>Olga Beliukeviciene</h4>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deserunt?</p>
@@ -89,8 +106,8 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
             <h4>helloworld</h4>
           </div>
         </div>
-      </div>
-    </section>
+      </ConclusionWrapper>
+    </Wrapper>
   );
 };
 
