@@ -88,15 +88,7 @@ export const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 10rem;
-  /* &:hover > .blur {
-    filter: blur(5px);
-  } */
-  /*
-  &:hover ${SliderWrapper} {
-    bottom: 0;
-    opacity: 1;
-    transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.4s.;
-  } */
+
   @media (min-width: 425px) {
     height: 15rem;
   }
@@ -128,13 +120,11 @@ export const H4 = styled.h4`
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   color: ${(props) => props.theme.color.primary};
-  /* color: #FAFF32; */
   padding: 0.5em 1em;
   border-radius: 0.2rem;
   font-weight: 400;
   border: 1px solid #e8ee8836;
   background: #181816;
-  /* background: #9A33FF; */
   text-shadow: 1px 2px 0px #000000;
   @media (min-width: 425px) {
     font-size: 1.05rem;
@@ -181,3 +171,4 @@ export const PWrapper = styled.div`
     margin: 1rem;
   }
 `;
+

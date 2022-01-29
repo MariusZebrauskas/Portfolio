@@ -1,5 +1,16 @@
 import React, { useEffect } from 'react';
-import { H1, H12, Header, Ofice, Wrapper, WrapperHeader } from './stylesContat';
+import {
+  Freelance,
+  H1,
+  H12,
+  Header,
+  Ofice,
+  Remote,
+  Wrapper,
+  WrapperHeader,
+  P,
+  WrapperIconsMain,
+} from './stylesContat';
 
 const Contatc = ({ setOpenWelcome }) => {
   useEffect(() => {
@@ -13,17 +24,23 @@ const Contatc = ({ setOpenWelcome }) => {
     <Wrapper>
       <Header>contact</Header>
       <WrapperHeader>
-        <H1>Developer Looking</H1>
-        <H12>For Work</H12>
+        <H1>Web Developer</H1>
+        <H12>Looking For Work</H12>
       </WrapperHeader>
-      <div>
+      <WrapperIconsMain>
         <div>
           <Ofice />
-          Office
+          <P>Office</P>
         </div>
-        <div>Online</div>
-        <div>Freelance</div>
-      </div>
+        <div>
+          <Freelance />
+          <P>Freelance</P>
+        </div>
+        <div>
+          <Remote />
+          <P>Remote Working</P>
+        </div>
+      </WrapperIconsMain>
     </Wrapper>
   );
 };

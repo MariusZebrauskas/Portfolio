@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import { RiComputerLine } from 'react-icons/ri';
 import { ImOffice } from 'react-icons/im';
+import { SiFreelancer } from 'react-icons/si';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -42,13 +44,32 @@ export const H12 = styled(H1)`
   margin-top: 0.3rem;
 `;
 
-export const Ofice = styled(ImOffice)`
-  color: red;
-`;
+export const Ofice = styled(ImOffice)``;
+export const Freelance = styled(SiFreelancer)``;
+export const Remote = styled(RiComputerLine)``;
+
 export const WrapperHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+`;
+
+export const P = styled.p`
+  font-weight: 400;
+  font-size: ${(props) => props.theme.fontSize.p};
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: ${(props) => props.theme.lineHeight.one};
+
+  opacity: 1;
+  color: ${(props) => props.theme.color.forth};
+`;
+
+export const WrapperIconsMain = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

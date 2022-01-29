@@ -55,3 +55,8 @@ function App() {
 }
 
 export default App;
+
+// FIXME: Paddingus pidesnius ant didesniu screen
+// FIXME: Sugalwoti contatc me 
+// FIXME: Testamonial
+// FIXME: Bottom
