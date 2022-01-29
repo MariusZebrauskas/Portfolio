@@ -10,6 +10,12 @@ import {
   WrapperHeader,
   P,
   WrapperIconsMain,
+  IconWrapper,
+  FormSubmit,
+  NameAndEmail,
+  Input,
+  Button,
+  PButon,
 } from './stylesContat';
 
 const Contatc = ({ setOpenWelcome }) => {
@@ -28,19 +34,30 @@ const Contatc = ({ setOpenWelcome }) => {
         <H12>Looking For Work</H12>
       </WrapperHeader>
       <WrapperIconsMain>
-        <div>
+        <IconWrapper>
           <Ofice />
           <P>Office</P>
-        </div>
-        <div>
+        </IconWrapper>
+        <IconWrapper freelance>
           <Freelance />
           <P>Freelance</P>
-        </div>
-        <div>
+        </IconWrapper>
+        <IconWrapper>
           <Remote />
           <P>Remote Working</P>
-        </div>
+        </IconWrapper>
       </WrapperIconsMain>
+      <H1>Drop Me A Line</H1>
+      <FormSubmit action='submit'>
+        <NameAndEmail>
+          <Input type='text' placeholder='Name' />
+          <Input type='email' required placeholder='Email' />
+        </NameAndEmail>
+        <Input type='text' required placeholder='Message' />
+        <Button>
+          <PButon>Send</PButon>
+        </Button>
+      </FormSubmit>
     </Wrapper>
   );
 };

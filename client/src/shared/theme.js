@@ -44,4 +44,7 @@ export const theme = {
     smaller: '1.7rem',
     smaller2: '1rem',
   },
+  icon: {
+    fontSize: 'calc(1.7rem + 1vw)',
+  },
 };

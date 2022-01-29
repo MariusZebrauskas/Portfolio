@@ -38,15 +38,30 @@ export const H1 = styled.p`
   @media (max-width: 280px) {
     font-size: ${(props) => props.theme.fontSize.small};
   }
+  @media (min-width: 550px) {
+    padding-right: 0.6em;
+  }
 `;
 
 export const H12 = styled(H1)`
   margin-top: 0.3rem;
+  @media (min-width: 550px) {
+    margin-top: 3rem;
+  }
 `;
 
-export const Ofice = styled(ImOffice)``;
-export const Freelance = styled(SiFreelancer)``;
-export const Remote = styled(RiComputerLine)``;
+export const Ofice = styled(ImOffice)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
+`;
+export const Freelance = styled(SiFreelancer)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
+`;
+export const Remote = styled(RiComputerLine)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
+`;
 
 export const WrapperHeader = styled.div`
   width: 100%;
@@ -54,6 +69,9 @@ export const WrapperHeader = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 550px) {
+    flex-direction: row;
+  }
 `;
 
 export const P = styled.p`
@@ -68,8 +86,94 @@ export const P = styled.p`
 `;
 
 export const WrapperIconsMain = styled.div`
+  margin-top: ${(props) => props.theme.margin.small};
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media (max-width: 375px) {
+    display: ${(props) => (props.freelance ? 'none' : 'flex')};
+  }
+`;
+
+// form
+
+export const FormSubmit = styled.form`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: ${(props) => props.theme.margin.small};
+`;
+
+export const NameAndEmail = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 1rem;
+  background: inherit;
+  margin-bottom: 2rem;
+  font-size: ${(props) => props.theme.fontSize.small};
+`;
+
+export const PButon = styled.p`
+  font-weight: 400;
+  font-size: ${(props) => props.theme.fontSize.p};
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  line-height: ${(props) => props.theme.lineHeight.one};
+  position: relative;
+  z-index: 5;
+  opacity: 1;
+  color: ${(props) => props.theme.color.forth};
+  transition: color ease-in-out 0.3s;
+`;
+export const Button = styled.button`
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  border: none;
+  box-shadow: 1px 3px 6px 0px #615a5a42;
+  border: 0.1875rem solid ${(props) => props.theme.color.forth};
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${(props) => props.theme.color.forth};
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform ease-in-out 0.3s;
+  }
+  &:hover:before {
+    transform: translateX(0);
+  }
+  &:hover ${PButon} {
+    color: ${(props) => props.theme.color.primary};
+    color: white;
+  }
 `;
