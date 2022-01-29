@@ -10,7 +10,7 @@ export const IntroWrapper = styled.div`
   align-items: center;
 `;
 
-export const Headers = styled.h1`
+export const Headers = styled.p`
   letter-spacing: 0.2rem;
   font-size: ${(props) => props.theme.fontSize.p2};
   position: relative;

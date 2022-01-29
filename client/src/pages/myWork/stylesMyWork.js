@@ -144,7 +144,7 @@ export const H4 = styled.h4`
   }
 `;
 
-export const Header = styled.h4`
+export const Header = styled.p`
   margin-top: ${(props) => props.theme.margin.smaller2};
   letter-spacing: 0.1rem;
   font-size: ${(props) => props.theme.fontSize.p2};
@@ -163,6 +163,9 @@ export const Header = styled.h4`
     bottom: 0;
     background-color: #fdf854;
     z-index: -2;
+  }
+  @media (max-width: 280px) {
+    font-size: ${(props) => props.theme.fontSize.small};
   }
 `;
 export const PWrapper = styled.div`

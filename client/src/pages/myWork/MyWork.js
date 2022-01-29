@@ -12,7 +12,7 @@ import {
   P,
   Header,
 } from './stylesMyWork';
-const MyWork = ({ setOpenWelcome }) => {
+const MyWork = ({ setOpenWelcome, setAudioSound }) => {
   useEffect(() => {
     // scroll up on render
     window.scroll(0, 0);
@@ -86,7 +86,11 @@ const MyWork = ({ setOpenWelcome }) => {
         <WrapperEachJobe className='animate'>
           <ImgWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ref={slider}>
             <OlgosWebImg className='musicschoolnotes blur' />
-            <Slider data1='Login: testmyweb@gmail.com' data2='Password: helloworld' />
+            <Slider
+              setAudioSound={setAudioSound}
+              data1='Login: testmyweb@gmail.com'
+              data2='Password: helloworld'
+            />
           </ImgWrapper>
           <DescriotionWrapper>
             <Header className='animate'>Full Stack Aplication</Header>

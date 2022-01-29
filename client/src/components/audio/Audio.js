@@ -27,6 +27,8 @@ const Audio = ({ audioSound, setAudioSound }) => {
             ? audio2
             : audioSound === 'contact'
             ? audio2
+            : audioSound === 'musicschoolnotes'
+            ? audio2
             : null
         }
         volume={0.5}

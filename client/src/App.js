@@ -36,7 +36,11 @@ function App() {
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
             <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />
-            <Route path='/mywork' exsact element={<MyWork setOpenWelcome={setOpenWelcome} />} />
+            <Route
+              path='/mywork'
+              exsact
+              element={<MyWork setAudioSound={setAudioSound} setOpenWelcome={setOpenWelcome} />}
+            />
             <Route
               path='/mywork/musicschoolnotes'
               exsact
