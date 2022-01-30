@@ -80,7 +80,7 @@ export const P = styled.p`
   letter-spacing: 0.1rem;
   text-align: justify;
   line-height: ${(props) => props.theme.lineHeight.one};
-
+  margin-top: 0.5rem;
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
 `;
@@ -120,6 +120,9 @@ export const NameAndEmail = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Input = styled.input`
@@ -131,10 +134,24 @@ export const Input = styled.input`
   background: inherit;
   margin-bottom: 2rem;
   font-size: ${(props) => props.theme.fontSize.small};
+  &::placeholder {
+    /* color: ${(props) => props.theme.color.forth}; */
+    font-weight: 500;
+    font-size: ${(props) => props.theme.fontSize.p};
+    letter-spacing: 0.07rem;
+  }
+  color: ${(props) => props.theme.color.forth};
+  font-weight: 500;
+  font-size: ${(props) => props.theme.fontSize.p2};
+
+
+  @media (min-width: 768px) {
+    margin-right: ${(props) => (props.name ? '5rem' : null)};
+  }
 `;
 
 export const PButon = styled.p`
-  font-weight: 400;
+  font-weight: 500;
   font-size: ${(props) => props.theme.fontSize.p};
   letter-spacing: 0.1rem;
   text-align: justify;
@@ -144,6 +161,18 @@ export const PButon = styled.p`
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
   transition: color ease-in-out 0.3s;
+`;
+export const Animation = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${(props) => props.theme.color.forth};
+  z-index: 1;
+  transform: translateX(-100%);
+  /* transition: transform ease-in-out 0.2s; */
 `;
 export const Button = styled.button`
   padding: 0.5rem 0.75rem;
@@ -156,7 +185,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  &:before {
+  cursor: pointer;
+  /* &:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -167,11 +197,11 @@ export const Button = styled.button`
     background-color: ${(props) => props.theme.color.forth};
     z-index: 1;
     transform: translateX(-100%);
-    transition: transform ease-in-out 0.3s;
-  }
-  &:hover:before {
+    transition: transform ease-in-out 0.2s;
+  } */
+  /* &:hover:before {
     transform: translateX(0);
-  }
+  } */
   &:hover ${PButon} {
     color: ${(props) => props.theme.color.primary};
     color: white;

@@ -166,18 +166,17 @@ export const Front = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 768px) {
-    width: 100%;
-    /* border-right: 0.125rem dashed #3333;
-    transition:border-right 5s ease-in; */
+  width: 100%;
+  @media (min-width: 349px) {
   }
+
 `;
 export const Back = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 768px) {
-    width: 100%;
+  width: 100%;
+  @media (min-width: 349px) {
   }
 `;
 export const IconWrapper = styled.section`
