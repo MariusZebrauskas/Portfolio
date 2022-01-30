@@ -18,6 +18,20 @@ import {
   Wrapper,
   WrapperTestamonial,
   Avatar,
+  Star,
+  ImgWrapper,
+  TextWrapper,
+  WrapperClient,
+  Name,
+  Mobile,
+  Comment,
+  StarsWrapper,
+  WrapperLink,
+  LoginPassword,
+  LoginPasswordText,
+  NamePassword,
+  LinkToWeb,
+  LinkWrapper,
 } from './musicStyles';
 import frontendimg from '../../img/8.png';
 import loginImg from '../../img/3.png';
@@ -48,7 +62,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       </IntroWrapper>
 
       <DesignWrapper>
-        <Headers mt='2rem'>Design</Headers>
+        <Headers mt='3rem'>Design</Headers>
         <Description>
           My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
@@ -62,7 +76,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </ImgMainWrapper>
       </DesignWrapper>
       <FrontEndWrapper>
-        <Headers mt='2rem'>Front-End</Headers>
+        <Headers mt='3rem'>Front-End</Headers>
         <Description>
           On the home page, I integrated a playlist. You can listen, watch music clips for free, by
           using a sliding playlist. If you are happy with a music piece you can add music notes to
@@ -74,7 +88,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </Description>
         <ImgFront src={frontendimg} width='100%' alt='' />
         <HeaderWrapper>
-          <Headers mt='2rem'>3D elements</Headers>
+          <Headers mt='3rem'>3D elements</Headers>
           <Headers>in about page</Headers>
         </HeaderWrapper>
         <Description>
@@ -83,7 +97,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </Description>
       </FrontEndWrapper>
       <BackEndWrapper>
-        <Headers mt='2rem'>Back-End</Headers>
+        <Headers mt='3rem'>Back-End</Headers>
         <Description>
           Using Node JS, express API I created a user account and authentication application.
           Because of security reasons, I don't want to go too deep into this topic. Then I added a
@@ -93,28 +107,44 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         <ImgFront src={loginImg} alt='' />
       </BackEndWrapper>
       <ConclusionWrapper>
-        <Headers mt='2rem'>Conclusion</Headers>
+        <Headers mt='3rem'>Testimonial</Headers>
         <WrapperTestamonial>
-          <div>
+          <ImgWrapper>
             <Avatar src={avatar} alt='' />
-            <h4>Olga Beliukeviciene</h4>
-          </div>
-          <div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deserunt?</p>
-            <div>5x starts</div>
-          </div>
+            <WrapperClient>
+              <Name>Olga Beliukeviciene</Name>
+              <Mobile>Mobile: +370 675 45513</Mobile>
+            </WrapperClient>
+          </ImgWrapper>
+          <TextWrapper>
+            <Comment>
+              Marius Zebrauskas work has been done professionally. Marius has the skills of a
+              designer also he can present things understandably and suggestively, has good computer
+              skills, has the perseverance and desire to do the job perfectly.
+            </Comment>
+            <StarsWrapper>
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+            </StarsWrapper>
+          </TextWrapper>
         </WrapperTestamonial>
-        <div>
-          <p>Now you are ready to check a website here is a demo account </p>
-          <div>
-            <p>login: </p>
-            <h4>testmyweb@gmail.com</h4>
-          </div>
-          <div>
-            <p>password: </p>
-            <h4>helloworld</h4>
-          </div>
-        </div>
+
+        <WrapperLink>
+          <LoginPassword>
+            <LoginPasswordText>login: </LoginPasswordText>
+            <NamePassword> testmyweb@gmail.com</NamePassword>
+          </LoginPassword>
+          <LoginPassword>
+            <LoginPasswordText>password: </LoginPasswordText>
+            <NamePassword> helloworld</NamePassword>
+          </LoginPassword>
+          <LinkToWeb href='https://www.musicschoolnotes.com/' target='_blank'>
+            www.musicschoolnotes.com
+          </LinkToWeb>
+        </WrapperLink>
       </ConclusionWrapper>
     </Wrapper>
   );

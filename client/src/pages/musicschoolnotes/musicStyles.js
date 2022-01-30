@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AiFillStar } from 'react-icons/ai';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -92,11 +93,122 @@ export const HeaderWrapper = styled.div`
 // testamonial
 
 export const WrapperTestamonial = styled.section`
+  margin-top: 1.7rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: ${(props) => props.theme.boxShadow.grey};
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Avatar = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
+`;
+
+export const ImgWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 37%;
+    justify-content: flex-start;
+  }
+`;
+export const TextWrapper = styled.div`
+  width: 100%;
+  margin-top: 1rem;
+  @media (min-width: 768px) {
+    width: 78%;
+  }
+`;
+
+export const Star = styled(AiFillStar)`
+  font-size: 1.5rem;
+  color: #e8d523;
+  margin-left: 0.3rem;
+`;
+
+export const WrapperClient = styled.div`
+  margin-top: 0.5rem;
+`;
+
+export const Name = styled(Description)`
+  text-indent: 0;
+  margin-top: 0;
+  font-weight: 500;
+`;
+export const Mobile = styled(Name)``;
+
+export const Comment = styled(Description)`
+  margin-top: 0;
+`;
+export const StarsWrapper = styled.div`
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+// link to olgos websites
+
+export const WrapperLink = styled.div`
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const LoginPassword = styled.div`
+  display: flex;
+`;
+export const LoginPasswordText = styled(Description)`
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  width: unset;
+`;
+export const NamePassword = styled(Description)`
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  /* color: red; */
+  width: unset;
+  @media (min-width: 320px) {
+    margin-left: calc(1rem + 0.5rem);
+  }
+`;
+
+export const LinkToWeb = styled.a`
+  font-weight: 600;
+  font-size: ${(props) => props.theme.fontSize.p};
+  letter-spacing: 0.1rem;
+  line-height: ${(props) => props.theme.lineHeight.one};
+  opacity: 1;
+  color: ${(props) => props.theme.color.forth};
+  margin: 0.75rem 0 4rem 0;
+  transition: all ease-in-out .2s;
+  &:hover {
+    color: #d60a6f;
+  }
+`;
+
+export const LinkWrapper = styled.div`
+  /* margin-top: ${(props) => props.theme.margin.smaller}; */
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

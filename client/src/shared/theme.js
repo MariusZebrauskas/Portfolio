@@ -47,4 +47,7 @@ export const theme = {
   icon: {
     fontSize: 'calc(1.7rem + 1vw)',
   },
+  boxShadow: {
+    grey: '2px 3px 4px 1px #b7b6b6',
+  },
 };
