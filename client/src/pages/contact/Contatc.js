@@ -45,7 +45,7 @@ const Contatc = ({ setOpenWelcome }) => {
   // animation on button hover enter
   let time = 0;
   const onMouseEnter = () => {
-    time = 700;
+    time = 800;
     gsap.fromTo(
       '.animation',
       { x: '-100%', opacity: 0 },

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import img1 from '../../img/1.png';
+import avatar from '../../img/avatar.png';
 import {
   AlbumWrapper,
   BackEndWrapper,
@@ -15,6 +16,8 @@ import {
   IntroWrapper,
   TwoImages,
   Wrapper,
+  WrapperTestamonial,
+  Avatar,
 } from './musicStyles';
 import frontendimg from '../../img/8.png';
 import loginImg from '../../img/3.png';
@@ -91,10 +94,16 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       </BackEndWrapper>
       <ConclusionWrapper>
         <Headers mt='2rem'>Conclusion</Headers>
-        <div>
-          <h4>Olga Beliukeviciene</h4>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deserunt?</p>
-        </div>
+        <WrapperTestamonial>
+          <div>
+            <Avatar src={avatar} alt='' />
+            <h4>Olga Beliukeviciene</h4>
+          </div>
+          <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deserunt?</p>
+            <div>5x starts</div>
+          </div>
+        </WrapperTestamonial>
         <div>
           <p>Now you are ready to check a website here is a demo account </p>
           <div>

@@ -84,8 +84,19 @@ export const ImgFront = styled.img`
 
 export const HeaderWrapper = styled.div`
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+`;
+// testamonial
+
+export const WrapperTestamonial = styled.section`
+  width: 100%;
+`;
+
+export const Avatar = styled.img`
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 `;
