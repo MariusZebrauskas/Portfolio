@@ -18,7 +18,7 @@ export const Headers = styled.p`
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
   opacity: 1;
-  margin-top: ${(props) => (props.mt ? props.mt : null)};
+  margin-top: ${(props) => props.theme.margin.small};
   &:before {
     content: '';
     position: absolute;
@@ -34,10 +34,12 @@ export const Headers = styled.p`
     font-size: ${(props) => props.theme.fontSize.small};
   }
 `;
-
+export const ElementsThreeD = styled(Headers)`
+  margin-top: unset;
+`;
 export const Img = styled.img`
   width: 45%;
-  margin-top: 1rem;
+  margin-top: ${(props) => props.theme.margin.smaller};
 
   /* width: calc(7rem + 1vw); */
 `;
@@ -80,10 +82,12 @@ export const FrontEndWrapper = styled.div`
 `;
 export const ImgFront = styled.img`
   width: 100%;
-  margin-top: 1rem;
+  margin-top: ${(props) => props.theme.margin.smaller};
 `;
 
 export const HeaderWrapper = styled.div`
+  margin-top: ${(props) => props.theme.margin.small};
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -93,7 +97,7 @@ export const HeaderWrapper = styled.div`
 // testamonial
 
 export const WrapperTestamonial = styled.section`
-  margin-top: 1.7rem;
+  margin-top: ${(props) => props.theme.margin.smaller};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -162,7 +166,7 @@ export const StarsWrapper = styled.div`
 
 export const WrapperLink = styled.div`
   width: 100%;
-  margin-top: 4rem;
+  margin-top: ${(props) => props.theme.margin.smaller};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,8 +201,9 @@ export const LinkToWeb = styled.a`
   line-height: ${(props) => props.theme.lineHeight.one};
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
-  margin: 0.75rem 0 4rem 0;
-  transition: all ease-in-out .2s;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  transition: all ease-in-out 0.2s;
   &:hover {
     color: #d60a6f;
   }

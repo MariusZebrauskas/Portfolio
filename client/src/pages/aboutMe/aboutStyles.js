@@ -66,18 +66,18 @@ export const Description = styled.p`
   letter-spacing: 0.1rem;
   text-align: justify;
   text-indent: 2rem;
-  line-height: ${props => props.theme.lineHeight.one};
+  line-height: ${(props) => props.theme.lineHeight.one};
   opacity: 0;
   color: ${(props) => props.theme.color.forth};
 `;
 
 export const TechnologiesWrapper = styled.section`
+  margin-top: ${(props) => props.theme.margin.small};
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: ${(props) => props.theme.margin.small};
 `;
 
 export const H1TechnologiesIUse = styled(ResponsiveWebsites)``;
@@ -169,7 +169,6 @@ export const Front = styled.section`
   width: 100%;
   @media (min-width: 349px) {
   }
-
 `;
 export const Back = styled.section`
   display: flex;
@@ -212,6 +211,7 @@ export const SingleIconHeader = styled.h4`
   color: ${(props) => props.theme.color.forth};
 `;
 export const OtherInfoWrapper = styled(TechnologiesWrapper)`
+  margin-top: ${(props) => props.theme.margin.small};
   margin-bottom: 10rem;
 `;
 export const OtherInfoHeader = styled(ResponsiveWebsites)``;
@@ -269,4 +269,3 @@ export const EducationIcon = styled(MdOutlineSchool)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;
-

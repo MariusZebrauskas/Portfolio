@@ -112,7 +112,7 @@ export const DescriotionWrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: ${(props) => props.theme.margin.small};
   width: 100%;
 `;
 
@@ -171,4 +171,3 @@ export const PWrapper = styled.div`
     margin: 1rem;
   }
 `;
-

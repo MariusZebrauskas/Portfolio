@@ -22,7 +22,6 @@ export const H1 = styled.p`
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
   opacity: 1;
-  margin-top: ${(props) => props.theme.margin.small};
 
   &:before {
     content: '';
@@ -46,10 +45,12 @@ export const H1 = styled.p`
 export const H12 = styled(H1)`
   margin-top: 0.3rem;
   @media (min-width: 550px) {
-    margin-top: 3rem;
+    margin-top: 0;
   }
 `;
-
+export const H14 = styled(H1)`
+  margin-top: ${(props) => props.theme.margin.small};
+`;
 export const Ofice = styled(ImOffice)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.forth};
@@ -64,6 +65,7 @@ export const Remote = styled(RiComputerLine)`
 `;
 
 export const WrapperHeader = styled.div`
+  margin-top: ${(props) => props.theme.margin.small};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -86,7 +88,7 @@ export const P = styled.p`
 `;
 
 export const WrapperIconsMain = styled.div`
-  margin-top: ${(props) => props.theme.margin.small};
+  margin-top: ${(props) => props.theme.margin.smaller};
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -111,7 +113,8 @@ export const FormSubmit = styled.form`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: ${(props) => props.theme.margin.small};
+  margin-top: ${(props) => props.theme.margin.smaller};
+  margin-bottom: 5rem;
 `;
 
 export const NameAndEmail = styled.div`
@@ -143,7 +146,6 @@ export const Input = styled.input`
   color: ${(props) => props.theme.color.forth};
   font-weight: 500;
   font-size: ${(props) => props.theme.fontSize.p2};
-
 
   @media (min-width: 768px) {
     margin-right: ${(props) => (props.name ? '5rem' : null)};

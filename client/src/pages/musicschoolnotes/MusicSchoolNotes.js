@@ -32,6 +32,7 @@ import {
   NamePassword,
   LinkToWeb,
   LinkWrapper,
+  ElementsThreeD,
 } from './musicStyles';
 import frontendimg from '../../img/8.png';
 import loginImg from '../../img/3.png';
@@ -62,7 +63,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       </IntroWrapper>
 
       <DesignWrapper>
-        <Headers mt='3rem'>Design</Headers>
+        <Headers>Design</Headers>
         <Description>
           My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
@@ -76,7 +77,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </ImgMainWrapper>
       </DesignWrapper>
       <FrontEndWrapper>
-        <Headers mt='3rem'>Front-End</Headers>
+        <Headers>Front-End</Headers>
         <Description>
           On the home page, I integrated a playlist. You can listen, watch music clips for free, by
           using a sliding playlist. If you are happy with a music piece you can add music notes to
@@ -88,8 +89,8 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </Description>
         <ImgFront src={frontendimg} width='100%' alt='' />
         <HeaderWrapper>
-          <Headers mt='3rem'>3D elements</Headers>
-          <Headers>in about page</Headers>
+          <ElementsThreeD>3D elements</ElementsThreeD>
+          <ElementsThreeD>in about page</ElementsThreeD>
         </HeaderWrapper>
         <Description>
           You can read the description about albums on the about page by clicking on images, also I
@@ -97,7 +98,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </Description>
       </FrontEndWrapper>
       <BackEndWrapper>
-        <Headers mt='3rem'>Back-End</Headers>
+        <Headers>Back-End</Headers>
         <Description>
           Using Node JS, express API I created a user account and authentication application.
           Because of security reasons, I don't want to go too deep into this topic. Then I added a
@@ -107,7 +108,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         <ImgFront src={loginImg} alt='' />
       </BackEndWrapper>
       <ConclusionWrapper>
-        <Headers mt='3rem'>Testimonial</Headers>
+        <Headers>Testimonial</Headers>
         <WrapperTestamonial>
           <ImgWrapper>
             <Avatar src={avatar} alt='' />

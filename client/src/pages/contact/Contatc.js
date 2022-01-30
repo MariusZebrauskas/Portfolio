@@ -18,6 +18,7 @@ import {
   Button,
   PButon,
   Animation,
+  H14,
 } from './stylesContat';
 
 const Contatc = ({ setOpenWelcome }) => {
@@ -86,7 +87,7 @@ const Contatc = ({ setOpenWelcome }) => {
           <P>Remote Working</P>
         </IconWrapper>
       </WrapperIconsMain>
-      <H1>Drop Me A Line</H1>
+      <H14>Drop Me A Line</H14>
       <FormSubmit onSubmit={submitHandler}>
         <NameAndEmail>
           <Input name ref={name} type='text' required placeholder='Name' />
