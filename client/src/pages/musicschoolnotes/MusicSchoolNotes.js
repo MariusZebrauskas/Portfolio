@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import img1 from '../../img/1.png';
 import avatar from '../../img/avatar.png';
+import gsap from 'gsap';
 import {
   AlbumWrapper,
   BackEndWrapper,
@@ -50,11 +51,29 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
     setOpenWelcome('deep');
     return () => {};
   }, []);
+
+  // animation
+  useEffect(() => {
+    gsap.fromTo(
+      '.animate',
+      {
+        opacity: 0,
+        y: '2rem',
+      },
+      {
+        delay: 0.5,
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+      }
+    );
+  }, []);
+
   return (
     <Wrapper>
       <IntroWrapper>
-        <Headers>Short Intro</Headers>
-        <Description>
+        <Headers className='animate'>Short Intro</Headers>
+        <Description className='animate'>
           musicschoolnotes.com Is a full-stack application and I`m the only developer who worked on
           this project. My tasks were to make a design, make front-end, and back-end applications
           with a user's authentication, account, email, payment gate systems.
@@ -63,22 +82,22 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       </IntroWrapper>
 
       <DesignWrapper>
-        <Headers>Design</Headers>
-        <Description>
+        <Headers className='animate'>Design</Headers>
+        <Description className='animate'>
           My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
         </Description>
         <ImgMainWrapper>
           <TwoImages>
-            <Img src={cirkas} alt='' />
-            <Img src={valsas} alt='' />
+            <Img className='animate' src={cirkas} alt='' />
+            <Img className='animate' src={valsas} alt='' />
           </TwoImages>
-          <Img src={musicfairystory} alt='' />
+          <Img className='animate' src={musicfairystory} alt='' />
         </ImgMainWrapper>
       </DesignWrapper>
       <FrontEndWrapper>
-        <Headers>Front-End</Headers>
-        <Description>
+        <Headers className='animate'>Front-End</Headers>
+        <Description className='animate'>
           On the home page, I integrated a playlist. You can listen, watch music clips for free, by
           using a sliding playlist. If you are happy with a music piece you can add music notes to
           the cart. Once you finish shopping, using stripe you can pay for your shopping items.
@@ -87,29 +106,29 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
           I integrated 3 languages into this website: Lithuanian, Russian, English. You can pick
           them up on the menu.
         </Description>
-        <ImgFront src={frontendimg} width='100%' alt='' />
+        <ImgFront className='animate' src={frontendimg} width='100%' alt='' />
         <HeaderWrapper>
-          <ElementsThreeD>3D elements</ElementsThreeD>
-          <ElementsThreeD>in about page</ElementsThreeD>
+          <ElementsThreeD className='animate'>3D elements</ElementsThreeD>
+          <ElementsThreeD className='animate'>in about page</ElementsThreeD>
         </HeaderWrapper>
-        <Description>
+        <Description className='animate'>
           You can read the description about albums on the about page by clicking on images, also I
           want to mention I integrated 3d elements on that page. Feel free to check it out!
         </Description>
       </FrontEndWrapper>
       <BackEndWrapper>
-        <Headers>Back-End</Headers>
-        <Description>
+        <Headers className='animate'>Back-End</Headers>
+        <Description className='animate'>
           Using Node JS, express API I created a user account and authentication application.
           Because of security reasons, I don't want to go too deep into this topic. Then I added a
           node-mailer and combined it with stripe, so after purchase node-mailer sends all purchased
           sheets to the client.
         </Description>
-        <ImgFront src={loginImg} alt='' />
+        <ImgFront className='animate' src={loginImg} alt='' />
       </BackEndWrapper>
       <ConclusionWrapper>
-        <Headers>Testimonial</Headers>
-        <WrapperTestamonial>
+        <Headers className='animate'>Testimonial</Headers>
+        <WrapperTestamonial className='animate'>
           <ImgWrapper>
             <Avatar src={avatar} alt='' />
             <WrapperClient>
@@ -133,7 +152,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
           </TextWrapper>
         </WrapperTestamonial>
 
-        <WrapperLink>
+        <WrapperLink className='animate'>
           <LoginPassword>
             <LoginPasswordText>login: </LoginPasswordText>
             <NamePassword> testmyweb@gmail.com</NamePassword>

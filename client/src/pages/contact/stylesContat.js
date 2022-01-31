@@ -13,6 +13,7 @@ export const Header = styled.h1`
   font-size: ${(props) => props.theme.fontSize.h1b};
   letter-spacing: ${(props) => props.theme.letterSpacing.small};
   color: ${(props) => props.theme.color.forth};
+  opacity: 0;
 `;
 
 export const H1 = styled.p`
@@ -21,7 +22,6 @@ export const H1 = styled.p`
   position: relative;
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
-  opacity: 1;
 
   &:before {
     content: '';
@@ -50,6 +50,7 @@ export const H12 = styled(H1)`
 `;
 export const H14 = styled(H1)`
   margin-top: ${(props) => props.theme.margin.small};
+  opacity: 0;
 `;
 export const Ofice = styled(ImOffice)`
   font-size: ${(props) => props.theme.fontSize.icon};
@@ -65,6 +66,8 @@ export const Remote = styled(RiComputerLine)`
 `;
 
 export const WrapperHeader = styled.div`
+  opacity: 0;
+
   margin-top: ${(props) => props.theme.margin.small};
   width: 100%;
   display: flex;
@@ -93,6 +96,7 @@ export const WrapperIconsMain = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 0;
 `;
 
 export const IconWrapper = styled.div`
@@ -129,6 +133,7 @@ export const NameAndEmail = styled.div`
 `;
 
 export const Input = styled.input`
+  opacity: 0;
   width: 100%;
   padding: 0.5rem 0.75rem;
   border: none;
@@ -139,6 +144,31 @@ export const Input = styled.input`
   font-size: ${(props) => props.theme.fontSize.small};
   &::placeholder {
     /* color: ${(props) => props.theme.color.forth}; */
+    font-weight: 500;
+    font-size: ${(props) => props.theme.fontSize.p};
+    letter-spacing: 0.07rem;
+  }
+  color: ${(props) => props.theme.color.forth};
+  font-weight: 500;
+  font-size: ${(props) => props.theme.fontSize.p2};
+
+  @media (min-width: 768px) {
+    margin-right: ${(props) => (props.name ? '5rem' : null)};
+  }
+`;
+
+export const TextArea = styled.textarea`
+  opacity: 0;
+
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 1rem;
+  background: inherit;
+  margin-bottom: 2rem;
+  font-size: ${(props) => props.theme.fontSize.small};
+  &::placeholder {
     font-weight: 500;
     font-size: ${(props) => props.theme.fontSize.p};
     letter-spacing: 0.07rem;
@@ -177,6 +207,8 @@ export const Animation = styled.div`
   /* transition: transform ease-in-out 0.2s; */
 `;
 export const Button = styled.button`
+  opacity: 0;
+
   padding: 0.5rem 0.75rem;
   width: 100%;
   border: none;

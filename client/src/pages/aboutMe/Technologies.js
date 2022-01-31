@@ -35,48 +35,47 @@ const Technologies = () => {
     // animations
     tl.fromTo(
       techologiesIuse.current,
-      { opacity: 0, y: '-2rem', scale: 0.8 },
+      { opacity: 0, y: '2rem' },
       {
-        duration: 0.2,
         opacity: 1,
         y: '0',
-        scale: 1,
-        delay: 0.8,
+
+        delay: 1.3,
         ease: 'expo.out',
       }
     )
       .fromTo(
         '.frondEnd',
-        { opacity: 0, y: '-2rem', scale: 0.8 },
+        { opacity: 0, y: '2rem' },
         {
           duration: 0.1,
           opacity: 1,
           y: '0',
-          scale: 1,
+
           ease: 'expo.out',
           stagger: 0.05,
         }
       )
       .fromTo(
         '.iconsFade',
-        { opacity: 0, y: '-2rem', scale: 0.1 },
+        { opacity: 0, y: '2rem' },
         {
           duration: 0.1,
           opacity: 1,
           y: '0',
-          scale: 1,
+
           ease: 'expo.out',
           stagger: 0.05,
         }
       )
       .fromTo(
         '.iconsFade2',
-        { opacity: 0, y: '-2rem', scale: 0.1 },
+        { opacity: 0, y: '2rem' },
         {
           duration: 0.1,
           opacity: 1,
           y: '0rem',
-          scale: 1,
+
           ease: 'expo.out',
           stagger: 0.1,
         },

@@ -15,11 +15,10 @@ const AboutMe = ({ setOpenWelcome }) => {
 
     // animation whole page loaded
     gsap.from(h1.current, {
-      duration: 0.2,
       opacity: 0,
       y: '2rem',
-      scale: 0.8,
-      delay: 0.3,
+      // scale: 0.8,
+      delay: 0.5,
       ease: 'expo.out',
     });
   }, []);

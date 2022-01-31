@@ -19,6 +19,7 @@ import {
   PButon,
   Animation,
   H14,
+  TextArea,
 } from './stylesContat';
 
 const Contatc = ({ setOpenWelcome }) => {
@@ -66,14 +67,30 @@ const Contatc = ({ setOpenWelcome }) => {
       );
     }, time);
   };
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.animate',
+      {
+        opacity: 0,
+        y: '2rem',
+      },
+      {
+        delay: 0.5,
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+      }
+    );
+  }, []);
   return (
     <Wrapper>
-      <Header>contact</Header>
-      <WrapperHeader>
+      <Header className='animate'>contact</Header>
+      <WrapperHeader className='animate'>
         <H1>Web Developer</H1>
         <H12>Looking For Work</H12>
       </WrapperHeader>
-      <WrapperIconsMain>
+      <WrapperIconsMain className='animate'>
         <IconWrapper>
           <Ofice />
           <P>Office</P>
@@ -87,14 +104,26 @@ const Contatc = ({ setOpenWelcome }) => {
           <P>Remote Working</P>
         </IconWrapper>
       </WrapperIconsMain>
-      <H14>Drop Me A Line</H14>
+      <H14 className='animate'>Drop Me A Line</H14>
       <FormSubmit onSubmit={submitHandler}>
         <NameAndEmail>
-          <Input name ref={name} type='text' required placeholder='Name' />
-          <Input ref={email} type='email' required placeholder='Email' />
+          <Input className='animate' name ref={name} type='text' required placeholder='Name' />
+          <Input className='animate' ref={email} type='email' required placeholder='Email' />
         </NameAndEmail>
-        <Input ref={message} type='text' required placeholder='Message' />
-        <Button onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} type='submit'>
+        <TextArea
+          className='animate'
+          ref={message}
+          type='text'
+          rows='4'
+          required
+          placeholder='Message'
+        />
+        <Button
+          className='animate'
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          type='submit'
+        >
           <PButon>Send</PButon>
           <Animation className='animation' />
         </Button>

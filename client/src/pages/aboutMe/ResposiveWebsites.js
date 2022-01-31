@@ -11,22 +11,18 @@ const ResposiveWebsites = () => {
   useEffect(() => {
     tl.fromTo(
       responsive.current,
-      { opacity: 0, y: '-2rem', scale: 0.8 },
+      { opacity: 0, y: '2rem' },
       {
-        delay: 0.4,
-        duration: 0.2,
+        delay: .55,
         opacity: 1,
-        y: '0rem',
-        scale: 1,
+        y: 0,
       }
     ).fromTo(
       description.current,
-      { opacity: 0, y: '-2rem', scale: 0.8 },
+      { opacity: 0, y: '2rem' },
       {
-        duration: 0.2,
         opacity: 1,
         y: '0rem',
-        scale: 1,
       }
     );
   }, []);
