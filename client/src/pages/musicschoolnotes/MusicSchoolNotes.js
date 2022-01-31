@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import img1 from '../../img/1.png';
+// import img1 from '../../img/1.png';
 import gsap from 'gsap';
 import {
   AlbumWrapper,

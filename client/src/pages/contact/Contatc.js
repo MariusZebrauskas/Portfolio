@@ -48,11 +48,11 @@ const Contatc = ({ setOpenWelcome }) => {
   let tl = gsap.timeline();
   let time = 0;
   const onMouseEnter = () => {
-    time = 800;
+    time = 550;
     tl.fromTo(
       '.animation',
-      { x: '-100%', opacity: 0 },
-      { ease: 'bounce', duration: `0.${time}`, opacity: 1, x: 0 }
+      { x: '-50%', opacity: 0 },
+      { ease: 'bounce.out', duration: `0.${time}`, opacity: 1, x: 0 }
     ).fromTo(
       '.hoverButtonText',
       {
@@ -71,7 +71,7 @@ const Contatc = ({ setOpenWelcome }) => {
       tl.fromTo(
         '.animation',
         { x: '0', opacity: 1 },
-        { ease: 'power3', duration: 0.2, opacity: 0, x: '-100%' }
+        { ease: 'power3', duration: 0.2, opacity: 0, x: '-50%' }
       ).fromTo(
         '.hoverButtonText',
         {
