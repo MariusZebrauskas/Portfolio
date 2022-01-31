@@ -220,24 +220,9 @@ export const Button = styled.button`
   align-items: center;
   overflow: hidden;
   cursor: pointer;
-  /* &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: ${(props) => props.theme.color.forth};
-    z-index: 1;
-    transform: translateX(-100%);
-    transition: transform ease-in-out 0.2s;
-  } */
-  /* &:hover:before {
-    transform: translateX(0);
-  } */
-  &:hover ${PButon} {
+  
+  /* &:hover ${PButon} {
     color: ${(props) => props.theme.color.primary};
     color: white;
-  }
+  } */
 `;

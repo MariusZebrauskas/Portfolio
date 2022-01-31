@@ -45,13 +45,21 @@ const Contatc = ({ setOpenWelcome }) => {
     };
   };
   // animation on button hover enter
+  let tl = gsap.timeline();
   let time = 0;
   const onMouseEnter = () => {
     time = 800;
-    gsap.fromTo(
+    tl.fromTo(
       '.animation',
       { x: '-100%', opacity: 0 },
       { ease: 'bounce', duration: `0.${time}`, opacity: 1, x: 0 }
+    ).fromTo(
+      '.hoverButtonText',
+      {
+        color: '#334455',
+      },
+      { duration: 0, color: 'white' },
+      '<'
     );
     setTimeout(() => {
       time = 0;
@@ -60,10 +68,17 @@ const Contatc = ({ setOpenWelcome }) => {
   // animation on button hover leave
   const onMouseLeave = () => {
     setTimeout(() => {
-      gsap.fromTo(
+      tl.fromTo(
         '.animation',
         { x: '0', opacity: 1 },
         { ease: 'power3', duration: 0.2, opacity: 0, x: '-100%' }
+      ).fromTo(
+        '.hoverButtonText',
+        {
+          color: 'white',
+        },
+        { duration: 0, color: '#334455' },
+        '<'
       );
     }, time);
   };
@@ -107,7 +122,14 @@ const Contatc = ({ setOpenWelcome }) => {
       <H14 className='animate'>Drop Me A Line</H14>
       <FormSubmit onSubmit={submitHandler}>
         <NameAndEmail>
-          <Input className='animate' name ref={name} type='text' required placeholder='Name' />
+          <Input
+            className='animate'
+            name='true'
+            ref={name}
+            type='text'
+            required
+            placeholder='Name'
+          />
           <Input className='animate' ref={email} type='email' required placeholder='Email' />
         </NameAndEmail>
         <TextArea
@@ -124,7 +146,7 @@ const Contatc = ({ setOpenWelcome }) => {
           onMouseLeave={onMouseLeave}
           type='submit'
         >
-          <PButon>Send</PButon>
+          <PButon className='hoverButtonText'>Send</PButon>
           <Animation className='animation' />
         </Button>
       </FormSubmit>

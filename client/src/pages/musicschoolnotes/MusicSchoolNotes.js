@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import img1 from '../../img/1.png';
-import avatar from '../../img/avatar.png';
 import gsap from 'gsap';
 import {
   AlbumWrapper,
@@ -35,8 +34,12 @@ import {
   LinkWrapper,
   ElementsThreeD,
 } from './musicStyles';
-import frontendimg from '../../img/8.png';
-import loginImg from '../../img/3.png';
+let avatar =
+  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2Favatar.png?alt=media&token=f7c3db20-72bd-455c-8bfb-837c713b9b4d';
+let frontendimg =
+  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2F8.png?alt=media&token=b5cab212-354d-423b-9fdf-c6a3ff2ac052';
+let loginImg =
+  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2F3.png?alt=media&token=327b614a-8dfc-42db-a500-c7a46b2b43a1';
 let musicfairystory =
   'https://firebasestorage.googleapis.com/v0/b/pianonotes-a108c.appspot.com/o/muzikinepasaka%2Fimg%2FMuzikine%20pasaka%20LT-EN%20-%20web-pages-1-1.jpg?alt=media&token=ade27c57-46b6-499a-b11c-bf3b8461df2e';
 let valsas =

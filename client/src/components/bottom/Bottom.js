@@ -10,7 +10,7 @@ const Bottom = ({ openWelcome }) => {
   };
 
   const [questions, setQuestions] = useState(
-    'Please leave a feedback about portfolio by email or by contact page'
+    'Please leave a feedback about portfolio via contatc page'
   );
   const [copyRights, setCopyRights] = useState('Copyrights');
 
@@ -21,9 +21,6 @@ const Bottom = ({ openWelcome }) => {
       </LogoWrapper>
       <Right>
         <P onMouseDown={preventDefaultActions}>{questions}</P>
-        <P>
-          <strong>{email}</strong>
-        </P>
       </Right>
       <Copyright>
         <P>

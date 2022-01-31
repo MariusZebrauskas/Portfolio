@@ -34,6 +34,7 @@ export const Right = styled.section`
   }
   @media (min-width: 768px) {
     justify-self: right;
+    align-self: start;
   }
 
   &:hover strong::after {

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import pic from '../../img/musicnotes2.jpg';
+let pic =
+  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicnotes2.jpg?alt=media&token=e5023a08-0c94-4388-9ecc-d68ecae91810';
 
 export const Wrapper = styled.section`
   width: 100%;
