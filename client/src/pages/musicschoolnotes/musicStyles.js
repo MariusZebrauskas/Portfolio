@@ -205,7 +205,7 @@ export const LinkToWeb = styled.a`
   margin-bottom: 4rem;
   transition: all ease-in-out 0.2s;
   &:hover {
-    color: #d60a6f;
+    color: ${(props) => props.theme.color.eigth};
   }
 `;
 

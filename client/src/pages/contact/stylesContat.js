@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { RiComputerLine } from 'react-icons/ri';
 import { ImOffice } from 'react-icons/im';
 import { SiFreelancer } from 'react-icons/si';
+import { MdOutlineMailOutline } from 'react-icons/md';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -160,7 +161,8 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   opacity: 0;
 
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   padding: 0.5rem 0.75rem;
   border: none;
   border-bottom: 1px solid #dadada;
@@ -194,18 +196,7 @@ export const PButon = styled.p`
   color: ${(props) => props.theme.color.forth};
   transition: color ease-in-out 0.3s;
 `;
-export const Animation = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ${(props) => props.theme.color.forth};
-  z-index: 1;
-  transform: translateX(-100%);
-  /* transition: transform ease-in-out 0.2s; */
-`;
+
 export const Button = styled.button`
   opacity: 0;
 
@@ -221,8 +212,52 @@ export const Button = styled.button`
   overflow: hidden;
   cursor: pointer;
   
-  /* &:hover ${PButon} {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${(props) => props.theme.color.forth};
+    z-index: 1;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform ease-in 0.2s,opacity ease-in-out 0.2s;
+}
+
+  } 
+   &:hover:before {
+     opacity: 1;
+    transform: translateX(0);
+  }
+  &:hover ${PButon} {
     color: ${(props) => props.theme.color.primary};
-    color: white;
-  } */
+  }
+`;
+
+// message been sent
+
+export const MessageBeenSendWrapper = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: ${(props) => props.theme.margin.small};
+  margin-bottom: 10rem;
+`;
+
+export const TextBeenSend = styled.h4`
+  opacity: 0;
+  color: ${(props) => props.theme.color.forth};
+  font-size: ${(props) => props.theme.fontSize.p3};
+`;
+
+export const MailFly = styled(MdOutlineMailOutline)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.eigth};
+  position: absolute;
+  opacity: 0;
+  transform: translate(-5rem, 5rem) scale(0) rotate(45deg);
 `;

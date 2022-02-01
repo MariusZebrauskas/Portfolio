@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import axios from 'axios';
 import {
   Freelance,
   H1,
@@ -17,17 +18,18 @@ import {
   Input,
   Button,
   PButon,
-  Animation,
   H14,
   TextArea,
 } from './stylesContat';
+import MessageBeenSend from './MessageBeenSend';
 
 const Contatc = ({ setOpenWelcome }) => {
   // message info
   let name = useRef();
   let email = useRef();
   let message = useRef();
-  let info;
+  // if message been send turn on thank you pages
+  const [messageSend, setMessageSend] = useState(false);
   useEffect(() => {
     // scroll up on render
     window.scroll(0, 0);
@@ -38,49 +40,19 @@ const Contatc = ({ setOpenWelcome }) => {
   // message to backend
   const submitHandler = (e) => {
     e.preventDefault();
-    info = {
-      name: name.current.value,
-      email: email.current.value,
-      message: message.current.value,
-    };
-  };
-  // animation on button hover enter
-  let tl = gsap.timeline();
-  let time = 0;
-  const onMouseEnter = () => {
-    time = 550;
-    tl.fromTo(
-      '.animation',
-      { x: '-50%', opacity: 0 },
-      { ease: 'bounce.out', duration: `0.${time}`, opacity: 1, x: 0 }
-    ).fromTo(
-      '.hoverButtonText',
-      {
-        color: '#334455',
-      },
-      { duration: 0, color: 'white' },
-      '<'
-    );
-    setTimeout(() => {
-      time = 0;
-    }, time);
-  };
-  // animation on button hover leave
-  const onMouseLeave = () => {
-    setTimeout(() => {
-      tl.fromTo(
-        '.animation',
-        { x: '0', opacity: 1 },
-        { ease: 'power3', duration: 0.2, opacity: 0, x: '-50%' }
-      ).fromTo(
-        '.hoverButtonText',
-        {
-          color: 'white',
-        },
-        { duration: 0, color: '#334455' },
-        '<'
-      );
-    }, time);
+    axios
+      .post('/message', {
+        name: name.current.value,
+        email: email.current.value,
+        message: message.current.value,
+      })
+      .then((response) => {
+        if (response.data.success) {
+          setMessageSend(true);
+        } else {
+          throw new Error('message bnot been send');
+        }
+      });
   };
 
   useEffect(() => {
@@ -98,6 +70,20 @@ const Contatc = ({ setOpenWelcome }) => {
       }
     );
   }, []);
+
+  // onclick animation
+  const onClick = () => {
+    let tl = gsap.timeline();
+    tl.to('.button', {
+      duration: 0.2,
+      scale: 1.01,
+      ease: 'back.out(1.7)',
+    }).to('.button', {
+      duration: 0.2,
+      scale: 1,
+      ease: 'back.out(1.7)',
+    });
+  };
   return (
     <Wrapper>
       <Header className='animate'>contact</Header>
@@ -119,37 +105,37 @@ const Contatc = ({ setOpenWelcome }) => {
           <P>Remote Working</P>
         </IconWrapper>
       </WrapperIconsMain>
-      <H14 className='animate'>Drop Me A Line</H14>
-      <FormSubmit onSubmit={submitHandler}>
-        <NameAndEmail>
-          <Input
-            className='animate'
-            name='true'
-            ref={name}
-            type='text'
-            required
-            placeholder='Name'
-          />
-          <Input className='animate' ref={email} type='email' required placeholder='Email' />
-        </NameAndEmail>
-        <TextArea
-          className='animate'
-          ref={message}
-          type='text'
-          rows='4'
-          required
-          placeholder='Message'
-        />
-        <Button
-          className='animate'
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          type='submit'
-        >
-          <PButon className='hoverButtonText'>Send</PButon>
-          <Animation className='animation' />
-        </Button>
-      </FormSubmit>
+      {!messageSend ? (
+        <>
+          <H14 className='animate'>Drop Me A Line</H14>
+          <FormSubmit onSubmit={submitHandler}>
+            <NameAndEmail>
+              <Input
+                className='animate'
+                name='true'
+                ref={name}
+                type='text'
+                required
+                placeholder='Name'
+              />
+              <Input className='animate' ref={email} type='email' required placeholder='Email' />
+            </NameAndEmail>
+            <TextArea
+              className='animate'
+              ref={message}
+              type='text'
+              rows='4'
+              required
+              placeholder='Message'
+            />
+            <Button className='animate button' type='submit' onClick={onClick}>
+              <PButon className='hoverButtonText'>Send</PButon>
+            </Button>
+          </FormSubmit>
+        </>
+      ) : (
+        <MessageBeenSend />
+      )}
     </Wrapper>
   );
 };

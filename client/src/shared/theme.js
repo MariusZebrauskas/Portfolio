@@ -7,6 +7,7 @@ export const theme = {
     sixth: '#9A33FF',
     seventh: '#5A00B3',
     six: '#2e2f2a',
+    eigth: '#d60a6f',
   },
   fontSize: {
     p: 'calc(.9rem + .1vw)',
