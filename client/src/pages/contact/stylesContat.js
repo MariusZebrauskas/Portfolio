@@ -245,7 +245,7 @@ export const MessageBeenSendWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: ${(props) => props.theme.margin.small};
-  margin-bottom: 10rem;
+  margin-bottom: 18rem;
 `;
 
 export const TextBeenSend = styled.h4`
@@ -255,7 +255,7 @@ export const TextBeenSend = styled.h4`
 `;
 
 export const MailFly = styled(MdOutlineMailOutline)`
-  font-size: ${(props) => props.theme.fontSize.icon};
+  font-size: calc(1.8rem + .5vw);
   color: ${(props) => props.theme.color.eigth};
   position: absolute;
   opacity: 0;
