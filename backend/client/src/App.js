@@ -56,6 +56,5 @@ function App() {
 
 export default App;
 
-
-// FIXME: clean console log 
+// FIXME: clean console log
 // FIXME: Ant send Button uzdeti laiko garsa

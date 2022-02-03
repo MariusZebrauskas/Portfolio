@@ -26,11 +26,11 @@ export const Wrapper = styled.div`
   transition: margin ease-in 0.3s;
 `;
 export const ContentWrapper = styled.section`
-
   margin: ${(props) => (props.openWelcome === 'deep' ? '46vh 0 0 0' : 0)};
   width: 100%;
   padding: 2rem;
   max-width: 800px;
+  overflow: hidden;
   @media (min-width: 653px) and (max-height: 280px) {
     /* galaxy fold */
     margin: ${(props) => (props.openWelcome === 'deep' ? '64vh 0 0 0' : 0)};
@@ -40,7 +40,7 @@ export const ContentWrapper = styled.section`
     /* ihone 12 */
     margin: ${(props) => (props.openWelcome === 'deep' ? '-8vh 0 0 0' : 0)};
   }
- 
+
   @media (min-width: 851px) and (max-height: 412px) {
     /* pixel 5 + galaxy 20 ultra */
     margin: ${(props) => (props.openWelcome === 'deep' ? '-15vh 0 0 0' : 0)};
