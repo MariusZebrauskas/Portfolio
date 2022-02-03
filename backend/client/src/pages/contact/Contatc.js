@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import ClipLoader from 'react-spinners/ClipLoader';
+
 import axios from 'axios';
 import {
   Freelance,
@@ -23,7 +25,9 @@ import {
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
 
-const Contatc = ({ setOpenWelcome }) => {
+const Contatc = ({ setOpenWelcome, setAudioSound }) => {
+  // loading
+  const [loading, setLoading] = useState(false);
   // message info
   let name = useRef();
   let email = useRef();
@@ -35,7 +39,7 @@ const Contatc = ({ setOpenWelcome }) => {
   const [emailInput, setEmailInput] = useState(undefined);
   const [messageInput, setMessageInput] = useState(undefined);
   const onChangeHandler = (props) => {
-    // this function sets background color
+    // this function sets background color when add text on input
     if (props === 'name') {
       if (!name.current.value) {
         return setNameInput(undefined);
@@ -56,8 +60,6 @@ const Contatc = ({ setOpenWelcome }) => {
     }
   };
 
- 
-
   useEffect(() => {
     // scroll up on render
     window.scroll(0, 0);
@@ -68,6 +70,8 @@ const Contatc = ({ setOpenWelcome }) => {
   // message to backend
   const submitHandler = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setMessageSend(false);
     axios
       .post('/message', {
         name: name.current.value,
@@ -76,10 +80,20 @@ const Contatc = ({ setOpenWelcome }) => {
       })
       .then((response) => {
         if (response.data.success) {
+          console.log("i run response code 200")
+          console.log('response:', response);
+          setAudioSound('email');
           setMessageSend(true);
+          setLoading(false);
         } else {
-          throw new Error('message bnot been send');
+          setLoading(false);
+          console.log('error');
+          throw new Error('message not been send');
         }
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
       });
   };
 
@@ -170,7 +184,10 @@ const Contatc = ({ setOpenWelcome }) => {
               onChange={() => onChangeHandler('message')}
             />
             <Button className='animate button' type='submit' onClick={onClick}>
-              <PButon className='hoverButtonText'>Send</PButon>
+              <PButon className='hoverButtonText'>
+                {loading ? null : 'Send'}
+                <ClipLoader loading={loading} color={'#334455'} size={18} />
+              </PButon>
             </Button>
           </FormSubmit>
         </>

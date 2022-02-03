@@ -16,9 +16,7 @@ function App() {
   const [openWelcome, setOpenWelcome] = useState('out');
   // controls mp3 audio
   const [audioSound, setAudioSound] = useState(null);
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
-  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
+
   return (
     <BrowserRouter>
       {/* lan survey icon  needed */}
@@ -35,7 +33,11 @@ function App() {
         <ContentWrapper openWelcome={openWelcome}>
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
-            <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />
+            <Route
+              path='/contatc'
+              exsact
+              element={<Contatc setAudioSound={setAudioSound} setOpenWelcome={setOpenWelcome} />}
+            />
             <Route
               path='/mywork'
               exsact
@@ -56,6 +58,5 @@ function App() {
 
 export default App;
 
-// FIXME: clean console log
-// FIXME: Ant send Button uzdeti laiko garsa
-// FIXME: add eror button on send + spinner 
+// FIXME: add eror button on send + spinner
+// FIXME: github link + linked in +  gyvenimo aprasymas

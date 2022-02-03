@@ -4,6 +4,7 @@ import gsap from 'gsap';
 
 const MessageBeenSend = () => {
   useEffect(() => {
+
     let tl = gsap.timeline();
     gsap.fromTo(
       '.animateMessage',

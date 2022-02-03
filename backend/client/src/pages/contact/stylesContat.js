@@ -213,6 +213,9 @@ export const Button = styled.button`
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   &:before {
     content: '';
@@ -258,8 +261,11 @@ export const TextBeenSend = styled.h4`
 
 export const MailFly = styled(MdOutlineMailOutline)`
   font-size: calc(1.8rem + 0.5vw);
-  color: ${(props) => props.theme.color.eigth};
+  color: ${(props) => props.theme.color.forth};
+
   position: absolute;
   opacity: 0;
-  transform: translate(-5rem, 5rem) scale(0) rotate(45deg);
+  transform: translate(0rem, 7rem) scale(0) rotate(45deg);
 `;
+
+
