@@ -30,6 +30,34 @@ const Contatc = ({ setOpenWelcome }) => {
   let message = useRef();
   // if message been send turn on thank you pages
   const [messageSend, setMessageSend] = useState(false);
+  // chek background color by input value "" or "text" or ""
+  const [nameInput, setNameInput] = useState(undefined);
+  const [emailInput, setEmailInput] = useState(undefined);
+  const [messageInput, setMessageInput] = useState(undefined);
+  const onChangeHandler = (props) => {
+    // this function sets background color
+    if (props === 'name') {
+      if (!name.current.value) {
+        return setNameInput(undefined);
+      }
+      return setNameInput(name.current.value);
+    }
+    if (props === 'email') {
+      if (!email.current.value) {
+        return setEmailInput(undefined);
+      }
+      return setEmailInput(email.current.value);
+    }
+    if (props === 'message') {
+      if (!message.current.value) {
+        return setMessageInput(undefined);
+      }
+      return setMessageInput(message.current.value);
+    }
+  };
+
+ 
+
   useEffect(() => {
     // scroll up on render
     window.scroll(0, 0);
@@ -84,6 +112,7 @@ const Contatc = ({ setOpenWelcome }) => {
       ease: 'back.out(1.7)',
     });
   };
+
   return (
     <Wrapper>
       <Header className='animate'>contact</Header>
@@ -117,8 +146,18 @@ const Contatc = ({ setOpenWelcome }) => {
                 type='text'
                 required
                 placeholder='Name'
+                nameInput={nameInput}
+                onChange={() => onChangeHandler('name')}
               />
-              <Input className='animate' ref={email} type='email' required placeholder='Email' />
+              <Input
+                className='animate'
+                ref={email}
+                type='email'
+                required
+                placeholder='Email'
+                emailInput={emailInput}
+                onChange={() => onChangeHandler('email')}
+              />
             </NameAndEmail>
             <TextArea
               className='animate'
@@ -127,6 +166,8 @@ const Contatc = ({ setOpenWelcome }) => {
               rows='4'
               required
               placeholder='Message'
+              messageInput={messageInput}
+              onChange={() => onChangeHandler('message')}
             />
             <Button className='animate button' type='submit' onClick={onClick}>
               <PButon className='hoverButtonText'>Send</PButon>

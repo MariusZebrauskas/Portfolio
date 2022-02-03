@@ -140,7 +140,8 @@ export const Input = styled.input`
   border: none;
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
-  background: inherit;
+  background: ${(props) =>
+    props.nameInput === undefined && props.emailInput === undefined ? 'inherit' : '#e8f0fe'};
   margin-bottom: 2rem;
   font-size: ${(props) => props.theme.fontSize.small};
   &::placeholder {
@@ -168,6 +169,7 @@ export const TextArea = styled.textarea`
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
   background: inherit;
+  background: ${(props) => (props.messageInput === undefined ? 'inherit' : '#e8f0fe')};
   margin-bottom: 2rem;
   font-size: ${(props) => props.theme.fontSize.small};
   &::placeholder {
@@ -255,7 +257,7 @@ export const TextBeenSend = styled.h4`
 `;
 
 export const MailFly = styled(MdOutlineMailOutline)`
-  font-size: calc(1.8rem + .5vw);
+  font-size: calc(1.8rem + 0.5vw);
   color: ${(props) => props.theme.color.eigth};
   position: absolute;
   opacity: 0;
