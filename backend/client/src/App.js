@@ -58,3 +58,4 @@ export default App;
 
 // FIXME: clean console log
 // FIXME: Ant send Button uzdeti laiko garsa
+// FIXME: add eror button on send + spinner 
