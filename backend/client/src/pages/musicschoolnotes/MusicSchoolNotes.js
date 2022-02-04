@@ -31,8 +31,11 @@ import {
   LoginPasswordText,
   NamePassword,
   LinkToWeb,
-  LinkWrapper,
   ElementsThreeD,
+  LinkWrapper,
+  NoteIcon,
+  WrapperMini,
+  GitIcon,
 } from './musicStyles';
 let avatar =
   'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2Favatar.png?alt=media&token=f7c3db20-72bd-455c-8bfb-837c713b9b4d';
@@ -156,17 +159,29 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </WrapperTestamonial>
 
         <WrapperLink className='animate'>
-          <LoginPassword>
-            <LoginPasswordText>login: </LoginPasswordText>
-            <NamePassword> testmyweb@gmail.com</NamePassword>
-          </LoginPassword>
-          <LoginPassword>
-            <LoginPasswordText>password: </LoginPasswordText>
-            <NamePassword> helloworld</NamePassword>
-          </LoginPassword>
-          <LinkToWeb href='https://www.musicschoolnotes.com/' target='_blank'>
-            www.musicschoolnotes.com
-          </LinkToWeb>
+          <LinkWrapper>
+            {/* web link */}
+            <WrapperMini href='https://www.musicschoolnotes.com/' target='_blank'>
+              <NoteIcon />
+              <LinkToWeb>www.musicschoolnotes.com</LinkToWeb>
+              <LoginPassword>
+                <LoginPasswordText>login: </LoginPasswordText>
+                <NamePassword> testmyweb@gmail.com</NamePassword>
+              </LoginPassword>
+              <LoginPassword>
+                <LoginPasswordText>password: </LoginPasswordText>
+                <NamePassword> helloworld</NamePassword>
+              </LoginPassword>
+            </WrapperMini>
+            {/* github lin needed */}
+            <WrapperMini
+              href='https://github.com/MariusZebrauskas/olga-full-stack-shop'
+              target='_blank'
+            >
+              <GitIcon />
+              <LinkToWeb>www.github.com</LinkToWeb>
+            </WrapperMini>
+          </LinkWrapper>
         </WrapperLink>
       </ConclusionWrapper>
     </Wrapper>

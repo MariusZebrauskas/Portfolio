@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { AiFillStar } from 'react-icons/ai';
+import { FaItunesNote, FaGithub } from 'react-icons/fa';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -181,6 +182,9 @@ export const LoginPasswordText = styled(Description)`
   padding: 0;
   text-indent: 0;
   width: unset;
+  @media (max-width: 320px) {
+    font-size: 0.8rem;
+  }
 `;
 export const NamePassword = styled(Description)`
   font-weight: 600;
@@ -189,24 +193,48 @@ export const NamePassword = styled(Description)`
   text-indent: 0;
   /* color: red; */
   width: unset;
-  @media (min-width: 320px) {
-    margin-left: calc(1rem + 0.5rem);
+  @media (max-width: 320px) {
+    font-size: 0.8rem;
   }
 `;
 
-export const LinkToWeb = styled.a`
+export const LinkToWeb = styled.p`
   font-weight: 600;
-  font-size: ${(props) => props.theme.fontSize.p};
+  font-size: 0.8rem;
   letter-spacing: 0.1rem;
   line-height: ${(props) => props.theme.lineHeight.one};
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  transition: all ease-in-out 0.2s;
-  &:hover {
-    color: ${(props) => props.theme.color.eigth};
+  margin-top: calc(0.3rem + 0.1vw);
+  @media (min-width: 320px) {
+    font-size: ${(props) => props.theme.fontSize.p};
   }
+`;
+
+export const WrapperMini = styled.a`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  max-width: 330px;
+
+  transition: background ease-in 0.2s, box-shadow ease-in 0.2s;
+  &:hover {
+    box-shadow: 5px 4px 9px -3px #b7b6b6, inset 4px 5px 5px -6px #b7b6b6;
+    background: #e8d523;
+    cursor: pointer;
+  }
+`;
+
+export const NoteIcon = styled(FaItunesNote)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
+`;
+export const GitIcon = styled(FaGithub)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
 `;
 
 export const LinkWrapper = styled.div`
@@ -214,6 +242,14 @@ export const LinkWrapper = styled.div`
 
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
+  /* border: 5px solid red; */
+  margin-top: ${(props) => props.theme.margin.smaller};
+  margin-bottom: 3rem;
+  @media (min-width: 500px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
