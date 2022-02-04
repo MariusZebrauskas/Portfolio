@@ -100,60 +100,60 @@ export const WrapperFrontBack = styled.section`
 
 export const ReactIcon = styled(FaReact)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const StyledomponentsIcon = styled(SiStyledcomponents)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const FramerMotionIcon = styled(SiFramer)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const HTML5Icon = styled(SiHtml5)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const Css3Icon = styled(SiCss3)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const SassIcon = styled(FaSass)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const GsapIcon = styled(SiGreensock)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const JSIcon = styled(SiJavascript)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 // back
 export const NodeJSIcon = styled(FaNodeJs)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const ExpressIcon = styled(SiExpress)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const MongoIcon = styled(SiMongodb)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const FireBaseIcon = styled(SiFirebase)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const GitHubIcon = styled(SiGithub)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const HerokuIcon = styled(SiHeroku)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 
 export const IconHeder = styled.i`
@@ -209,6 +209,8 @@ export const DoubleIconWrapper = styled.div`
 
 export const SingleIconHeader = styled.h4`
   color: ${(props) => props.theme.color.forth};
+  /* line-height: ${(props) => props.theme.lineHeight.big}; */
+  margin-top: calc(0.3rem + 0.1vw);
 `;
 export const OtherInfoWrapper = styled(TechnologiesWrapper)`
   margin-top: ${(props) => props.theme.margin.small};
@@ -251,15 +253,15 @@ export const OtherI = styled.i`
 
 export const GymIcon = styled(CgGym)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const LanguagesIcon = styled(FaLanguage)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;
 export const MotoIcon = styled(BiLayerPlus)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
   margin-top: ${(props) => (props.last ? '1.5rem' : null)};
   @media (min-width: 375px) {
     margin-top: 0;
@@ -267,5 +269,5 @@ export const MotoIcon = styled(BiLayerPlus)`
 `;
 export const EducationIcon = styled(MdOutlineSchool)`
   font-size: ${(props) => props.theme.fontSize.icon};
-  color: ${(props) => props.theme.color.fifth};
+  color: ${(props) => props.theme.color.forth};
 `;

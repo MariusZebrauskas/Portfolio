@@ -24,10 +24,22 @@ import {
   TextArea,
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
+import Warning from '../../shared/warning/Warning';
 
 const Contatc = ({ setOpenWelcome, setAudioSound }) => {
+  // loading color
+  const [color, setColor] = useState('#334455');
+  const onMouseEnter = () => {
+    setColor('white');
+  };
+  const onMouseLeave = () => {
+    setColor('#334455');
+  };
   // loading
   const [loading, setLoading] = useState(false);
+  // error
+  const [error, setError] = useState(false);
+
   // message info
   let name = useRef();
   let email = useRef();
@@ -80,19 +92,21 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
       })
       .then((response) => {
         if (response.data.success) {
-          console.log("i run response code 200")
+          console.log('i run response code 200');
           console.log('response:', response);
           setAudioSound('email');
           setMessageSend(true);
           setLoading(false);
+          setError(false);
         } else {
           setLoading(false);
-          console.log('error');
+          setError(true);
           throw new Error('message not been send');
         }
       })
       .catch((error) => {
         setLoading(false);
+        setError(true);
         console.log(error);
       });
   };
@@ -183,10 +197,16 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
               messageInput={messageInput}
               onChange={() => onChangeHandler('message')}
             />
-            <Button className='animate button' type='submit' onClick={onClick}>
+            <Button
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              className='animate button'
+              type='submit'
+              onClick={onClick}
+            >
               <PButon className='hoverButtonText'>
-                {loading ? null : 'Send'}
-                <ClipLoader loading={loading} color={'#334455'} size={18} />
+                <ClipLoader loading={loading} zindex={99} color={color} size={18} />
+                Send
               </PButon>
             </Button>
           </FormSubmit>
@@ -194,6 +214,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
       ) : (
         <MessageBeenSend />
       )}
+      {error && <Warning>Oops Something Went Wrong</Warning>}
     </Wrapper>
   );
 };

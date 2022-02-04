@@ -119,7 +119,7 @@ export const FormSubmit = styled.form`
   flex-direction: column;
   width: 100%;
   margin-top: ${(props) => props.theme.margin.smaller};
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 `;
 
 export const NameAndEmail = styled.div`
@@ -197,6 +197,9 @@ export const PButon = styled.p`
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
   transition: color ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Button = styled.button`
