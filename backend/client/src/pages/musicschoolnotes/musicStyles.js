@@ -114,6 +114,7 @@ export const WrapperTestamonial = styled.section`
 export const Avatar = styled.img`
   width: 5rem;
   height: 5rem;
+  object-fit: cover;
   border-radius: 50%;
 `;
 
@@ -220,7 +221,7 @@ export const WrapperMini = styled.a`
   padding: 1rem;
   max-width: 330px;
 
-  transition: background ease-in 0.2s, box-shadow ease-in 0.2s;
+  transition: background ease-in-out 0.2s, box-shadow ease-in-out 0.2s;
   &:hover {
     box-shadow: 5px 4px 9px -3px #b7b6b6, inset 4px 5px 5px -6px #b7b6b6;
     background: #e8d523;

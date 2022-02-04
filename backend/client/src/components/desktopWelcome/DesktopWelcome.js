@@ -36,7 +36,7 @@ const DesktopWelcome = ({ openWelcome }) => {
       </WrapperH1>
       <WrapperText>
         <P>
-          I'm a REACT JS Web Developer. I enjoy writing functions and building beautiful responsive
+          I'm a REACT / NODE JS Web Developer. I enjoy writing functions and building beautiful responsive
           websites.
         </P>
       </WrapperText>

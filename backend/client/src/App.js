@@ -58,5 +58,5 @@ function App() {
 
 export default App;
 
-// FIXME: add eror button on send + spinner
 // FIXME: github link + linked in +  gyvenimo aprasymas
+// FIXME: contatc page linked inlin, github, resume;
