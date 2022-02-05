@@ -26,10 +26,11 @@ import {
   WrapperIconConnect,
   GithubIcon,
   LinkedInIcon,
+  Cv,
+  IconWrapperHover,
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
 import Warning from '../../shared/warning/Warning';
-import Cv from './Cv';
 
 const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   // loading color
@@ -153,9 +154,22 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
         <H1Connect>Lets Connect</H1Connect>
       </WrapperHeader>
       <WrapperIconConnect>
-        <GithubIcon></GithubIcon>
-        <LinkedInIcon></LinkedInIcon>
-        <Cv/>
+        <IconWrapperHover
+          href='https://github.com/MariusZebrauskas?tab=repositories'
+          target='_blank'
+          className='animate'
+        >
+          <GithubIcon />
+          <P>GitHub</P>
+        </IconWrapperHover>
+        <IconWrapperHover href='https://uk.linkedin.com/' target='_blank' className='animate'>
+          <LinkedInIcon />
+          <P>LinkedIn</P>
+        </IconWrapperHover>
+        <IconWrapperHover className='animate' mt='-.2rem'>
+          <Cv>CV</Cv>
+          <P>Resume</P>
+        </IconWrapperHover>
       </WrapperIconConnect>
       <WrapperHeader className='animate'>
         <H1>Web Developer</H1>

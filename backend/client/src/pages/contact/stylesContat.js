@@ -85,12 +85,47 @@ export const H1Connect = styled(H1)`
   padding: 0;
 `;
 export const WrapperIconConnect = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: #334455;
+  margin-top: ${(props) => props.theme.margin.smaller};
+  /* background:green; */
+}
 `;
 export const GithubIcon = styled(FaGithub)``;
 export const LinkedInIcon = styled(FaLinkedin)``;
+export const Cv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 0.5rem;
+  &:before {
+    content: '';
+    height: 40%;
+    width: 30%;
+    /* background-color: red; */
+    position: absolute;
+    top: -0.1rem;
+    left: 0rem;
+    border-left: 0.2rem solid ${(props) => props.theme.color.forth};
+    border-top: 0.2rem solid ${(props) => props.theme.color.forth};
+  }
+  &:after {
+    content: '';
+    height: 40%;
+    width: 30%;
+    /* background-color: red; */
+    position: absolute;
+    right: -0rem;
+    bottom: 0;
+    border-right: 0.2rem solid ${(props) => props.theme.color.forth};
+    border-bottom: 0.2rem solid ${(props) => props.theme.color.forth};
+  }
+`;
 
 export const P = styled.p`
   font-weight: 400;
@@ -112,7 +147,7 @@ export const WrapperIconsMain = styled.div`
   opacity: 0;
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +156,21 @@ export const IconWrapper = styled.div`
     display: ${(props) => (props.freelance ? 'none' : 'flex')};
   }
 `;
+export const IconWrapperHover = styled(IconWrapper)`
+  opacity: 0;
 
+  padding: 0.5rem 0.7rem;
+  margin-top: ${(props) => (props.mt ? props.mt : null)};
+  &:hover,
+  &:hover p,
+  &:hover div:before,
+  &:hover div:after {
+    cursor: pointer;
+    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
+    color: #7089a1;
+    border-color: #7089a1;
+  }
+`;
 // form
 
 export const FormSubmit = styled.form`
@@ -231,7 +280,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &:before {
     content: '';
     position: absolute;
@@ -244,12 +293,11 @@ export const Button = styled.button`
     z-index: 1;
     transform: translateX(-100%);
     opacity: 0;
-    transition: transform ease-in 0.2s,opacity ease-in-out 0.2s;
-}
+    transition: transform ease-in 0.2s, opacity ease-in-out 0.2s;
+  }
 
-  } 
-   &:hover:before {
-     opacity: 1;
+  &:hover:before {
+    opacity: 1;
     transform: translateX(0);
   }
   &:hover ${PButon} {

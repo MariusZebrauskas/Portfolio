@@ -58,5 +58,8 @@ function App() {
 
 export default App;
 
-// FIXME: github link + linked in +  gyvenimo aprasymas
-// FIXME: contatc page linked inlin, github, resume;
+// FIXME: padaryti pilna mz-script.com domaina ir visur pridetti
+//FIXME:: Gyvenimo aprasymas  web site domainas aprasymo apacioje
+//FIXME:  rezume pop on screen 
+// FIXME: sukurti linked in anketa
+// FIXME: linked in Linkas + Linked in account
