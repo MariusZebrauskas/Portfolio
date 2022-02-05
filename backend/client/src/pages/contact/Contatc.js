@@ -22,9 +22,14 @@ import {
   PButon,
   H14,
   TextArea,
+  H1Connect,
+  WrapperIconConnect,
+  GithubIcon,
+  LinkedInIcon,
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
 import Warning from '../../shared/warning/Warning';
+import Cv from './Cv';
 
 const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   // loading color
@@ -144,6 +149,14 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   return (
     <Wrapper>
       <Header className='animate'>contact</Header>
+      <WrapperHeader className='animate'>
+        <H1Connect>Lets Connect</H1Connect>
+      </WrapperHeader>
+      <WrapperIconConnect>
+        <GithubIcon></GithubIcon>
+        <LinkedInIcon></LinkedInIcon>
+        <Cv/>
+      </WrapperIconConnect>
       <WrapperHeader className='animate'>
         <H1>Web Developer</H1>
         <H12>Looking For Work</H12>

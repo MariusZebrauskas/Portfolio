@@ -70,7 +70,7 @@ const OtherInfo = () => {
             <MotoIcon last='true' />
             <OtherSingleDescription>
               <OtherI>Motto</OtherI>
-              <OtherP>Lern Something New Every Day</OtherP>
+              <OtherP>Learn Something New Every Day</OtherP>
             </OtherSingleDescription>
           </OtherSingleWrapper>
         </section>

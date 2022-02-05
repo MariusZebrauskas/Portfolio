@@ -3,6 +3,7 @@ import { RiComputerLine } from 'react-icons/ri';
 import { ImOffice } from 'react-icons/im';
 import { SiFreelancer } from 'react-icons/si';
 import { MdOutlineMailOutline } from 'react-icons/md';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -79,6 +80,17 @@ export const WrapperHeader = styled.div`
     flex-direction: row;
   }
 `;
+
+export const H1Connect = styled(H1)`
+  padding: 0;
+`;
+export const WrapperIconConnect = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+export const GithubIcon = styled(FaGithub)``;
+export const LinkedInIcon = styled(FaLinkedin)``;
 
 export const P = styled.p`
   font-weight: 400;
@@ -270,5 +282,3 @@ export const MailFly = styled(MdOutlineMailOutline)`
   opacity: 0;
   transform: translate(0rem, 7rem) scale(0) rotate(45deg);
 `;
-
-
