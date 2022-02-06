@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ClipLoader from 'react-spinners/ClipLoader';
-
+import cv from './cv.png';
 import axios from 'axios';
 import {
   Freelance,
@@ -28,6 +28,10 @@ import {
   LinkedInIcon,
   Cv,
   IconWrapperHover,
+  WrapperCv,
+  ImgCv,
+  WrapperX,
+  X,
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
 import Warning from '../../shared/warning/Warning';
@@ -149,6 +153,12 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
 
   return (
     <Wrapper>
+      <WrapperCv>
+        <ImgCv src={cv} /> 
+        <WrapperX>
+          <X />
+        </WrapperX>
+      </WrapperCv>
       <Header className='animate'>contact</Header>
       <WrapperHeader className='animate'>
         <H1Connect>Lets Connect</H1Connect>

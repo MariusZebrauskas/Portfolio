@@ -4,6 +4,7 @@ import { ImOffice } from 'react-icons/im';
 import { SiFreelancer } from 'react-icons/si';
 import { MdOutlineMailOutline } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoMdClose } from 'react-icons/io';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -92,7 +93,6 @@ export const WrapperIconConnect = styled.div`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: #334455;
   margin-top: ${(props) => props.theme.margin.smaller};
-  /* background:green; */
 }
 `;
 export const GithubIcon = styled(FaGithub)``;
@@ -166,7 +166,7 @@ export const IconWrapperHover = styled(IconWrapper)`
   &:hover div:before,
   &:hover div:after {
     cursor: pointer;
-    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s;
+    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s, transform ease-in-out 0.2s;
     color: #7089a1;
     border-color: #7089a1;
   }
@@ -329,4 +329,70 @@ export const MailFly = styled(MdOutlineMailOutline)`
   position: absolute;
   opacity: 0;
   transform: translate(0rem, 7rem) scale(0) rotate(45deg);
+`;
+
+export const WrapperCv = styled.div`
+  position: fixed;
+  background-color: #000000e6;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 10000;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const ImgCv = styled.img`
+  /* opacity: 0; */
+  width: 100%;
+  max-width: 50rem;
+  position: relative;
+  z-index: 500;
+  /* height: 80vh; */
+  @media (min-width: 653px) and (min-height: 280px) {
+    width: 40%;
+  }
+  @media (min-width: 720px) and (min-height: 540px) {
+    width: 60%;
+  }
+  @media (min-width: 653px) and (min-height: 1000px) {
+    width: 90%;
+  }
+  @media (min-width: 820px) and (min-height: 412px){
+    width: 40%;
+  }
+  @media (min-width: 820px) and (min-height: 1180px){
+    width: 100%;
+  }
+
+  @media (min-width: 1000px) and (min-height: 768px){
+    width: 50%;
+  }
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+`;
+
+export const WrapperX = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 90000;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.color.primary};
+  
+`;
+
+export const X = styled(IoMdClose)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  transition: transform ease-in-out 1s, color ease-in-out 0.2s;
+  &:hover {
+    cursor: pointer;
+    color: ${(props) => props.theme.color.third};
+    transform: rotate(360deg);
+  }
 `;
