@@ -49,9 +49,6 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   const [loading, setLoading] = useState(false);
   // error
   const [error, setError] = useState(false);
-  // show cv
-
-  const cvHandler = () => {};
 
   // message info
   let name = useRef();
@@ -154,11 +151,68 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
     });
   };
 
+  // show  hide cv handler
+
+  const cvHandler = (swich) => {
+    let tl2 = gsap.timeline();
+    if (swich === 'turnON') {
+      tl2
+        .fromTo(
+          '.animateFadeIN',
+          {
+            opacity: 0,
+            zIndex: -10000,
+          },
+          {
+            duration: 0.1,
+            opacity: 1,
+            zIndex: 10000,
+          }
+        )
+        .fromTo(
+          '.animatePopUp',
+          {
+            opacity: 0,
+            scale: 0.8,
+          },
+          {
+            delay: 0.1,
+            opacity: 1,
+            scale: 1,
+            stagger: 0.5,
+          }
+        );
+    }
+    if (swich === 'turnOFF') {
+      tl2
+        .fromTo(
+          '.animatePopUp',
+          {
+            opacity: 1,
+            scale: 1,
+          },
+          { duration: 0.5, opacity: 0, scale: 0.8, stagger: 0.1, ease: 'power4.out' }
+        )
+        .fromTo(
+          '.animateFadeIN',
+          {
+            opacity: 1,
+            zIndex: 10000,
+          },
+          {
+            duration: 0.1,
+            opacity: 0,
+            zIndex: -10000,
+          }
+        );
+    }
+  };
+
   return (
     <Wrapper>
-      <WrapperCv>
-        <ImgCv src={cv} />
-        <WrapperX onClick={cvHandler}>
+      <WrapperCv className='animateFadeIN'>
+        <ImgCv className='animatePopUp' src={cv} />
+        <WrapperX className='animatePopUp' onClick={() => cvHandler('turnOFF')}>
           <X />
         </WrapperX>
       </WrapperCv>
@@ -179,7 +233,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
           <LinkedInIcon />
           <P>LinkedIn</P>
         </IconWrapperHover>
-        <IconWrapperHover className='animate' mt='-.2rem'>
+        <IconWrapperHover onClick={() => cvHandler('turnON')} className='animate' mt='-.2rem'>
           <Cv>CV</Cv>
           <P>Resume</P>
         </IconWrapperHover>

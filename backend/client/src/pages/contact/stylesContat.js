@@ -337,18 +337,19 @@ export const WrapperCv = styled.div`
   width: 100%;
   height: 100vh;
   top: 0;
-  z-index: 10000;
   padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  z-index: -1000;
 `;
 export const ImgCv = styled.img`
-  /* opacity: 0; */
   width: 100%;
   max-width: 50rem;
   position: relative;
   z-index: 500;
+  opacity: 0;
 
   @media (min-width: 653px) and (max-height: 375px) {
     /* galaxy fold, SE */
