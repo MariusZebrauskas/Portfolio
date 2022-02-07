@@ -333,7 +333,7 @@ export const MailFly = styled(MdOutlineMailOutline)`
 
 export const WrapperCv = styled.div`
   position: fixed;
-  background-color: #000000e6;
+  background-color: #000000fa;
   width: 100%;
   height: 100vh;
   top: 0;
@@ -349,42 +349,36 @@ export const ImgCv = styled.img`
   max-width: 50rem;
   position: relative;
   z-index: 500;
-  /* height: 80vh; */
-  @media (min-width: 653px) and (min-height: 280px) {
+
+  @media (min-width: 653px) and (max-height: 375px) {
+    /* galaxy fold, SE */
+    width: 45%;
+  }
+  @media (min-width: 720px) and (max-height: 540px) {
+    /* surface duo */
+    width: 70%;
+  }
+  @media (min-width: 740px) and (max-height: 414px) {
+    /* ihone XR,12 Pro, galaxy s8, */
     width: 40%;
-  }
-  @media (min-width: 720px) and (min-height: 540px) {
-    width: 60%;
-  }
-  @media (min-width: 653px) and (min-height: 1000px) {
-    width: 90%;
-  }
-  @media (min-width: 820px) and (min-height: 412px){
-    width: 40%;
-  }
-  @media (min-width: 820px) and (min-height: 1180px){
-    width: 100%;
   }
 
-  @media (min-width: 1000px) and (min-height: 768px){
+  @media (min-width: 1024px) and (max-height: 820px) {
+    /* Nest hub + max */
     width: 50%;
-  }
-  @media (min-width: 1024px) {
-    width: 30%;
   }
 `;
 
 export const WrapperX = styled.div`
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   z-index: 90000;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.color.primary};
-  
 `;
 
 export const X = styled(IoMdClose)`

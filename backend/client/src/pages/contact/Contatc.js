@@ -49,6 +49,9 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   const [loading, setLoading] = useState(false);
   // error
   const [error, setError] = useState(false);
+  // show cv
+
+  const cvHandler = () => {};
 
   // message info
   let name = useRef();
@@ -154,8 +157,8 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
   return (
     <Wrapper>
       <WrapperCv>
-        <ImgCv src={cv} /> 
-        <WrapperX>
+        <ImgCv src={cv} />
+        <WrapperX onClick={cvHandler}>
           <X />
         </WrapperX>
       </WrapperCv>

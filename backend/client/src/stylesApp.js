@@ -42,17 +42,17 @@ export const ContentWrapper = styled.section`
   }
 
   @media (min-width: 851px) and (max-height: 412px) {
-    /* pixel 5 + galaxy 20 ultra */
+ 
     margin: ${(props) => (props.openWelcome === 'deep' ? '-15vh 0 0 0' : 0)};
   }
 
   /* FIXME: IPAD */
   @media (min-width: 768px) and (max-height: 1368px) {
-    /* pixel 5 + galaxy 20 ultra */
+
     margin: ${(props) => (props.openWelcome === 'deep' ? '0vh 0 0 0' : 0)};
   }
   @media (min-width: 2560px) {
-    /* pixel 5 + galaxy 20 ultra */
+
     margin: ${(props) => (props.openWelcome === 'deep' ? '4vh 0 0 0' : 0)};
   }
 `;
