@@ -171,6 +171,25 @@ export const IconWrapperHover = styled(IconWrapper)`
     border-color: #7089a1;
   }
 `;
+export const PHover = styled(P)`
+  position: relative;
+  span {
+    content: '';
+    height: 0.3rem;
+    width: 100%;
+    background-color: ${(props) => props.theme.color.forth};
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    @media (min-width: 768px) {
+      bottom: calc(-0.1rem - 0.2vw);
+    }
+    @media (min-width: 2560px) {
+      bottom: calc(-0.1rem - 0.1vw);
+    }
+    /* transform: scale(0); */
+  }
+`;
 // form
 
 export const FormSubmit = styled.form`

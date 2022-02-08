@@ -32,6 +32,12 @@ const Audio = ({ audioSound, setAudioSound }) => {
             ? audio2
             : audioSound === 'musicschoolnotes'
             ? audio2
+            : audioSound === 'gitAudio'
+            ? audio2
+            : audioSound === 'LinkedAudio'
+            ? audio2
+            : audioSound === 'resumeAudio'
+            ? audio2
             : null
         }
         volume={0.5}

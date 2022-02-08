@@ -32,6 +32,7 @@ import {
   ImgCv,
   WrapperX,
   X,
+  PHover,
 } from './stylesContat';
 import MessageBeenSend from './MessageBeenSend';
 import Warning from '../../shared/warning/Warning';
@@ -137,6 +138,25 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
     );
   }, []);
 
+ // audio on clikc links
+ const linkAudioHandler = (params) => {
+  console.log('params:', params)
+  if (params === 'gitAudio') {
+    hoverGit.reverse();
+    return setAudioSound(params);
+  }
+  if (params === 'linkedAudio') {
+    hoverLinkt.reverse();
+    return setAudioSound(params);
+  }
+  if (params === 'resumeAudio') {
+    hoverResume.reverse();
+    return setAudioSound(params);
+  }
+  
+};
+
+
   // onclick animation
   const onClick = () => {
     let tl = gsap.timeline();
@@ -150,10 +170,11 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
       ease: 'back.out(1.7)',
     });
   };
-
+  
   // show  hide cv handler
-
+  
   const cvHandler = (swich) => {
+    linkAudioHandler('resumeAudio');
     let tl2 = gsap.timeline();
     if (swich === 'turnON') {
       tl2
@@ -173,7 +194,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
           '.animatePopUp',
           {
             opacity: 0,
-            scale: 0.8,
+            scale: 0.4,
           },
           {
             delay: 0.1,
@@ -191,7 +212,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
             opacity: 1,
             scale: 1,
           },
-          { duration: 0.5, opacity: 0, scale: 0.8, stagger: 0.1, ease: 'power4.out' }
+          { duration: 0.5, opacity: 0, scale: 0.4, stagger: 0.1, ease: 'power4.out' }
         )
         .fromTo(
           '.animateFadeIN',
@@ -200,14 +221,101 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
             zIndex: 10000,
           },
           {
-            duration: 0.1,
+            delay: 0.2,
+            duration: 0.05,
             opacity: 0,
             zIndex: -10000,
-          }
+          },
+          '<'
         );
     }
   };
-
+  // hover links animationTimer
+  // GIT HOVER
+  let duration = 0.4;
+  let hoverGit = gsap.fromTo(
+    '.bounceGit',
+    {
+      scale: 1,
+    },
+    {
+      scale: 0,
+      repeat: -1,
+      yoyo: true,
+      paused: true,
+      duration: duration,
+      backgroundColor: '#7089a1',
+    }
+  );
+  // LINKEED HOVER
+  let hoverLinkt = gsap.fromTo(
+    '.bounceLinked',
+    {
+      scale: 1,
+    },
+    {
+      scale: 0,
+      repeat: -1,
+      yoyo: true,
+      paused: true,
+      duration: duration,
+      backgroundColor: '#7089a1',
+    }
+  );
+  // REsume HOVER_GIT
+  let hoverResume = gsap.fromTo(
+    '.bounceResume',
+    {
+      scale: 1,
+    },
+    {
+      scale: 0,
+      repeat: -1,
+      yoyo: true,
+      paused: true,
+      duration: duration,
+      backgroundColor: '#7089a1',
+    }
+  );
+  const onHover = (params) => {
+    if (params === 'gitHover') {
+      hoverGit.play();
+    }
+    if (params === 'linkedInHover') {
+      hoverLinkt.play();
+    }
+    if (params === 'resumeHover') {
+      hoverResume.play();
+    }
+  };
+  // leave links animationTimer
+  const onLeave = (params) => {
+    // GIT
+    if (params === 'gitLeave') {
+      gsap.to('.bounceGit', {
+        scale: 1,
+        backgroundColor: '#334455',
+      });
+      hoverGit.pause();
+    }
+    // LINKED
+    if (params === 'linkedInLeave') {
+      gsap.to('.bounceLinked', {
+        scale: 1,
+        backgroundColor: '#334455',
+      });
+      hoverLinkt.pause();
+    }
+    // RESUME
+    if (params === 'resumeLeave') {
+      gsap.to('.bounceResume', {
+        scale: 1,
+        backgroundColor: '#334455',
+      });
+      hoverResume.pause();
+    }
+  };
+ 
   return (
     <Wrapper>
       <WrapperCv className='animateFadeIN'>
@@ -225,17 +333,39 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
           href='https://github.com/MariusZebrauskas?tab=repositories'
           target='_blank'
           className='animate'
+          onMouseEnter={() => onHover('gitHover')}
+          onMouseLeave={() => onLeave('gitLeave')}
+          onClick={() => linkAudioHandler('gitAudio')}
         >
           <GithubIcon />
-          <P>GitHub</P>
+          <PHover>
+            <span className='bounceGit'></span>GitHub
+          </PHover>
         </IconWrapperHover>
-        <IconWrapperHover href='https://uk.linkedin.com/' target='_blank' className='animate'>
+        <IconWrapperHover
+          onMouseEnter={() => onHover('linkedInHover')}
+          onMouseLeave={() => onLeave('linkedInLeave')}
+          onClick={() => linkAudioHandler('linkedAudio')}
+          href='https://uk.linkedin.com/'
+          target='_blank'
+          className='animate'
+        >
           <LinkedInIcon />
-          <P>LinkedIn</P>
+          <PHover>
+            <span className='bounceLinked'></span>LinkedIn
+          </PHover>
         </IconWrapperHover>
-        <IconWrapperHover onClick={() => cvHandler('turnON')} className='animate' mt='-.2rem'>
+        <IconWrapperHover
+          onMouseEnter={() => onHover('resumeHover')}
+          onMouseLeave={() => onLeave('resumeLeave')}
+          onClick={() => cvHandler('turnON')}
+          className='animate'
+          mt='-.2rem'
+        >
           <Cv>CV</Cv>
-          <P>Resume</P>
+          <PHover>
+            <span className='bounceResume'></span>Resume
+          </PHover>
         </IconWrapperHover>
       </WrapperIconConnect>
       <WrapperHeader className='animate'>
