@@ -346,7 +346,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
           onMouseEnter={() => onHover('linkedInHover')}
           onMouseLeave={() => onLeave('linkedInLeave')}
           onClick={() => linkAudioHandler('linkedAudio')}
-          href='https://uk.linkedin.com/'
+          href='https://www.linkedin.com/in/m-z-javascript/'
           target='_blank'
           className='animate'
         >
