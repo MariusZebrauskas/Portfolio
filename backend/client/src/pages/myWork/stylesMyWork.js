@@ -113,7 +113,7 @@ export const DescriotionWrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: ${(props) => props.theme.margin.small};
+  margin-top: ${(props) => props.theme.margin.smaller};
   width: 100%;
 `;
 

@@ -41,8 +41,10 @@ export const theme = {
   margin: {
     mainWrapper: 'calc(1rem + 1vw)',
     top: '12.5rem 0 0 0',
-    small: 'calc(3rem + .5vw)',
-    smaller: 'calc(1.7rem + .5vw)',
+    // small: 'calc(3rem + .5vw)',
+    // smaller: 'calc(1.7rem + .5vw)',
+    small: 'calc(3rem + 2.1vw)',
+    smaller: 'calc(2rem + .7vw)',
     smaller2: '1rem',
   },
   icon: {
