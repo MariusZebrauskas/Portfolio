@@ -90,7 +90,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       <DesignWrapper>
         <Headers className='animate'>Design</Headers>
         <Description className='animate'>
-          My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
+          My client was a Piano teacher, she already had 3 music albums. Using pictures of albums, I
           designed the website design on the fly.
         </Description>
         <ImgMainWrapper>
@@ -138,13 +138,13 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
           <ImgWrapper>
             <Avatar src={avatar} alt='' />
             <WrapperClient>
-              <Name>Olga Beliukeviciene</Name>
+              <Name>Olga Beliukevičienė</Name>
               <Mobile>Mobile: +370 675 45513</Mobile>
             </WrapperClient>
           </ImgWrapper>
           <TextWrapper>
             <Comment>
-              Marius Zebrauskas work has been done professionally. Marius has the skills of a
+              Marius Žebrauskas work has been done professionally. Marius has the skills of a
               designer also he can present things understandably and suggestively, has good computer
               skills, has the perseverance and desire to do the job perfectly.
             </Comment>

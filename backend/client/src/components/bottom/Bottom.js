@@ -10,7 +10,7 @@ const Bottom = ({ openWelcome }) => {
   };
 
   const [questions, setQuestions] = useState(
-    'Please leave a feedback about portfolio via contatc page'
+    'Please leave feedback about portfolio via contact page'
   );
   const [copyRights, setCopyRights] = useState('Copyrights');
 

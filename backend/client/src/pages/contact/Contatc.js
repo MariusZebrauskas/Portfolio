@@ -326,7 +326,7 @@ const Contatc = ({ setOpenWelcome, setAudioSound }) => {
       </WrapperCv>
       <Header className='animate'>contact</Header>
       <WrapperHeader className='animate'>
-        <H1Connect>Lets Connect</H1Connect>
+        <H1Connect>Let's Connect</H1Connect>
       </WrapperHeader>
       <WrapperIconConnect>
         <IconWrapperHover

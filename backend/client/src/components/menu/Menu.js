@@ -47,7 +47,7 @@ const Menu = ({
         activatemenu={activatemenu}
         openWelcome={openWelcome}
         openImgPortfolio={openImgPortfolio}
-        data='Contatc'
+        data='Contact'
         setAudioSound={setAudioSound}
 
       />
