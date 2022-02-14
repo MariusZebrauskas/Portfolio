@@ -25,6 +25,7 @@ import {
   StyledomponentsIcon,
   TechnologiesWrapper,
   GsapIcon,
+  ReduxIcon,
 } from './aboutStyles';
 
 const Technologies = () => {
@@ -125,8 +126,8 @@ const Technologies = () => {
             </DoubleIconWrapper>
             <DoubleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
-                <ReactIcon />
-                <SingleIconHeader>React Router Dom</SingleIconHeader>
+                <ReduxIcon />
+                <SingleIconHeader>Redux</SingleIconHeader>
               </SingleIconWrapper>
 
               <SingleIconWrapper className='iconsFade'>
@@ -136,8 +137,8 @@ const Technologies = () => {
             </DoubleIconWrapper>
             <DoubleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
-                <Css3Icon />
-                <SingleIconHeader>CSS 3</SingleIconHeader>
+                <ReactIcon />
+                <SingleIconHeader>React Router Dom</SingleIconHeader>
               </SingleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
                 <SassIcon />

@@ -93,7 +93,7 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
             />
           </ImgWrapper>
           <DescriotionWrapper>
-            <Header className='animate'>Full Stack Aplication</Header>
+            <Header className='animate'>Full Stack Application</Header>
 
             <P className='animate'>
               Technologies: React, Styled Components, Framer Motion, React Router, Context Api, Node

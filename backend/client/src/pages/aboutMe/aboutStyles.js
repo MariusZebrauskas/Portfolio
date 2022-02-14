@@ -12,6 +12,7 @@ import {
   SiGithub,
   SiHeroku,
   SiGreensock,
+  SiRedux,
 } from 'react-icons/si';
 import { MdOutlineSchool } from 'react-icons/md';
 import { CgGym } from 'react-icons/cg';
@@ -99,6 +100,10 @@ export const WrapperFrontBack = styled.section`
 // front
 
 export const ReactIcon = styled(FaReact)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.forth};
+`;
+export const ReduxIcon = styled(SiRedux)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.forth};
 `;
