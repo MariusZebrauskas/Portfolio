@@ -13,7 +13,7 @@ const Welcome = ({ openWelcome }) => {
       </WrapperH1>
       <SecondPar openWelcome={openWelcome}>
         <P>REACT / NODE JS</P>
-        <P paddingBottom>WEB DEWELOPER</P>
+        <P paddingBottom>WEB DEVELOPER</P>
       </SecondPar>
 
       <ThirdPar openWelcome={openWelcome}>
