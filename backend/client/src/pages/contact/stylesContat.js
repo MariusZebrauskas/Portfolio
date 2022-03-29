@@ -299,6 +299,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f1f3f9;
 
   &:before {
     content: '';

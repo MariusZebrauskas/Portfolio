@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import ClipLoader from 'react-spinners/ClipLoader';
-import cv from './cv.png';
+import cv from './mzcv.png';
 import axios from 'axios';
 import {
   Freelance,
