@@ -3,8 +3,6 @@ import { RiComputerLine } from 'react-icons/ri';
 import { ImOffice } from 'react-icons/im';
 import { SiFreelancer } from 'react-icons/si';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { IoMdClose } from 'react-icons/io';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -82,51 +80,6 @@ export const WrapperHeader = styled.div`
   }
 `;
 
-export const H1Connect = styled(H1)`
-  padding: 0;
-`;
-export const WrapperIconConnect = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: ${(props) => props.theme.fontSize.icon};
-  color: #334455;
-  margin-top: ${(props) => props.theme.margin.smaller};
-}
-`;
-export const GithubIcon = styled(FaGithub)``;
-export const LinkedInIcon = styled(FaLinkedin)``;
-export const Cv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 0 0.5rem;
-  &:before {
-    content: '';
-    height: 40%;
-    width: 30%;
-    /* background-color: red; */
-    position: absolute;
-    top: -0.1rem;
-    left: 0rem;
-    border-left: 0.2rem solid ${(props) => props.theme.color.forth};
-    border-top: 0.2rem solid ${(props) => props.theme.color.forth};
-  }
-  &:after {
-    content: '';
-    height: 40%;
-    width: 30%;
-    /* background-color: red; */
-    position: absolute;
-    right: -0rem;
-    bottom: 0;
-    border-right: 0.2rem solid ${(props) => props.theme.color.forth};
-    border-bottom: 0.2rem solid ${(props) => props.theme.color.forth};
-  }
-`;
-
 export const P = styled.p`
   font-weight: 400;
   font-size: ${(props) => props.theme.fontSize.p};
@@ -147,7 +100,7 @@ export const WrapperIconsMain = styled.div`
   opacity: 0;
 `;
 
-export const IconWrapper = styled.a`
+export const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,40 +109,7 @@ export const IconWrapper = styled.a`
     display: ${(props) => (props.freelance ? 'none' : 'flex')};
   }
 `;
-export const IconWrapperHover = styled(IconWrapper)`
-  opacity: 0;
 
-  padding: 0.5rem 0.7rem;
-  margin-top: ${(props) => (props.mt ? props.mt : null)};
-  &:hover,
-  &:hover p,
-  &:hover div:before,
-  &:hover div:after {
-    cursor: pointer;
-    transition: color ease-in-out 0.2s, border-color ease-in-out 0.2s, transform ease-in-out 0.2s;
-    color: #7089a1;
-    border-color: #7089a1;
-  }
-`;
-export const PHover = styled(P)`
-  position: relative;
-  span {
-    content: '';
-    height: 0.3rem;
-    width: 100%;
-    background-color: ${(props) => props.theme.color.forth};
-    position: absolute;
-    left: 0;
-    bottom: -0.3rem;
-    @media (min-width: 768px) {
-      bottom: calc(-0.1rem - 0.2vw);
-    }
-    @media (min-width: 2560px) {
-      bottom: calc(-0.1rem - 0.1vw);
-    }
-    /* transform: scale(0); */
-  }
-`;
 // form
 
 export const FormSubmit = styled.form`
@@ -199,7 +119,7 @@ export const FormSubmit = styled.form`
   flex-direction: column;
   width: 100%;
   margin-top: ${(props) => props.theme.margin.smaller};
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 `;
 
 export const NameAndEmail = styled.div`
@@ -220,8 +140,7 @@ export const Input = styled.input`
   border: none;
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
-  background: ${(props) =>
-    props.nameInput === undefined && props.emailInput === undefined ? 'inherit' : '#e8f0fe'};
+  background: inherit;
   margin-bottom: 2rem;
   font-size: ${(props) => props.theme.fontSize.small};
   &::placeholder {
@@ -249,7 +168,6 @@ export const TextArea = styled.textarea`
   border-bottom: 1px solid #dadada;
   margin-bottom: 1rem;
   background: inherit;
-  background: ${(props) => (props.messageInput === undefined ? 'inherit' : '#e8f0fe')};
   margin-bottom: 2rem;
   font-size: ${(props) => props.theme.fontSize.small};
   &::placeholder {
@@ -277,9 +195,6 @@ export const PButon = styled.p`
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
   transition: color ease-in-out 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const Button = styled.button`
@@ -296,11 +211,7 @@ export const Button = styled.button`
   align-items: center;
   overflow: hidden;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f3f9;
-
+  
   &:before {
     content: '';
     position: absolute;
@@ -313,11 +224,12 @@ export const Button = styled.button`
     z-index: 1;
     transform: translateX(-100%);
     opacity: 0;
-    transition: transform ease-in 0.2s, opacity ease-in-out 0.2s;
-  }
+    transition: transform ease-in 0.2s,opacity ease-in-out 0.2s;
+}
 
-  &:hover:before {
-    opacity: 1;
+  } 
+   &:hover:before {
+     opacity: 1;
     transform: translateX(0);
   }
   &:hover ${PButon} {
@@ -343,71 +255,9 @@ export const TextBeenSend = styled.h4`
 `;
 
 export const MailFly = styled(MdOutlineMailOutline)`
-  font-size: calc(1.8rem + 0.5vw);
-  color: ${(props) => props.theme.color.forth};
-
+  font-size: calc(1.8rem + .5vw);
+  color: ${(props) => props.theme.color.eigth};
   position: absolute;
   opacity: 0;
-  transform: translate(0rem, 7rem) scale(0) rotate(45deg);
-`;
-
-export const WrapperCv = styled.div`
-  position: fixed;
-  background-color: #000000fa;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  z-index: -1000;
-`;
-export const ImgCv = styled.img`
-  width: 100%;
-  max-width: 50rem;
-  position: relative;
-  z-index: 500;
-  opacity: 0;
-
-  @media (min-width: 653px) and (max-height: 375px) {
-    /* galaxy fold, SE */
-    width: 45%;
-  }
-  @media (min-width: 720px) and (max-height: 540px) {
-    /* surface duo */
-    width: 70%;
-  }
-  @media (min-width: 740px) and (max-height: 414px) {
-    /* ihone XR,12 Pro, galaxy s8, */
-    width: 40%;
-  }
-
-  @media (min-width: 1024px) and (max-height: 820px) {
-    /* Nest hub + max */
-    width: 50%;
-  }
-`;
-
-export const WrapperX = styled.div`
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 90000;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: ${(props) => props.theme.color.primary};
-`;
-
-export const X = styled(IoMdClose)`
-  font-size: ${(props) => props.theme.fontSize.icon};
-  transition: transform ease-in-out 1s, color ease-in-out 0.2s;
-  &:hover {
-    cursor: pointer;
-    color: ${(props) => props.theme.color.third};
-    transform: rotate(360deg);
-  }
+  transform: translate(-5rem, 5rem) scale(0) rotate(45deg);
 `;

@@ -130,7 +130,7 @@ export const Close = styled(MdOutlineClose)`
   font-size: 2rem;
   top: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '1rem')};
   right: ${(props) => (props.openwelcome === 'deep' ? '1rem' : '1rem')};
-  z-index: 100;
+  z-index: 99999;
   opacity: ${(props) =>
     props.openwelcome === 'in' || props.openwelcome === 'deep'
       ? 1

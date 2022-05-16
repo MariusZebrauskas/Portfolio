@@ -6,14 +6,13 @@ let audio5 =
   'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/mp3%2F5.mp3?alt=media&token=365769d4-92d7-40db-9401-8f994847b790';
 let audio2 =
   'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/mp3%2F2.mp3?alt=media&token=9a240c93-2c2d-4493-93d9-973429dad8e7';
-let email =
-  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/mp3%2Femail.mp3?alt=media&token=0d5e2b5f-5dfd-4baf-8762-470b55ef6d2a';
+
 const Audio = ({ audioSound, setAudioSound }) => {
   useEffect(() => {
     setTimeout(() => {
       setAudioSound(null);
     }, 300);
-  }, [audioSound, setAudioSound]);
+  }, [audioSound,setAudioSound]);
   return (
     <>
       <ReactAudioPlayer
@@ -22,8 +21,6 @@ const Audio = ({ audioSound, setAudioSound }) => {
             ? audio4
             : audioSound === 'onX'
             ? audio5
-            : audioSound === 'email'
-            ? email
             : audioSound === 'about'
             ? audio2
             : audioSound === 'myWork'
@@ -31,12 +28,6 @@ const Audio = ({ audioSound, setAudioSound }) => {
             : audioSound === 'contact'
             ? audio2
             : audioSound === 'musicschoolnotes'
-            ? audio2
-            : audioSound === 'gitAudio'
-            ? audio2
-            : audioSound === 'LinkedAudio'
-            ? audio2
-            : audioSound === 'resumeAudio'
             ? audio2
             : null
         }

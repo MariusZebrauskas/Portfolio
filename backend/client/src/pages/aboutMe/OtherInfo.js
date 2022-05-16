@@ -54,7 +54,7 @@ const OtherInfo = () => {
             <GymIcon />
             <OtherSingleDescription>
               <OtherI>Hobby</OtherI>
-              <OtherP>GYM</OtherP>
+              <OtherP>GYM, Fishing</OtherP>
             </OtherSingleDescription>
           </OtherSingleWrapper>
         </section>
@@ -70,7 +70,7 @@ const OtherInfo = () => {
             <MotoIcon last='true' />
             <OtherSingleDescription>
               <OtherI>Motto</OtherI>
-              <OtherP>Learn Something New Every Day</OtherP>
+              <OtherP>Lern Something New Every Day</OtherP>
             </OtherSingleDescription>
           </OtherSingleWrapper>
         </section>

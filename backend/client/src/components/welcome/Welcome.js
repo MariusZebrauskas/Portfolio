@@ -12,13 +12,13 @@ const Welcome = ({ openWelcome }) => {
         </NameWrapper>
       </WrapperH1>
       <SecondPar openWelcome={openWelcome}>
-        <P>REACT / NODE JS</P>
-        <P paddingBottom>WEB DEVELOPER</P>
+        <P>REACT JS FRONT END</P>
+        <P paddingBottom>WEB DEWELOPER</P>
       </SecondPar>
 
       <ThirdPar openWelcome={openWelcome}>
         <P2>
-          I'm a Web Developer. I enjoy writing functions and building beautiful responsive
+          I'm a REACT JS Web Developer. I enjoy writing functions and building beautiful responsive
           websites.
         </P2>
       </ThirdPar>

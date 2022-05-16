@@ -25,7 +25,10 @@ import {
   StyledomponentsIcon,
   TechnologiesWrapper,
   GsapIcon,
+  NextJSIcon,
   ReduxIcon,
+  TailwinIcon,
+  NetlifyIcon,
 } from './aboutStyles';
 
 const Technologies = () => {
@@ -126,8 +129,8 @@ const Technologies = () => {
             </DoubleIconWrapper>
             <DoubleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
-                <ReduxIcon />
-                <SingleIconHeader>Redux</SingleIconHeader>
+                <ReactIcon />
+                <SingleIconHeader>React Router Dom</SingleIconHeader>
               </SingleIconWrapper>
 
               <SingleIconWrapper className='iconsFade'>
@@ -137,8 +140,8 @@ const Technologies = () => {
             </DoubleIconWrapper>
             <DoubleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
-                <ReactIcon />
-                <SingleIconHeader>React Router Dom</SingleIconHeader>
+                <Css3Icon />
+                <SingleIconHeader>CSS 3</SingleIconHeader>
               </SingleIconWrapper>
               <SingleIconWrapper className='iconsFade'>
                 <SassIcon />
@@ -155,6 +158,16 @@ const Technologies = () => {
                 <SingleIconHeader>HTML 5</SingleIconHeader>
               </SingleIconWrapper>
             </DoubleIconWrapper>
+            <DoubleIconWrapper>
+              <SingleIconWrapper className='iconsFade'>
+                <ReduxIcon />
+                <SingleIconHeader>Redux</SingleIconHeader>
+              </SingleIconWrapper>
+              <SingleIconWrapper className='iconsFade'>
+                <TailwinIcon />
+                <SingleIconHeader>Tailwind</SingleIconHeader>
+              </SingleIconWrapper>
+            </DoubleIconWrapper>
           </IconWrapper>
         </Front>
 
@@ -163,8 +176,8 @@ const Technologies = () => {
           <IconWrapper>
             <DoubleIconWrapper>
               <SingleIconWrapper className='iconsFade2'>
-                <NodeJSIcon />
-                <SingleIconHeader>Node js</SingleIconHeader>
+                <NextJSIcon />
+                <SingleIconHeader>Next JS</SingleIconHeader>
               </SingleIconWrapper>
               <SingleIconWrapper className='iconsFade2'>
                 <ExpressIcon />
@@ -190,6 +203,17 @@ const Technologies = () => {
               <SingleIconWrapper className='iconsFade2'>
                 <HerokuIcon />
                 <SingleIconHeader>Heroku</SingleIconHeader>
+              </SingleIconWrapper>
+            </DoubleIconWrapper>
+            <DoubleIconWrapper>
+              <SingleIconWrapper className='iconsFade2'>
+                <NodeJSIcon />
+                <SingleIconHeader>NodeJS</SingleIconHeader>
+              </SingleIconWrapper>
+
+              <SingleIconWrapper className='iconsFade2'>
+                <NetlifyIcon />
+                <SingleIconHeader>Netlify</SingleIconHeader>
               </SingleIconWrapper>
             </DoubleIconWrapper>
           </IconWrapper>

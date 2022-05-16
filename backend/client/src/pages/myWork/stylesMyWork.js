@@ -2,6 +2,8 @@ import styled from 'styled-components';
 let pic =
   'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicnotes2.jpg?alt=media&token=e5023a08-0c94-4388-9ecc-d68ecae91810';
 
+let todoImg =
+  'https://firebasestorage.googleapis.com/v0/b/smart-book-ce0de.appspot.com/o/todo%20app%20home%20page%20-%20redized.jpg?alt=media&token=f70c0ebe-b182-4512-9b71-ec9a20dbc8f0';
 export const Wrapper = styled.section`
   width: 100%;
   display: flex;
@@ -19,12 +21,13 @@ export const MyWorkH1 = styled.h1`
 
 export const WrapperCompleateProjects = styled.section`
   margin-top: ${(props) => props.theme.margin.small};
-  margin-bottom: 10rem;
+
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
 `;
 export const P = styled.p`
   margin-top: ${(props) => props.theme.margin.smaller};
@@ -76,12 +79,20 @@ export const SliderWrapper = styled.div`
     color: #fcff4d;
   }
 `;
+
 export const OlgosWebImg = styled.div`
   background: url(${pic}) no-repeat center center;
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
+`;
+export const TodoImage = styled(OlgosWebImg)`
+  background: url(${todoImg});
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 `;
 
 export const ImgWrapper = styled.div`
@@ -107,13 +118,13 @@ export const WrapperEachJobe = styled.section`
   transition: height ease-in-out 0.2s;
   width: 100%;
   opacity: 0;
+  margin-bottom: 8rem;
 `;
 export const DescriotionWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: ${(props) => props.theme.margin.smaller};
   width: 100%;
 `;
 
@@ -136,7 +147,7 @@ export const H4 = styled.h4`
 `;
 
 export const Header = styled.p`
-  margin-top: ${(props) => props.theme.margin.smaller2};
+  margin-bottom: ${(props) => props.theme.margin.smaller};
   letter-spacing: 0.1rem;
   font-size: ${(props) => props.theme.fontSize.p2};
   position: relative;

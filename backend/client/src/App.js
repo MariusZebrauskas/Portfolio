@@ -10,13 +10,16 @@ import MyWork from './pages/myWork/MyWork';
 import Home from './pages/homeTest/Home';
 import Bottom from './components/bottom/Bottom';
 import MusicSchoolNotes from './pages/musicschoolnotes/MusicSchoolNotes';
+import SmartBook from './pages/smartbook/SmartBook';
 
 function App() {
   // controls img scale + center
   const [openWelcome, setOpenWelcome] = useState('out');
   // controls mp3 audio
   const [audioSound, setAudioSound] = useState(null);
-
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
+  // FIXME: i added openWelcome variable to bottom to display none ir sugriuvo media querys
   return (
     <BrowserRouter>
       {/* lan survey icon  needed */}
@@ -33,11 +36,7 @@ function App() {
         <ContentWrapper openWelcome={openWelcome}>
           <Routes>
             <Route path='/about' exsact element={<AboutMe setOpenWelcome={setOpenWelcome} />} />
-            <Route
-              path='/contatc'
-              exsact
-              element={<Contatc setAudioSound={setAudioSound} setOpenWelcome={setOpenWelcome} />}
-            />
+            <Route path='/contatc' exsact element={<Contatc setOpenWelcome={setOpenWelcome} />} />
             <Route
               path='/mywork'
               exsact
@@ -47,6 +46,11 @@ function App() {
               path='/mywork/musicschoolnotes'
               exsact
               element={<MusicSchoolNotes setOpenWelcome={setOpenWelcome} />}
+            />
+            <Route
+              path='/mywork/smartbook'
+              exsact
+              element={<SmartBook setOpenWelcome={setOpenWelcome}/>}
             />
           </Routes>
         </ContentWrapper>
@@ -58,8 +62,6 @@ function App() {
 
 export default App;
 
-// FIXME: padaryti pilna mz-script.com domaina ir visur pridetti
-//FIXME:: Gyvenimo aprasymas  web site domainas aprasymo apacioje
-//FIXME:  rezume pop on screen 
-// FIXME: sukurti linked in anketa
-// FIXME: linked in Linkas + Linked in account
+
+// FIXME: clean console log 
+// FIXME: Ant send Button uzdeti laiko garsa

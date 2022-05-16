@@ -77,6 +77,9 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
     }
   };
 
+  useEffect(() => {
+    console.log('openWelcomemain componenet says : ', openWelcome);
+  });
 
 
   return (

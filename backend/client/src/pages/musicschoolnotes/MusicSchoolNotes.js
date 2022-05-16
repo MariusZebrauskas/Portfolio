@@ -31,11 +31,8 @@ import {
   LoginPasswordText,
   NamePassword,
   LinkToWeb,
-  ElementsThreeD,
   LinkWrapper,
-  NoteIcon,
-  WrapperMini,
-  GitIcon,
+  ElementsThreeD,
 } from './musicStyles';
 let avatar =
   'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2Favatar.png?alt=media&token=f7c3db20-72bd-455c-8bfb-837c713b9b4d';
@@ -90,7 +87,7 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
       <DesignWrapper>
         <Headers className='animate'>Design</Headers>
         <Description className='animate'>
-          My client was a Piano teacher, she already had 3 music albums. Using pictures of albums, I
+          My client was a Piano teacher, she already had 3 music albums. Using pictures of albums I
           designed the website design on the fly.
         </Description>
         <ImgMainWrapper>
@@ -138,13 +135,13 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
           <ImgWrapper>
             <Avatar src={avatar} alt='' />
             <WrapperClient>
-              <Name>Olga Beliukevičienė</Name>
+              <Name>Olga Beliukeviciene</Name>
               <Mobile>Mobile: +370 675 45513</Mobile>
             </WrapperClient>
           </ImgWrapper>
           <TextWrapper>
             <Comment>
-              Marius Žebrauskas work has been done professionally. Marius has the skills of a
+              Marius Zebrauskas work has been done professionally. Marius has the skills of a
               designer also he can present things understandably and suggestively, has good computer
               skills, has the perseverance and desire to do the job perfectly.
             </Comment>
@@ -159,29 +156,17 @@ const MusicSchoolNotes = ({ setOpenWelcome }) => {
         </WrapperTestamonial>
 
         <WrapperLink className='animate'>
-          <LinkWrapper>
-            {/* web link */}
-            <WrapperMini href='https://www.musicschoolnotes.com/' target='_blank'>
-              <NoteIcon />
-              <LinkToWeb>www.musicschoolnotes.com</LinkToWeb>
-              <LoginPassword>
-                <LoginPasswordText>login: </LoginPasswordText>
-                <NamePassword> testmyweb@gmail.com</NamePassword>
-              </LoginPassword>
-              <LoginPassword>
-                <LoginPasswordText>password: </LoginPasswordText>
-                <NamePassword> helloworld</NamePassword>
-              </LoginPassword>
-            </WrapperMini>
-            {/* github lin needed */}
-            <WrapperMini
-              href='https://github.com/MariusZebrauskas/olga-full-stack-shop'
-              target='_blank'
-            >
-              <GitIcon />
-              <LinkToWeb>www.github.com</LinkToWeb>
-            </WrapperMini>
-          </LinkWrapper>
+          <LoginPassword>
+            <LoginPasswordText>login: </LoginPasswordText>
+            <NamePassword> testmyweb@gmail.com</NamePassword>
+          </LoginPassword>
+          <LoginPassword>
+            <LoginPasswordText>password: </LoginPasswordText>
+            <NamePassword> helloworld</NamePassword>
+          </LoginPassword>
+          <LinkToWeb href='https://www.musicschoolnotes.com/' target='_blank'>
+            www.musicschoolnotes.com
+          </LinkToWeb>
         </WrapperLink>
       </ConclusionWrapper>
     </Wrapper>
