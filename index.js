@@ -1,19 +1,19 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8800;
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 // const cartRoutes = require('./routes/cart');
 // const authRoutes = require('./routes/auth');
 // const recoverRoutes = require('./routes/recover');
 // const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const cors = require('cors');
-const path = require('path');
+const dotenv = require("dotenv");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const cors = require("cors");
+const path = require("path");
 // https force
-const enforce = require('express-sslify');
+const enforce = require("express-sslify");
 // compres data
 // const compression = require('compression');
 dotenv.config();
@@ -24,6 +24,7 @@ const errorHandler = (err, req, res, next) => {
   }
 };
 //middlewere
+
 app.use(express.json());
 // protect headers from hackers
 app.use(helmet.dnsPrefetchControl());
@@ -37,7 +38,7 @@ app.use(helmet.permittedCrossDomainPolicies());
 app.use(helmet.referrerPolicy());
 app.use(helmet.xssFilter());
 // info about requests
-app.use(morgan('common'));
+app.use(morgan("common"));
 // cors alloow front to back comunicate
 app.use(cors());
 // app.use(compression());
@@ -49,7 +50,7 @@ app.use(cors());
 // }
 
 // routes
-app.post('/message', (req, res) => {
+app.post("/message", (req, res) => {
   let message = {
     name: req.body.name,
     email: req.body.email,
@@ -65,7 +66,7 @@ app.post('/message', (req, res) => {
       };
 
       const transporter = nodemailer.createTransport({
-        host: 'smtp.mail.yahoo.com',
+        host: "smtp.mail.yahoo.com",
         port: 465,
         auth: {
           user: testAccount.user,
@@ -79,8 +80,8 @@ app.post('/message', (req, res) => {
 
       let info = await transporter.sendMail({
         from: testAccount.user, // sender address
-        to: 'zebrauskas.mar@gmail.com', // list of receivers
-        subject: 'Portfolio Portfolio Portfolio', // Subject line
+        to: "zebrauskas.mar@gmail.com", // list of receivers
+        subject: "Portfolio Portfolio Portfolio", // Subject line
         html: `<div>
           <h4>name: ${message.name} ,</h4>
           <h4>email: ${message.email} ,</h1>
@@ -88,8 +89,8 @@ app.post('/message', (req, res) => {
       </div>`,
       });
 
-      console.log('Message sent: %s', info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     }
 
     sendEmail().catch(console.error);
@@ -97,18 +98,15 @@ app.post('/message', (req, res) => {
   } catch (err) {
     res.status(404).json({ success: false });
 
-    console.log('err:', err);
+    console.log("err:", err);
   }
 });
 
-
-app.use(express.static('client/build'));
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+app.use(express.static("client/build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 //error handler MAIN
 app.listen(PORT, (req, res) => {
   console.log(`app is running on ${PORT}`);
 });
-
-
