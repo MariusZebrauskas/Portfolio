@@ -44,12 +44,13 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
 
   // timer stops overlaping animation wich brokeanimation
   // timer runs 1 animation at the time
-  let timer = false;
+  let timer = null;
+  
 
   const onMouseEnter = (param1, param2) => {
     // timer stops overlaping animation wich brokeanimation
     // timer runs 1 animation at the time
-    if (timer) {
+    if (timer === param1) {
       return;
     }
     // slider up
@@ -64,10 +65,10 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
   const onMouseLeave = (param1, param2) => {
     // timer stops overlaping animation wich brokeanimation
     // timer runs 1 animation at the time
-    if (timer) {
+    if (timer === param1) {
       return;
     }
-    timer = true;
+    timer = param1;
     // slider down
     gsap.to(param2.current.children[1], {
       duration: 0.6,
@@ -77,7 +78,7 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
     // blure background remove
     gsap.to(param1, { duration: 0.7, filter: 'blur(0px)' });
     setTimeout(() => {
-      timer = false;
+      timer = null;
     }, 601);
   };
 
@@ -87,7 +88,7 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
       <WrapperCompleateProjects>
         {/* jobe1 */}
         <WrapperEachJobe className='animate'>
-          <Header className='animate'>Full Stack Aplication</Header>
+          <Header className='animate'>Full Stack Application </Header>
           <ImgWrapper
             onMouseEnter={() => onMouseEnter('.blurOlgos', slider)}
             onMouseLeave={() => onMouseLeave('.blurOlgos', slider)}
@@ -112,7 +113,7 @@ const MyWork = ({ setOpenWelcome, setAudioSound }) => {
         {/* jobe2 */}
 
         <WrapperEachJobe className='animate'>
-          <Header className='animate'>Full Stack Aplication Nr. 2</Header>
+          <Header className='animate'>Full Stack Application  Nr. 2</Header>
           <ImgWrapper
             onMouseEnter={() => onMouseEnter('.blurSmartBook', slider2)}
             onMouseLeave={() => onMouseLeave('.blurSmartBook', slider2)}

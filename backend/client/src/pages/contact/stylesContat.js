@@ -203,6 +203,7 @@ export const Button = styled.button`
   padding: 0.5rem 0.75rem;
   width: 100%;
   border: none;
+  background: #efefef;
   box-shadow: 1px 3px 6px 0px #615a5a42;
   border: 0.1875rem solid ${(props) => props.theme.color.forth};
   position: relative;

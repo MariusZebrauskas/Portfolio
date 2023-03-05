@@ -6,25 +6,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 
-
 // import required modules
 import { EffectCards } from 'swiper';
 
 import img1 from './todo app home contact-resized.jpg';
 import img2 from './todo app home dashboard-resized.jpg';
 import img3 from './todo app home page - redized.jpg';
-import img4 from './todo app home routine-redized.jpg';
+import img4 from './todo app home routine-resized.jpg';
 import { Image, Wrapper } from './slyderCSS';
 
 const Slider = () => {
   return (
-    <Wrapper>
-      <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className='mySwiper'
-      >
+    <Wrapper className='animate'>
+      <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className='mySwiper'>
         <SwiperSlide>
           <Image src={img3} alt='image3' />
         </SwiperSlide>

@@ -6,20 +6,29 @@ import { Bottom, Img, Left } from './styles';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
-const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
+const Main = ({
+  setOpenWelcome,
+  openWelcome,
+  setAudioSound,
+  togglerabout,
+  togglerwork,
+  togglercontatc,
+  activeabout,
+  activework,
+  activecontact,
+  activatemenu
+}) => {
   const imgRef = useRef();
-  const [activeabout, togglerabout] = useState(false);
-  const [activework, togglerwork] = useState(false);
-  const [activecontact, togglercontatc] = useState(false);
-
   const [activeAllMenu, setActiveAllMenu] = useState(false);
 
+
+
   // remove all active menu items
-  const activatemenu = (about, work, contact) => {
-    togglerabout(about);
-    togglerwork(work);
-    togglercontatc(contact);
-  };
+  // const activatemenu = (about, work, contact) => {
+  //   togglerabout(about);
+  //   togglerwork(work);
+  //   togglercontatc(contact);
+  // };
 
   const adjustImg = () => {
     if (activeabout) {
@@ -80,7 +89,6 @@ const Main = ({ setOpenWelcome, openWelcome, setAudioSound }) => {
   useEffect(() => {
     console.log('openWelcomemain componenet says : ', openWelcome);
   });
-
 
   return (
     <Img ref={imgRef} openWelcome={openWelcome} onClick={() => openImgPortfolio('in')}>

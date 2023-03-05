@@ -16,6 +16,7 @@ import {
   SiRedux,
   SiTailwindcss,
   SiNetlify,
+  SiTypescript,
 } from 'react-icons/si';
 import { MdOutlineSchool } from 'react-icons/md';
 import { CgGym } from 'react-icons/cg';
@@ -139,6 +140,10 @@ export const JSIcon = styled(SiJavascript)`
   color: ${(props) => props.theme.color.fifth};
 `;
 export const ReduxIcon = styled(SiRedux)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.fifth};
+`;
+export const TSIcon = styled(SiTypescript)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;
@@ -288,4 +293,26 @@ export const MotoIcon = styled(BiLayerPlus)`
 export const EducationIcon = styled(MdOutlineSchool)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
+`;
+
+export const LinkToContact = styled.i`
+  color: #004593;
+  margin-left: 10px;
+  position: relative;
+  margin-bottom: 50px;
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #004593;
+    transform: scale(0);
+    transition: transform ease-in-out 0.15s;
+  }
+  &:hover::after {
+    transform: scale(1);
+  }
 `;

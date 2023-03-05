@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   margin-top: ${(props) => props.theme.margin.smaller};
-  overflow: hidden;
   padding: 0 1.5rem;
-  @media (min-width: 600px){
+  overflow: hidden;
+  @media (min-width: 600px) {
+    overflow: unset;
 
-      padding: 0 3rem;
+    padding: 0 3rem;
   }
 `;
 

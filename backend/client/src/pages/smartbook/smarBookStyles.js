@@ -217,3 +217,9 @@ export const LinkWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const Strong = styled.strong`
+  /* margin: '5rem';
+   */
+  margin: 0 .5rem 0 2rem;
+`;

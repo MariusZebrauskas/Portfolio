@@ -29,6 +29,7 @@ import {
   ReduxIcon,
   TailwinIcon,
   NetlifyIcon,
+  TSIcon,
 } from './aboutStyles';
 
 const Technologies = () => {
@@ -167,6 +168,16 @@ const Technologies = () => {
                 <TailwinIcon />
                 <SingleIconHeader>Tailwind</SingleIconHeader>
               </SingleIconWrapper>
+            </DoubleIconWrapper>
+            <DoubleIconWrapper>
+              <SingleIconWrapper className='iconsFade'>
+                <TSIcon />
+                <SingleIconHeader>Typescript</SingleIconHeader>
+              </SingleIconWrapper>
+              {/* <SingleIconWrapper className='iconsFade'>
+                <TailwinIcon />
+                <SingleIconHeader>Tailwind</SingleIconHeader>
+              </SingleIconWrapper> */}
             </DoubleIconWrapper>
           </IconWrapper>
         </Front>

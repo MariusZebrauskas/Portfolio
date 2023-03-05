@@ -101,6 +101,7 @@ app.post('/message', (req, res) => {
   }
 });
 
+
 app.use(express.static('client/build'));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
@@ -110,8 +111,4 @@ app.listen(PORT, (req, res) => {
   console.log(`app is running on ${PORT}`);
 });
 
-// FIXME: parasyti komentara drag mouse left or right po kuriniais
 
-// FIXME: tikrasalbumo pavadinimas Muzikines pasakos
-// 7 kuriinys Liūdnas Asiliukas
-// 9 pasiklyde vaikai

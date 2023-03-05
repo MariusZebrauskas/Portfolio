@@ -5,7 +5,7 @@ import ResposiveWebsites from './ResposiveWebsites';
 import Technologies from './Technologies';
 import gsap from 'gsap';
 
-const AboutMe = ({ setOpenWelcome }) => {
+const AboutMe = ({ setOpenWelcome, activatemenu,setAudioSound }) => {
   const h1 = useRef();
   useEffect(() => {
     // scroll up on render
@@ -26,7 +26,7 @@ const AboutMe = ({ setOpenWelcome }) => {
   return (
     <Wrapper>
       <AboutMeH1 ref={h1}>about me</AboutMeH1>
-      <ResposiveWebsites />
+      <ResposiveWebsites setAudioSound={setAudioSound} activatemenu={activatemenu}/>
       <Technologies />
       <OtherInfo />
     </Wrapper>

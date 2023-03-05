@@ -1,8 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { ResponsiveWebsitesWrapper, ResponsiveWebsites, Description } from './aboutStyles';
+import {
+  ResponsiveWebsitesWrapper,
+  ResponsiveWebsites,
+  Description,
+  LinkToContact,
+} from './aboutStyles';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
-const ResposiveWebsites = () => {
+const ResposiveWebsites = ({ activatemenu,setAudioSound }) => {
   const responsive = useRef();
   const description = useRef();
   const tl = gsap.timeline({});
@@ -13,7 +19,7 @@ const ResposiveWebsites = () => {
       responsive.current,
       { opacity: 0, y: '2rem' },
       {
-        delay: .55,
+        delay: 0.55,
         opacity: 1,
         y: 0,
       }
@@ -27,13 +33,22 @@ const ResposiveWebsites = () => {
     );
   }, []);
   // ANIMATIONS
+  const redirectToContact = () => {
+    // change color on menu to yellow
+    activatemenu(false, false, true);
+    // autio sound
+    setAudioSound('contact');
+  };
   return (
     <ResponsiveWebsitesWrapper>
       <ResponsiveWebsites ref={responsive}>Responsive Websites</ResponsiveWebsites>
       <Description ref={description}>
-        Responsive Modern Websites Are My Thing. I Would Love To Modify Existing Software. Detect
-        And Correct Errors, Improve Performance, And Upgrade Interfaces, Or If You Got A Design Of A
-        Brand New Website, I Would Love To Be A Front End Web Developer In Your Team.
+        If You Need A Brand New Website, Or You Need A Developer In Your Team. Please Leave A Message In
+        <Link onClick={redirectToContact} to='/contatc'>
+          <LinkToContact>Contact</LinkToContact>
+        </Link>{' '}
+        Page. I Would Love To Modify Existing Software, Detect And Correct Errors, Improve
+        Performance Or Upgrade Interfaces.
       </Description>
     </ResponsiveWebsitesWrapper>
   );
