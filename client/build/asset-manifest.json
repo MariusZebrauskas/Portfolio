@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.22da3ffd.css",
+    "main.js": "/static/js/main.8a015b7d.js",
+    "static/media/todo app home page - redized.jpg": "/static/media/todo app home page - redized.b39d12543b051e764c1c.jpg",
+    "static/media/todo app home routine-resized.jpg": "/static/media/todo app home routine-resized.df2b97d39c5178361c3a.jpg",
+    "static/media/todo app home dashboard-resized.jpg": "/static/media/todo app home dashboard-resized.cb60664ded9819a57c70.jpg",
+    "index.html": "/index.html",
+    "main.22da3ffd.css.map": "/static/css/main.22da3ffd.css.map",
+    "main.8a015b7d.js.map": "/static/js/main.8a015b7d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22da3ffd.css",
+    "static/js/main.8a015b7d.js"
+  ]
+}
