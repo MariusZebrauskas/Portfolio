@@ -7,6 +7,7 @@ import {
   Wrapper,
   WrapperCompleateProjects,
   ImgWrapper,
+  EmbrkImage,
   WrapperEachJobe,
   DescriotionWrapper,
   P,
@@ -19,13 +20,13 @@ const projects = [
     id: Math.random(),
     title: "Embrk Limited (working since 09-2022)",
     imgClass: "test",
-    imgComponent: <TodoImage className="musicschoolnotes test" />,
+    imgComponent: <EmbrkImage className="musicschoolnotes test" />,
     sliderData: {
-      data1: "test",
-      data2: "test",
-      data3: "test",
+      data1: "Full Stack developer",
+      data2: "https://www.footballticketpad.com/, https://www.seatloader.com/",
+      url: "embrk",
     },
-    description: "test",
+    description: "Technologies: Typescript, SvelteKit, NodeJs, NextJs",
   },
   {
     id: Math.random(),
@@ -35,7 +36,7 @@ const projects = [
     sliderData: {
       data1: "Login: testmyweb@gmail.com",
       data2: "Password: helloworld",
-      data3: "musicschoolnotes",
+      url: "musicschoolnotes",
     },
     description:
       "Technologies: React, Styled Components, Framer Motion, React Router, Context Api, Node JS, Express, Mongo DB, Fire Base, Stripe, Node Mailer...",
@@ -48,7 +49,7 @@ const projects = [
     sliderData: {
       data1: "Login: testmyweb@gmail.com",
       data2: "Password: helloworld",
-      data3: "smartbook",
+      url: "smartbook",
     },
     description:
       "Technologies: NextJS, TypesScript, Redux, Tailwind, GSAP, Mongo DB, Fire Base, Node Mailer, Bcrypt, Joi, Axios.",
@@ -151,11 +152,14 @@ function Project({ project, setAudioSound }) {
   const slider = useRef();
 
   return (
-    <WrapperEachJobe key={project.id} className="animate">
+    <WrapperEachJobe
+      key={project.id}
+      className="animate"
+      onMouseLeave={() => onMouseLeave(`.${project.imgClass}`, slider)}
+    >
       <Header className="animate">{project.title}</Header>
       <ImgWrapper
         onMouseEnter={() => onMouseEnter(`.${project.imgClass}`, slider)}
-        onMouseLeave={() => onMouseLeave(`.${project.imgClass}`, slider)}
         ref={slider}
       >
         {project.imgComponent}
@@ -163,7 +167,7 @@ function Project({ project, setAudioSound }) {
           setAudioSound={setAudioSound}
           data1={project.sliderData.data1}
           data2={project.sliderData.data2}
-          data3={project.sliderData.data3}
+          data3={project.sliderData.url}
         />
       </ImgWrapper>
       <DescriotionWrapper>

@@ -1,9 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 let pic =
-  'https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicnotes2.jpg?alt=media&token=e5023a08-0c94-4388-9ecc-d68ecae91810';
+  "https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicnotes2.jpg?alt=media&token=e5023a08-0c94-4388-9ecc-d68ecae91810";
 
+let embrk =
+  "https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2Fticketpad%2FScreenshot%202024-10-22%20at%2021.51.45.png?alt=media&token=c1e61a33-9d70-4016-bf18-b56e334c092d";
 let todoImg =
-  'https://firebasestorage.googleapis.com/v0/b/smart-book-ce0de.appspot.com/o/todo%20app%20home%20page%20-%20redized.jpg?alt=media&token=f70c0ebe-b182-4512-9b71-ec9a20dbc8f0';
+  "https://firebasestorage.googleapis.com/v0/b/smart-book-ce0de.appspot.com/o/todo%20app%20home%20page%20-%20redized.jpg?alt=media&token=f70c0ebe-b182-4512-9b71-ec9a20dbc8f0";
 export const Wrapper = styled.section`
   width: 100%;
   display: flex;
@@ -73,7 +75,8 @@ export const SliderWrapper = styled.div`
   flex-direction: column;
   background-color: #141513c9;
   opacity: 1;
-  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s, color ease-in-out 0.2s;
+  transition: bottom ease-in-out 0.2s, opacity ease-in-out 0.2s,
+    color ease-in-out 0.2s;
   &:hover ${P2} {
     transition: color ease-in-out 0.2s;
     color: #fcff4d;
@@ -82,6 +85,13 @@ export const SliderWrapper = styled.div`
 
 export const OlgosWebImg = styled.div`
   background: url(${pic}) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;
+export const EmbrkImage = styled.div`
+  background: url(${embrk}) no-repeat center center;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -156,7 +166,7 @@ export const Header = styled.p`
   opacity: 0;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 0.4rem;
