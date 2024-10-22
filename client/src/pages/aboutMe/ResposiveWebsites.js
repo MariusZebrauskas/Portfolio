@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import {
   ResponsiveWebsitesWrapper,
   ResponsiveWebsites,
   Description,
   LinkToContact,
-} from './aboutStyles';
-import gsap from 'gsap';
-import { Link } from 'react-router-dom';
+} from "./aboutStyles";
+import gsap from "gsap";
+import { Link } from "react-router-dom";
 
-const ResposiveWebsites = ({ activatemenu,setAudioSound }) => {
+const ResposiveWebsites = ({ activatemenu, setAudioSound }) => {
   const responsive = useRef();
   const description = useRef();
   const tl = gsap.timeline({});
@@ -17,7 +17,7 @@ const ResposiveWebsites = ({ activatemenu,setAudioSound }) => {
   useEffect(() => {
     tl.fromTo(
       responsive.current,
-      { opacity: 0, y: '2rem' },
+      { opacity: 0, y: "2rem" },
       {
         delay: 0.55,
         opacity: 1,
@@ -25,10 +25,10 @@ const ResposiveWebsites = ({ activatemenu,setAudioSound }) => {
       }
     ).fromTo(
       description.current,
-      { opacity: 0, y: '2rem' },
+      { opacity: 0, y: "2rem" },
       {
         opacity: 1,
-        y: '0rem',
+        y: "0rem",
       }
     );
   }, []);
@@ -37,18 +37,21 @@ const ResposiveWebsites = ({ activatemenu,setAudioSound }) => {
     // change color on menu to yellow
     activatemenu(false, false, true);
     // autio sound
-    setAudioSound('contact');
+    setAudioSound("contact");
   };
   return (
     <ResponsiveWebsitesWrapper>
-      <ResponsiveWebsites ref={responsive}>Responsive Websites</ResponsiveWebsites>
+      <ResponsiveWebsites ref={responsive}>
+        Responsive Websites
+      </ResponsiveWebsites>
       <Description ref={description}>
-        If You Need A Brand New Website, Or You Need A Developer In Your Team. Please Leave A Message In
-        <Link onClick={redirectToContact} to='/contatc'>
+        If you need a brand new website or a skilled developer to join your
+        team, please leave a message on the
+        <Link onClick={redirectToContact} to="/contatc">
           <LinkToContact>Contact</LinkToContact>
-        </Link>{' '}
-        Page. I Would Love To Modify Existing Software, Detect And Correct Errors, Improve
-        Performance Or Upgrade Interfaces.
+        </Link>{" "}
+        page. I would love to help modify existing software, detect and correct
+        errors, improve performance, or upgrade interfaces.
       </Description>
     </ResponsiveWebsitesWrapper>
   );
