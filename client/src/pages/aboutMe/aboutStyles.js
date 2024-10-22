@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { FaReact, FaSass, FaNodeJs, FaLanguage } from 'react-icons/fa';
+import styled from "styled-components";
+import { FaReact, FaSass, FaNodeJs, FaLanguage } from "react-icons/fa";
 import {
   SiStyledcomponents,
   SiFramer,
@@ -17,10 +17,11 @@ import {
   SiTailwindcss,
   SiNetlify,
   SiTypescript,
-} from 'react-icons/si';
-import { MdOutlineSchool } from 'react-icons/md';
-import { CgGym } from 'react-icons/cg';
-import { BiLayerPlus } from 'react-icons/bi';
+  SiSvelte,
+} from "react-icons/si";
+import { MdOutlineSchool } from "react-icons/md";
+import { CgGym } from "react-icons/cg";
+import { BiLayerPlus } from "react-icons/bi";
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -50,7 +51,7 @@ export const ResponsiveWebsites = styled.p`
   opacity: 0;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 0.4rem;
@@ -108,6 +109,10 @@ export const ReactIcon = styled(FaReact)`
   color: ${(props) => props.theme.color.fifth};
 `;
 export const StyledomponentsIcon = styled(SiStyledcomponents)`
+  font-size: ${(props) => props.theme.fontSize.icon};
+  color: ${(props) => props.theme.color.fifth};
+`;
+export const SvelteIcon = styled(SiSvelte)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
 `;
@@ -285,7 +290,7 @@ export const LanguagesIcon = styled(FaLanguage)`
 export const MotoIcon = styled(BiLayerPlus)`
   font-size: ${(props) => props.theme.fontSize.icon};
   color: ${(props) => props.theme.color.fifth};
-  margin-top: ${(props) => (props.last ? '1.5rem' : null)};
+  margin-top: ${(props) => (props.last ? "1.5rem" : null)};
   @media (min-width: 375px) {
     margin-top: 0;
   }
@@ -301,7 +306,7 @@ export const LinkToContact = styled.i`
   position: relative;
   margin-bottom: 50px;
   &:after {
-    content: '';
+    content: "";
     width: 100%;
     position: absolute;
     bottom: -7px;
