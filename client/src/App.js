@@ -11,6 +11,7 @@ import Home from "./pages/homeTest/Home";
 import Bottom from "./components/bottom/Bottom";
 import MusicSchoolNotes from "./pages/musicschoolnotes/MusicSchoolNotes";
 import SmartBook from "./pages/smartbook/SmartBook";
+import Embrk from "./pages/embrk/embrk";
 
 function App() {
   // controls img scale + center
@@ -87,6 +88,11 @@ function App() {
               path="/mywork/smartbook"
               exsact
               element={<SmartBook setOpenWelcome={setOpenWelcome} />}
+            />
+            <Route
+              path="/mywork/embrk"
+              exsact
+              element={<Embrk setOpenWelcome={setOpenWelcome} />}
             />
           </Routes>
         </ContentWrapper>
