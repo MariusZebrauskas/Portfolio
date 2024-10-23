@@ -14,7 +14,7 @@ const cors = require("cors");
 const path = require("path");
 // https force
 const enforce = require("express-sslify");
-// compres data
+// compares data
 // const compression = require('compression');
 dotenv.config();
 
@@ -60,7 +60,7 @@ app.post("/message", (req, res) => {
     // FIXME::send files++++++++++++++++++++++++++++++++++++++++++++++++++++++
     async function sendEmail() {
       // FIXME:test account + env data
-      const testAccount = {
+      const emailAccount = {
         user: process.env.EMAIL_NAME,
         pass: process.env.EMAIL_PASS,
       };
@@ -69,8 +69,8 @@ app.post("/message", (req, res) => {
         host: "smtp.mail.yahoo.com",
         port: 465,
         auth: {
-          user: testAccount.user,
-          pass: testAccount.pass,
+          user: emailAccount.user,
+          pass: emailAccount.pass,
         },
         secure: true, // true for 465, false for other ports
         tls: {
@@ -79,7 +79,7 @@ app.post("/message", (req, res) => {
       });
 
       let info = await transporter.sendMail({
-        from: testAccount.user, // sender address
+        from: emailAccount.user, // sender address
         to: "zebrauskas.mar@gmail.com", // list of receivers
         subject: "Portfolio Portfolio Portfolio", // Subject line
         html: `<div>
