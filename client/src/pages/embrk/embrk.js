@@ -46,15 +46,21 @@ const Embrk = ({ setOpenWelcome }) => {
     <Wrapper>
       {/* intro */}
       <IntroWrapper>
-        <Headers className="animate">Description</Headers>
+        <Headers className="animate">Introduction</Headers>
 
         <Description className="animate">
-          Smarbook is a full-stack application. This application was developed
-          with NextJS technologies. NextJS allowed me to use the front-end, and
-          back-end on the same framework, it increased my development speed and
-          experience a lot. Also, SmartBook is powered by GSAP animations. With
-          GSAP I achieved a really nice and smooth animations which increase
-          user experience. This application has:
+          Embark Limited is a multimillion-pound organization at the forefront
+          of football ticket sales. My journey with Embark began with an
+          ambitious project to overhaul the outdated system at
+          www.footballticketpad.com, transitioning to a more advanced
+          technological framework. As part of a small, agile team composed of a
+          senior developer and two junior developers, including myself, we
+          undertook the challenge of rewriting, modifying, and optimizing
+          thousands of lines of code. The original system was built on Angular
+          for the front end, Node.js for the backend, and MySQL for database
+          management. In pursuit of enhanced performance and scalability, we
+          transitioned to Next.js for the front end, maintained Node.js on the
+          backend, and upgraded our database solutions to MongoDB using TypeORM.
           <br />
           <Slider
             data={[
@@ -81,31 +87,58 @@ const Embrk = ({ setOpenWelcome }) => {
             ]}
           />
           <br />
-          <Strong>1. Accounting system.</Strong>
-          You can register a user manually or use google auth login
-          functionality. Also, once you create an account, you don't need to log
-          in the next time you come back to the smart book, it does it for you
+          My initial seven months were intensely focused on the development and
+          implementation of pre-designed pages, retrieving data, refining user
+          experiences, and engaging in productive collaborations with our design
+          team. This phase was pivotal in honing my skills in dynamic component
+          usage, clean code practices, and the application of sophisticated CSS
+          and HTML5 methodologies.
           <br />
           <br />
-          <Strong>2. Email system.</Strong> Users can contact me via the contact
-          page. And send real emails to my Gmail account.
+          Despite the advantages, we encountered limitations with Next.js due to
+          its excessive boilerplate and recurring bugs, prompting our switch to
+          SvelteKit. This change demanded a comprehensive rewrite of our
+          front-end code, significantly enhancing system efficiency and
+          maintainability.
           <br />
           <br />
-          <Strong>3. Advanced Todo list.</Strong>
-          Todo list is connected to MongoDB, and it has CRUD ( Create, Update,
-          Delete ) functionality. Smart-book list also has a really cool
-          animation I personally recommend checking them out.
+          One year into my role, I spearheaded a critical initiative to develop
+          www.seatloader.com, a platform akin to Ticketpad but with extended
+          services including hotel bookings. This site, alongside Ticketpad,
+          features robust administrative panels for both front-end and backend
+          management. Seatloader is streamlined for ticket and hotel service
+          offerings, whereas Ticketpad serves a diverse clientele involving
+          brokers, affiliates, and direct customers and accommodates a broader
+          array of events like football, concerts, and upcoming expansions into
+          horse and car races. Our backend architecture is designed for
+          versatility, allowing easy integration of new categories through a
+          well-organized database structure of industries ,categories,
+          subcategories, and events…
+          <br />
+          <br />A significant aspect of my role involved engineering advanced
+          systems for ticket listings and re-listings, empowering admins,
+          brokers, and customers with efficient tools for selling and reselling
+          tickets. Additionally, I innovated our admin panel by developing a
+          dynamic page matrix that enables the creation of customizable pages
+          via a data-driven approach. introduced a drag-and-drop component that
+          supports array data and custom subcomponents for each data entry,
+          greatly enhancing the user experience and operational flexibility also
+          had to create file manager …
           <br />
           <br />
-          <Strong>4. Excel type Todo list. </Strong>
-          This list is also connected to MongoDB, and it has CRUD ( Create,
-          Update, Delete ) functionality as well.
+          Through these transformative two years at Embark Limited, I have
+          evolved from a junior developer to a confident mid-level developer,
+          equipped with a robust set of skills and a proven track record of
+          delivering critical solutions in high-stakes environments.
         </Description>
       </IntroWrapper>
 
       <WrapperLink className="animate">
-        <LinkToWeb href="https://smart-book.org" target="_blank">
-          www.smart-book.org
+        <LinkToWeb href="https://www.footballticketpad.com" target="_blank">
+          www.footballticketpad.com
+        </LinkToWeb>
+        <LinkToWeb href="https://www.seatloader.com" target="_blank">
+          www.seatloader.com
         </LinkToWeb>
       </WrapperLink>
     </Wrapper>

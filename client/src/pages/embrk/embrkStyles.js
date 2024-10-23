@@ -201,8 +201,7 @@ export const LinkToWeb = styled.a`
   line-height: ${(props) => props.theme.lineHeight.one};
   opacity: 1;
   color: ${(props) => props.theme.color.forth};
-  margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0.5rem;
   transition: all ease-in-out 0.2s;
   &:hover {
     color: ${(props) => props.theme.color.eigth};
