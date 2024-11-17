@@ -10,7 +10,8 @@ const path = require("path");
 
 // https force
 const enforce = require("express-sslify");
-const { default: axios } = require("axios");
+const axios = require("axios");
+
 // compares data
 // const compression = require('compression');
 dotenv.config();
@@ -95,8 +96,7 @@ app.post("/message", (req, res) => {
 });
 
 app.post("/ping", async (req, res) => {
-  console.log("working I'm getting pinged");
-
+  console.log("working I'm getting pinged", PORT);
   // Retrieve the scheduler URL from the request body
   const schedulerUrl = req.body.schedulerUrl;
   console.log("schedulerUrl", schedulerUrl);
@@ -104,13 +104,14 @@ app.post("/ping", async (req, res) => {
     return res.status(400).send("Scheduler URL is required.");
   }
 
-  try {
-    await axios.get(schedulerUrl);
-    console.log(`Scheduler app has been pinged successfully.`);
-  } catch (error) {
-    console.error(`Failed to ping the scheduler app: ${error}`);
-    return res.status(500).send("Failed to ping the scheduler app.");
-  }
+  // try {
+  //   // it is not able to send request back
+  //   await axios.get(schedulerUrl);
+  //   console.log(`Scheduler app has been pinged successfully.`);
+  // } catch (error) {
+  //   console.error(error.message);
+  //   return res.status(500).send("Failed to ping the scheduler app.");
+  // }
 
   res.status(200).send("Pong");
 });
