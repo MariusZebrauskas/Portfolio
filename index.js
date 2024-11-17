@@ -93,7 +93,7 @@ app.post("/message", (req, res) => {
   }
 });
 
-app.get("/ping", async (req, res) => {
+app.post("/ping", async (req, res) => {
   console.log("working I'm getting pinged");
 
   // Retrieve the scheduler URL from the request body
