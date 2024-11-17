@@ -99,7 +99,7 @@ app.post("/ping", async (req, res) => {
 
   // Retrieve the scheduler URL from the request body
   const schedulerUrl = req.body.schedulerUrl;
-
+  console.log("schedulerUrl", schedulerUrl);
   if (!schedulerUrl) {
     return res.status(400).send("Scheduler URL is required.");
   }
