@@ -105,6 +105,10 @@ app.post("/message", (req, res) => {
   }
 });
 
+app.get("/ping", (req, res) => {
+  console.log("wroking im getting pinged", req.body);
+});
+
 app.use(express.static("client/build"));
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
