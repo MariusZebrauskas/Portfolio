@@ -43,7 +43,7 @@ const DesktopWelcome = ({ openWelcome }) => {
     >
       <WrapperH1>
         <H1>Marius</H1>
-        <H1>Zebrauskas+</H1>
+        <H1>Zebrauskas</H1>
       </WrapperH1>
       <WrapperText>
         <P>
