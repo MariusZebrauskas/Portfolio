@@ -194,6 +194,10 @@ export const NamePassword = styled(Description)`
   }
 `;
 
+export const Image = styled.img`
+  max-width: 100%;
+`;
+
 export const LinkToWeb = styled.a`
   font-weight: 600;
   font-size: ${(props) => props.theme.fontSize.p};

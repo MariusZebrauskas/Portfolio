@@ -64,9 +64,11 @@ app.post("/message", (req, res) => {
         user: process.env.EMAIL_NAME,
         pass: process.env.EMAIL_PASS,
       };
-
+      // hvpp pkdo ntvd weap
       const transporter = nodemailer.createTransport({
-        host: "smtp.mail.yahoo.com",
+        // host: "smtp.mail.yahoo.com",
+        host: "smtp.gmail.com",
+
         port: 465,
         auth: {
           user: emailAccount.user,

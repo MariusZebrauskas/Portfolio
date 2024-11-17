@@ -13,6 +13,7 @@ import {
   WrapperLink,
   LinkToWeb,
   Strong,
+  Image,
 } from "./embrkStyles";
 let frontendimg =
   "https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2F8.png?alt=media&token=b5cab212-354d-423b-9fdf-c6a3ff2ac052";
@@ -126,6 +127,7 @@ const Embrk = ({ setOpenWelcome }) => {
           had to create file manager …
           <br />
           <br />
+          <Image src="https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2Fticketpad%2FScreenshot%202024-10-26%20at%2021.20.49.png?alt=media&token=7bb4d54d-ab58-4628-8197-94b435053405" />
           Through these transformative two years at Embark Limited, I have
           evolved from a junior developer to a confident mid-level developer,
           equipped with a robust set of skills and a proven track record of
