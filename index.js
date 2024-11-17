@@ -2,11 +2,6 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8800;
 const nodemailer = require("nodemailer");
-
-// const cartRoutes = require('./routes/cart');
-// const authRoutes = require('./routes/auth');
-// const recoverRoutes = require('./routes/recover');
-// const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -42,13 +37,6 @@ app.use(helmet.xssFilter());
 app.use(morgan("common"));
 // cors alloow front to back comunicate
 app.use(cors());
-// app.use(compression());
-
-// https redirect
-
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(enforce.HTTPS({ trustProtoHeader: true }));
-// }
 
 // routes
 app.post("/message", (req, res) => {
@@ -105,8 +93,25 @@ app.post("/message", (req, res) => {
   }
 });
 
-app.get("/ping", (req, res) => {
-  console.log("wroking im getting pinged", req.body);
+app.get("/ping", async (req, res) => {
+  console.log("working I'm getting pinged");
+
+  // Retrieve the scheduler URL from the request body
+  const schedulerUrl = req.body.schedulerUrl;
+
+  if (!schedulerUrl) {
+    return res.status(400).send("Scheduler URL is required.");
+  }
+
+  try {
+    await axios.get(schedulerUrl);
+    console.log(`Scheduler app has been pinged successfully.`);
+  } catch (error) {
+    console.error(`Failed to ping the scheduler app: ${error}`);
+    return res.status(500).send("Failed to ping the scheduler app.");
+  }
+
+  res.status(200).send("Pong");
 });
 
 app.use(express.static("client/build"));
