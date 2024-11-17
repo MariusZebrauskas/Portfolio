@@ -10,6 +10,7 @@ const path = require("path");
 
 // https force
 const enforce = require("express-sslify");
+const { default: axios } = require("axios");
 // compares data
 // const compression = require('compression');
 dotenv.config();
