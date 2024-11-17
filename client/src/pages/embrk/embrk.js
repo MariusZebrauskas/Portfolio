@@ -1,22 +1,16 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
 import Slider from "../../components/slider/Slider";
-import SmartBookVideo from "../../components/video/SmartBookVideo";
 import {
   Description,
   Headers,
   IntroWrapper,
-  LoginPassword,
-  LoginPasswordText,
-  NamePassword,
   Wrapper,
   WrapperLink,
   LinkToWeb,
-  Strong,
   Image,
 } from "./embrkStyles";
-let frontendimg =
-  "https://firebasestorage.googleapis.com/v0/b/portfolio-c9396.appspot.com/o/img%2FmyWork%2Fmusicschoolnotes%2F8.png?alt=media&token=b5cab212-354d-423b-9fdf-c6a3ff2ac052";
+
 const Embrk = ({ setOpenWelcome }) => {
   useEffect(() => {
     // scroll up on render
@@ -122,7 +116,7 @@ const Embrk = ({ setOpenWelcome }) => {
           tickets. Additionally, I innovated our admin panel by developing a
           dynamic page matrix that enables the creation of customizable pages
           via a data-driven approach. introduced a drag-and-drop component that
-          supports array data and custom subcomponents for each data entry,
+          supports array data and custom sub-components for each data entry,
           greatly enhancing the user experience and operational flexibility also
           had to create file manager …
           <br />
