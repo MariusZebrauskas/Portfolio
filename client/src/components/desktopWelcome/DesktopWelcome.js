@@ -58,14 +58,19 @@ const DesktopWelcome = ({ openWelcome }) => {
       animate="animate"
     >
       <WrapperH1>
-        <H1>Marius</H1>
-        <H1>Zebrauskas</H1>
+        <H1>JavaScript</H1>
+        <H1>developer</H1>
       </WrapperH1>
       <WrapperText>
         <P>
-          I'm a dedicated JavaScript developer with {workDuration} of real-life
-          experience working as a full stack developer, specializing in creating
-          responsive and functional websites.
+          with {workDuration} of hands-on experience as a full-stack developer.
+          I specialize in designing and building responsive, dynamic, and
+          user-centered websites that combine functionality with exceptional
+          performance. My expertise spans crafting elegant front-end interfaces
+          and integrating powerful back-end solutions, delivering seamless
+          digital experiences. Driven by innovation and a love for
+          problem-solving, I thrive in transforming ideas into reality through
+          clean code and modern technologies.
         </P>
       </WrapperText>
     </Wrapper>

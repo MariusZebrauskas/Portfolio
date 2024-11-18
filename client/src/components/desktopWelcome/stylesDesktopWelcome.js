@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Wrapper = styled(motion.section)`
   /* background: green; */
@@ -49,8 +49,9 @@ export const WrapperText = styled.div`
 `;
 
 export const P = styled.p`
-  font-size: ${(props) => props.theme.fontSize.p2};
+  font-size: ${(props) => props.theme.fontSize.p1};
   line-height: 2rem;
   letter-spacing: 0.1rem;
+  max-height: 200px;
   color: ${(props) => props.theme.color.forth};
 `;

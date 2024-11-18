@@ -7,7 +7,6 @@ import AboutMe from "./pages/aboutMe/AboutMe";
 import Audio from "./components/audio/Audio";
 import Contatc from "./pages/contact/Contatc";
 import MyWork from "./pages/myWork/MyWork";
-import Home from "./pages/homeTest/Home";
 import Bottom from "./components/bottom/Bottom";
 import MusicSchoolNotes from "./pages/musicschoolnotes/MusicSchoolNotes";
 import SmartBook from "./pages/smartbook/SmartBook";
@@ -30,7 +29,7 @@ function App() {
     togglerwork(work);
     togglercontatc(contact);
   };
-
+  console.log({ activeabout, activework, activecontact, openWelcome });
   return (
     <BrowserRouter>
       {/* lan survey icon  needed  test*/}
