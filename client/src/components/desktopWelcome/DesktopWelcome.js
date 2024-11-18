@@ -29,6 +29,22 @@ const animationIn = {
   },
 };
 const DesktopWelcome = ({ openWelcome }) => {
+  function calculateWorkDuration(startDate) {
+    const start = new Date(startDate);
+    const now = new Date();
+
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    return `${years} years ${months > 5 ? `and ${months} months` : ""}`;
+  }
+
+  const workDuration = calculateWorkDuration("2022-09-01");
   return (
     <Wrapper
       variants={
@@ -47,7 +63,7 @@ const DesktopWelcome = ({ openWelcome }) => {
       </WrapperH1>
       <WrapperText>
         <P>
-          I'm a dedicated JavaScript developer with 2 years of real-life
+          I'm a dedicated JavaScript developer with {workDuration} of real-life
           experience working as a full stack developer, specializing in creating
           responsive and functional websites.
         </P>
