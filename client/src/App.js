@@ -29,7 +29,6 @@ function App() {
     togglerwork(work);
     togglercontatc(contact);
   };
-  console.log({ activeabout, activework, activecontact, openWelcome });
   return (
     <BrowserRouter>
       {/* lan survey icon  needed  test*/}
