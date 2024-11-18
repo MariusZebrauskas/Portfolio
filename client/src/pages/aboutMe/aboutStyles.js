@@ -49,6 +49,7 @@ export const ResponsiveWebsites = styled.p`
   z-index: -1;
   color: ${(props) => props.theme.color.forth};
   opacity: 0;
+  text-align: center;
 
   &:before {
     content: "";

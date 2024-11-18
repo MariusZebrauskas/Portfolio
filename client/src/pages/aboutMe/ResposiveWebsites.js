@@ -42,7 +42,7 @@ const ResposiveWebsites = ({ activatemenu, setAudioSound }) => {
   return (
     <ResponsiveWebsitesWrapper>
       <ResponsiveWebsites ref={responsive}>
-        I Love Turning Ideas Into Digital Reality
+        Turning Creativity into Functionality
       </ResponsiveWebsites>
       <Description ref={description}>
         I’m a detail-oriented web developer with a strong focus on building

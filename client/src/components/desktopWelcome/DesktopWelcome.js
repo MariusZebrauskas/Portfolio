@@ -63,14 +63,14 @@ const DesktopWelcome = ({ openWelcome }) => {
       </WrapperH1>
       <WrapperText>
         <P>
-          with {workDuration} of hands-on experience as a full-stack developer.
-          I specialize in designing and building responsive, dynamic, and
-          user-centered websites that combine functionality with exceptional
-          performance. My expertise spans crafting elegant front-end interfaces
-          and integrating powerful back-end solutions, delivering seamless
-          digital experiences. Driven by innovation and a love for
-          problem-solving, I thrive in transforming ideas into reality through
-          clean code and modern technologies.
+          with {workDuration} of professional experience as a full-stack
+          developer in a company environment. I specialize in building
+          responsive, dynamic, and user-centered websites that combine
+          functionality with exceptional performance. My expertise spans
+          crafting elegant front-end interfaces and integrating powerful
+          back-end solutions, delivering seamless digital experiences. Driven by
+          innovation and a love for problem-solving, I thrive in transforming
+          ideas into reality through clean code and modern technologies.
         </P>
       </WrapperText>
     </Wrapper>
