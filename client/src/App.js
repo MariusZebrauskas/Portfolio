@@ -88,7 +88,7 @@ function App() {
               element={<SmartBook setOpenWelcome={setOpenWelcome} />}
             />
             <Route
-              path="/mywork/embrk"
+              path="/mywork/Embrk"
               exsact
               element={<Embrk setOpenWelcome={setOpenWelcome} />}
             />

@@ -24,7 +24,7 @@ const projects = [
     sliderData: {
       data1: "Full Stack developer",
       data2: "https://www.footballticketpad.com/, https://www.seatloader.com/",
-      url: "embrk",
+      url: "Embrk",
     },
     description: "Technologies: Typescript, SvelteKit, NodeJs, NextJs",
   },
